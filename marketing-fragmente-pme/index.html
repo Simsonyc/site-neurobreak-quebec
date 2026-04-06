@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Système marketing B2B pour PME francophones | NeuroBreak™</title>
-  <meta name="description" content="Votre marketing n'est pas inefficace. Il est fragmenté. NeuroBreak™ structure acquisition, conversion et orchestration pour PME B2B francophones." />
-  <link rel="canonical" href="https://neurobreak.ca/francophonie-systeme-marketing-b2b" />
+  <title>Marketing fragmenté PME : le vrai problème de croissance | NeuroBreak™</title>
+  <meta name="description" content="Vos actions marketing existent. Elles ne se parlent pas. Découvrez pourquoi le marketing fragmenté freine les PME B2B — et comment l'architecture change tout." />
+  <link rel="canonical" href="https://neurobreak.ca/marketing-fragmente-pme" />
 
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Accueil","item":"https://neurobreak.ca/"},{"@type":"ListItem","position":2,"name":"Architecture marketing B2B francophone","item":"https://neurobreak.ca/francophonie-systeme-marketing-b2b"}]}</script>
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Architecture marketing B2B pour PME francophones — le modèle NeuroBreak™","author":{"@type":"Person","name":"Christophe Simon"},"publisher":{"@type":"Organization","name":"NeuroBreak™ Studio","url":"https://neurobreak.ca"}}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Accueil","item":"https://neurobreak.ca/"},{"@type":"ListItem","position":2,"name":"Système marketing B2B","item":"https://neurobreak.ca/francophonie-systeme-marketing-b2b"},{"@type":"ListItem","position":3,"name":"Marketing fragmenté PME","item":"https://neurobreak.ca/marketing-fragmente-pme"}]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Marketing fragmenté PME — nommer le problème que personne ne voit","author":{"@type":"Person","name":"Christophe Simon"},"publisher":{"@type":"Organization","name":"NeuroBreak™ Studio","url":"https://neurobreak.ca"}}</script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -20,8 +20,6 @@
 
     /* ══════════════════════════════════════════════════════
        PALETTES DARK / LIGHT
-       L'accent rouge-orange --vif reste fixe dans les deux thèmes.
-       Le fond, le texte et les lignes basculent.
     ══════════════════════════════════════════════════════ */
     :root {
       --vif:       #E63E1C;
@@ -35,7 +33,6 @@
       --trans:     background .3s ease, color .3s ease, border-color .3s ease;
     }
 
-    /* THÈME LIGHT (défaut — V3 originale) */
     [data-theme="light"] {
       --bg:        #F8F6F1;
       --bg-2:      #EDEAE2;
@@ -47,7 +44,7 @@
       --ligne:     #D0CBC0;
       --ligne-2:   #D8D4C8;
       --nav-bg:    #F8F6F1;
-      --encart-bg: #141210;   /* EN BREF, ticker, footer : toujours sombre */
+      --encart-bg: #141210;
       --card-bg:   transparent;
       --card-hover:#EDEAE2;
       --ghost:     #EDEAE2;
@@ -59,7 +56,6 @@
       --switch-dot:#141210;
     }
 
-    /* THÈME DARK */
     [data-theme="dark"] {
       --bg:        #141210;
       --bg-2:      #1E1C18;
@@ -107,9 +103,8 @@
     [data-theme="dark"] .theme-switch__dot { transform: translateX(15px); }
 
     /* ══ CURSEUR ══ */
-    /* Curseur custom — body seulement, éléments interactifs gardent pointer */
     body { cursor: none; }
-    a, button, [role="button"], .card, .membre, .nav__btn, .cta__btn,
+    a, button, [role="button"], .card, .nav__btn, .cta__btn,
     .theme-switch, .theme-switch * { cursor: pointer !important; }
     #cursor {
       position: fixed; width: 10px; height: 10px;
@@ -142,9 +137,7 @@
     p:last-child { margin-bottom: 0; }
     strong { color: var(--txt); font-weight: 500; }
 
-    /* ══════════════════════════════════════════════
-       ENCART PHOTO — identique à la V5
-    ══════════════════════════════════════════════ */
+    /* ══ PHOTO ENCART ══ */
     .photo-encart {
       position: relative; overflow: hidden;
       background: #2A2722; border: 1px solid rgba(255,255,255,.08);
@@ -205,44 +198,7 @@
     .breadcrumb a { color: var(--txt-4); text-decoration: none; }
     .breadcrumb a:hover { color: var(--vif); opacity: 1; }
 
-    /* ══════════════════════════════════════════════
-       HERO — grille 2 colonnes avec photo à droite
-    ══════════════════════════════════════════════ */
-    .hero {
-      max-width: var(--max); margin: 0 auto;
-      padding: 5rem 2.5rem 3rem;
-      display: grid;
-      grid-template-columns: 1fr 280px;
-      gap: 0 4rem;
-      align-items: end;
-    }
-    .hero__left { }
-    .hero__tag {
-      display: inline-flex; align-items: center; gap: .6rem;
-      font-family: var(--f-mono); font-size: .65rem; letter-spacing: .12em; text-transform: uppercase;
-      color: var(--txt-4); margin-bottom: 1.5rem; transition: color .3s;
-    }
-    .hero__tag::before { content: ''; display: inline-block; width: 24px; height: 2px; background: var(--vif); }
-    .hero__h1 {
-      font-family: var(--f-display);
-      font-size: clamp(4rem, 8vw, 9rem); line-height: .92; letter-spacing: .01em;
-      color: var(--txt); margin-bottom: 2rem; transition: color .3s;
-    }
-    .hero__h1 .rouge { color: var(--vif); }
-    .hero__h1 .fin {
-      font-family: var(--f-serif); font-weight: 300; font-style: italic;
-      font-size: clamp(2.5rem, 5vw, 5.5rem); letter-spacing: -.01em;
-      display: block; line-height: 1.1; color: var(--txt-3); transition: color .3s;
-    }
-    .hero__statement {
-      font-family: var(--f-serif); font-size: clamp(1.1rem, 1.5vw, 1.35rem);
-      font-style: italic; font-weight: 300; color: var(--txt-3);
-      line-height: 1.55; max-width: 520px; margin-bottom: 0;
-      padding-left: 1.5rem; border-left: 2px solid var(--vif);
-      transition: color .3s;
-    }
-
-    /* ══ HERO — V3 original, sans photo (identique à la V3) ══ */
+    /* ══ HERO ══ */
     .hero {
       max-width: var(--max); margin: 0 auto;
       padding: 5rem 2.5rem 0;
@@ -251,7 +207,6 @@
       gap: 0 4rem;
       align-items: start;
     }
-    .hero__left { }
     .hero__tag {
       display: inline-flex; align-items: center; gap: .6rem;
       font-family: var(--f-mono); font-size: .65rem; letter-spacing: .12em; text-transform: uppercase;
@@ -276,7 +231,6 @@
       padding-left: 1.5rem; border-left: 2px solid var(--vif);
       transition: color .3s;
     }
-    /* Panneau droit hero — méta + index (V3 original) */
     .hero__right { padding-top: 1rem; border-left: 1px solid var(--ligne); padding-left: 2.5rem; transition: border-color .3s; }
     .hero__meta-label { font-family: var(--f-mono); font-size: .6rem; letter-spacing: .14em; text-transform: uppercase; color: var(--txt-4); margin-bottom: .5rem; }
     .hero__meta-val { font-family: var(--f-sans); font-size: .82rem; font-weight: 500; color: var(--txt); margin-bottom: 1.75rem; transition: color .3s; }
@@ -286,15 +240,11 @@
     .hero__index a { color: var(--txt-3); text-decoration: none; font-family: var(--f-sans); font-size: .78rem; transition: color .15s; }
     .hero__index a:hover { color: var(--vif); opacity: 1; }
 
-    /* ══════════════════════════════════════════════
-       EN BREF — fond sombre fixe + ZONE A photo Christophe
-       La photo est dans la colonne droite du EN BREF
-    ══════════════════════════════════════════════ */
+    /* ══ EN BREF ══ */
     .en-bref { background: var(--encart-bg); padding: 2.5rem; margin: 4rem 0 0; }
     .en-bref__inner {
       max-width: var(--max); margin: 0 auto;
       display: grid;
-      /* label vertical | texte | photo portrait */
       grid-template-columns: auto 1fr 240px;
       gap: 0 3rem;
       align-items: center;
@@ -302,14 +252,6 @@
     .en-bref__label { font-family: var(--f-display); font-size: 4rem; line-height: 1; color: var(--vif); letter-spacing: .05em; writing-mode: vertical-rl; text-orientation: mixed; transform: rotate(180deg); padding-bottom: .5rem; align-self: center; }
     .en-bref__corps { font-family: var(--f-serif); font-size: clamp(1rem, 1.2vw, 1.15rem); font-weight: 300; color: rgba(248,246,241,.75); line-height: 1.75; margin-bottom: 0; }
     .en-bref__corps strong { color: #F8F6F1; font-weight: 500; }
-
-    /* ══ ZONE A — Photo Christophe dans le EN BREF ══
-       REMPLACER le placeholder par :
-       <img src="christophe-simon.jpg"
-            alt="Christophe Simon — Architecte stratégique NeuroBreak™"
-            style="width:100%;height:100%;object-fit:cover;object-position:top center;" />
-       FORMAT : portrait 3/4, min. 480×640 px
-    ══ */
     .en-bref__photo {
       display: flex; flex-direction: column;
       align-self: stretch;
@@ -327,7 +269,7 @@
     .en-bref__photo-caption__name { font-family: var(--f-display); font-size: .85rem; letter-spacing: .08em; color: #fff; }
     .en-bref__photo-caption__role { font-family: var(--f-mono); font-size: .52rem; letter-spacing: .08em; text-transform: uppercase; color: rgba(255,255,255,.75); }
 
-    /* ══ TICKER — fond sombre fixe ══ */
+    /* ══ TICKER ══ */
     .ticker { background: var(--encart-bg); padding: .9rem 0; overflow: hidden; white-space: nowrap; border-top: 1px solid rgba(255,255,255,.06); }
     .ticker__inner { display: inline-block; animation: ticker 28s linear infinite; }
     .ticker__inner span { font-family: var(--f-display); font-size: 1rem; letter-spacing: .15em; color: rgba(248,246,241,.35); margin-right: 3rem; }
@@ -350,15 +292,10 @@
     .block__ghost { font-family: var(--f-display); font-size: 8rem; line-height: 1; color: var(--ghost); letter-spacing: -.02em; position: absolute; top: -1rem; left: -1rem; z-index: 0; user-select: none; pointer-events: none; transition: color .3s; }
     .block__num { font-family: var(--f-mono); font-size: .65rem; font-weight: 500; letter-spacing: .14em; color: var(--vif); position: relative; z-index: 1; margin-top: .5rem; }
     .block__tag { font-family: var(--f-mono); font-size: .6rem; letter-spacing: .1em; text-transform: uppercase; color: var(--txt-4); margin-top: .5rem; position: relative; z-index: 1; line-height: 1.5; transition: color .3s; }
-    .block__content { }
     .block__titre { font-family: var(--f-serif); font-size: clamp(1.6rem, 2.5vw, 2.2rem); font-weight: 700; color: var(--txt); line-height: 1.18; margin-bottom: 1.75rem; letter-spacing: -.01em; transition: color .3s; }
     .block__titre em { font-style: italic; font-weight: 300; color: var(--txt-3); }
 
-    /* ══ ZONE B — Photo contextuelle §01 ══
-       REMPLACER par :
-       <img src="bureau.jpg" alt="Dirigeant"
-            style="width:100%;height:100%;object-fit:cover;" />
-    ══ */
+    /* Photo inline flottante */
     .photo-inline { float: right; width: 260px; margin: 0 0 1.5rem 2.5rem; }
     .photo-inline .photo-encart { width: 100%; aspect-ratio: 4/3; border-radius: 4px; border: 1px solid var(--ligne); }
     .photo-inline__caption { padding: .4rem .7rem; background: var(--bg-2); border: 1px solid var(--ligne); border-top: none; border-radius: 0 0 4px 4px; font-family: var(--f-mono); font-size: .54rem; letter-spacing: .08em; text-transform: uppercase; color: var(--txt-4); transition: var(--trans); }
@@ -385,12 +322,7 @@
     .liste li { display: grid; grid-template-columns: 1.5rem 1fr; gap: 0 1rem; padding: .75rem 0; border-bottom: 1px solid var(--ligne-2); font-family: var(--f-sans); font-size: .88rem; color: var(--txt-3); font-weight: 300; line-height: 1.6; transition: color .3s, border-color .3s; }
     .liste li::before { content: '↳'; color: var(--vif); font-size: .9rem; line-height: 1.6; }
 
-    /* ══ ZONE D — Photo territoire §03 ══
-       REMPLACER par :
-       <img src="quebec.jpg" alt="Québec"
-            style="width:100%;height:100%;object-fit:cover;" />
-       Sur les pages locales : photo de la ville.
-    ══ */
+    /* Photo territoire */
     .photo-territoire { float: right; width: 300px; margin: 0 0 2rem 2.5rem; }
     .photo-territoire .photo-encart { width: 100%; aspect-ratio: 16/9; border-radius: 4px; border: 1px solid var(--ligne); }
     .photo-territoire__caption { padding: .4rem .7rem; background: var(--encart-bg); border-radius: 0 0 4px 4px; font-family: var(--f-mono); font-size: .54rem; letter-spacing: .08em; text-transform: uppercase; color: rgba(248,246,241,.4); }
@@ -400,21 +332,16 @@
     .faq-block__header { display: grid; grid-template-columns: 120px 1fr; gap: 0 3rem; margin-bottom: 3rem; }
     .faq-q { display: grid; grid-template-columns: 120px 1fr; gap: 0 3rem; padding: 1.5rem 0; border-top: 1px solid var(--ligne); }
     .faq-q__num { font-family: var(--f-mono); font-size: .6rem; color: var(--txt-4); letter-spacing: .1em; padding-top: .2rem; }
-    .faq-q__inner { }
     .faq-q__q { font-family: var(--f-serif); font-size: 1rem; font-weight: 700; color: var(--txt); margin-bottom: .6rem; transition: color .3s; }
     .faq-q__r { font-family: var(--f-sans); font-size: .85rem; font-weight: 300; color: var(--txt-3); line-height: 1.72; margin-bottom: 0; transition: color .3s; }
 
     /* Signature */
     .signature { padding: 4rem 0 3rem; display: grid; grid-template-columns: 120px 1fr; gap: 0 3rem; border-bottom: 1px solid var(--ligne); }
-    .signature__label { font-family: var(--f-mono); font-size: .6rem; color: var(--txt-4); letter-spacing: .1em; text-transform: uppercase; }
     .signature__texte { font-family: var(--f-display); font-size: clamp(2rem, 4vw, 4.5rem); line-height: 1; color: var(--txt); letter-spacing: .02em; transition: color .3s; }
     .signature__texte span { color: var(--vif); }
     .signature__auteur { font-family: var(--f-mono); font-size: .7rem; color: var(--txt-4); letter-spacing: .1em; margin-top: 1rem; grid-column: 2; }
 
-    /* ══════════════════════════════════════════════
-       SECTION ÉQUIPE — TRIO 3 COLONNES ÉGALES
-       Zones E1 · E2 · E3
-    ══════════════════════════════════════════════ */
+    /* ══ SECTION ÉQUIPE ══ */
     .equipe-section { background: var(--encart-bg); padding: 4rem 2.5rem; margin-top: 0; }
     .equipe-inner { max-width: var(--max); margin: 0 auto; }
     .equipe-header { display: flex; align-items: baseline; gap: 1.5rem; margin-bottom: 2.5rem; }
@@ -422,12 +349,6 @@
     .equipe-header__titre { font-family: var(--f-display); font-size: clamp(2rem, 4vw, 3.5rem); color: #F8F6F1; letter-spacing: .04em; line-height: 1; }
     .equipe-header__titre span { color: var(--vif); }
     .equipe-grille { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.25rem; }
-
-    /* ══ ZONES E1/E2/E3 — Photos carrées ══
-       REMPLACER dans chaque .photo-encart :
-       <img src="NOM.jpg" alt="Prénom"
-            style="width:100%;height:100%;object-fit:cover;object-position:top center;" />
-    ══ */
     .membre { display: flex; flex-direction: column; }
     .membre .photo-encart { width: 100%; aspect-ratio: 1/1; border-radius: 4px 4px 0 0; border-bottom: none; }
     .membre__bar { padding: .65rem 1rem; display: flex; align-items: center; justify-content: space-between; }
@@ -435,7 +356,6 @@
     .membre--olivier    .membre__bar { background: #2A2722; border: 1px solid rgba(255,255,255,.1); }
     .membre--lounas     .membre__bar { background: #504B44; }
     .membre__name { font-family: var(--f-display); font-size: .95rem; letter-spacing: .07em; color: #fff; }
-    .membre--christophe .membre__name { color: #fff; }
     .membre__role { font-family: var(--f-mono); font-size: .54rem; letter-spacing: .07em; text-transform: uppercase; color: rgba(255,255,255,.65); }
     .membre__bio { padding: 1rem 1rem 1.25rem; background: #1E1C18; flex: 1; border: 1px solid rgba(255,255,255,.06); border-top: none; border-radius: 0 0 4px 4px; }
     .membre__bio p { font-family: var(--f-sans); font-size: .78rem; font-weight: 300; color: rgba(248,246,241,.5); line-height: 1.65; margin-bottom: 0; }
@@ -461,24 +381,16 @@
     .footer__nav a:hover { color: var(--vif); opacity: 1; }
     .footer__copy { width: 100%; font-family: var(--f-mono); font-size: .6rem; color: rgba(248,246,241,.25); letter-spacing: .06em; margin-top: 1rem; }
 
-    /* ══════════════════════════════════════════════
-       MOBILE FIRST — base = mobile, on monte ensuite
-    ══════════════════════════════════════════════ */
-
-    /* ── Base mobile (< 560px) ── */
+    /* ══ MOBILE ══ */
     .nav { padding: 0 1rem; }
     .nav__right { gap: .75rem; }
-    /* Masquer "20 territoires" sur mobile — ne rentre pas */
     .nav__pill { display: none; }
     .hero { grid-template-columns: 1fr; padding: 3.5rem 1.25rem 0; gap: 0; }
-    .hero__left { }
     .hero__right { border-left: none; padding-left: 0; border-top: 1px solid var(--ligne); padding-top: 1.5rem; margin-top: 1.5rem; transition: border-color .3s; }
     .hero__h1 { font-size: clamp(3rem, 12vw, 4rem); }
     .en-bref { padding: 1.75rem 1.25rem; margin-top: 2rem; }
-    /* Sur mobile : label horizontal + texte + photo dessous */
     .en-bref__inner { grid-template-columns: 1fr; gap: 1rem; }
     .en-bref__label { writing-mode: horizontal-tb; transform: none; font-size: 2rem; margin-bottom: .5rem; }
-    /* Photo visible sur mobile — sous le texte, format compact */
     .en-bref__photo { display: flex; flex-direction: row; align-items: center; gap: 1rem; margin-top: .75rem; }
     .en-bref__photo .photo-encart { width: 100px; height: 130px; flex-shrink: 0; border-radius: 4px 4px 0 0; }
     .en-bref__photo-caption { border-radius: 0 0 4px 4px; padding: .35rem .6rem; }
@@ -506,12 +418,10 @@
     .cta__inner { grid-template-columns: 1fr; gap: 1.5rem; }
     .footer { padding: 2rem 1.25rem; }
     .breadcrumb-wrap { padding: .6rem 1.25rem; }
-    /* Pas de curseur custom sur mobile */
     #cursor { display: none; }
     body { cursor: auto; }
     a, button, [role="button"] { cursor: pointer !important; }
 
-    /* ── Tablette (≥ 560px) ── */
     @media (min-width: 560px) {
       .nav { padding: 0 1.75rem; }
       .nav__right { gap: 1.5rem; }
@@ -538,7 +448,6 @@
       .footer { padding: 2.5rem 1.75rem; }
     }
 
-    /* ── Desktop (≥ 900px) ── */
     @media (min-width: 900px) {
       .nav { padding: 0 2.5rem; }
       .hero { grid-template-columns: 1fr 320px; padding: 5rem 2.5rem 0; gap: 0 4rem; }
@@ -562,7 +471,6 @@
       .cta__inner { grid-template-columns: 1fr auto; gap: 2rem 4rem; }
       .footer { padding: 3rem 2.5rem; }
       .breadcrumb-wrap { padding: .75rem 2.5rem; }
-      /* Curseur custom réactivé sur desktop */
       #cursor { display: block; }
       body { cursor: none; }
       a, button, [role="button"], .card, .membre,
@@ -579,9 +487,8 @@
 <nav class="nav" aria-label="Navigation principale">
   <a href="/" class="nav__logo">NEURO<i>BREAK</i>™</a>
   <div class="nav__right">
-    <a href="/systeme-marketing-b2b-quebec" class="nav__pill">20 territoires →</a>
+    <a href="/francophonie-systeme-marketing-b2b" class="nav__pill">Système complet →</a>
 
-    <!-- SWITCH DARK / LIGHT -->
     <button class="theme-switch" id="themeSwitch" aria-label="Basculer thème clair/sombre">
       <span class="theme-switch__icon theme-switch__icon--sun" aria-hidden="true">☀️</span>
       <span class="theme-switch__track"><span class="theme-switch__dot"></span></span>
@@ -596,59 +503,57 @@
 <div class="breadcrumb-wrap">
   <ol class="breadcrumb" aria-label="Fil d'Ariane">
     <li><a href="/">Accueil</a></li>
-    <li>Architecture B2B francophone</li>
+    <li><a href="/francophonie-systeme-marketing-b2b">Système B2B</a></li>
+    <li>Marketing fragmenté PME</li>
   </ol>
 </div>
 
-<!-- ══ HERO — V3 original ══ -->
+<!-- ══ HERO ══ -->
 <header class="hero" id="top">
   <div class="hero__left">
-    <div class="hero__tag">NeuroBreak™ Studio — Système B2B Francophone</div>
+    <div class="hero__tag">NeuroBreak™ Studio — Pilier 01 · Diagnostic</div>
     <h1 class="hero__h1">
-      ARCHI<br />
-      <span class="rouge">TECTURE</span><br />
-      <span class="fin">marketing B2B</span>
+      MARKE<br />
+      <span class="rouge">TING</span><br />
+      <span class="fin">fragmenté PME</span>
     </h1>
     <p class="hero__statement">
-      Votre marketing n'est pas inefficace.<br />
-      Il est fragmenté.<br />
-      Ce n'est pas la même chose.
+      Le problème n'est pas visible.<br />
+      C'est une absence de structure,<br />
+      pas un manque d'effort.
     </p>
   </div>
 
   <div class="hero__right">
     <p class="hero__meta-label">Auteur</p>
     <p class="hero__meta-val">Christophe Simon<br />Architecte stratégique</p>
-    <p class="hero__meta-label">Territoire</p>
-    <p class="hero__meta-val">Québec — Francophonie B2B</p>
+    <p class="hero__meta-label">Pilier</p>
+    <p class="hero__meta-val">01 — Diagnostic territorial</p>
     <p class="hero__meta-label">Système</p>
     <p class="hero__meta-val">Acquisition · Conversion · Orchestration</p>
     <ul class="hero__index" aria-label="Sommaire">
-      <li><span class="idx">01</span><a href="#probleme">Ce que la fragmentation coûte</a></li>
-      <li><span class="idx">02</span><a href="#leviers">Les trois leviers</a></li>
-      <li><span class="idx">03</span><a href="#francophonie">Francophonie B2B</a></li>
-      <li><span class="idx">04</span><a href="#territoires">Vingt territoires</a></li>
+      <li><span class="idx">01</span><a href="#fragmentation">Ce que fragmenté signifie</a></li>
+      <li><span class="idx">02</span><a href="#exposition">Pourquoi les PME B2B sont exposées</a></li>
+      <li><span class="idx">03</span><a href="#cout">Ce que ça coûte — en logique</a></li>
+      <li><span class="idx">04</span><a href="#piliers">Les trois piliers de l'architecture</a></li>
       <li><span class="idx">05</span><a href="#faq">Questions fréquentes</a></li>
     </ul>
   </div>
 </header>
 
-<!-- EN BREF + ZONE A — Photo Christophe à droite du texte -->
+<!-- EN BREF -->
 <div class="en-bref" id="en-bref">
   <div class="en-bref__inner">
     <p class="en-bref__label" aria-hidden="true">EN<br/>BREF</p>
-    <p class="en-bref__corps">NeuroBreak™ est un <strong>système d'architecture marketing B2B</strong> conçu pour les PME francophones. Il aligne trois leviers — acquisition YouTube structurée, réduction du cycle de vente, et orchestration centralisée — pour transformer un marketing dispersé en machine de croissance cohérente. <strong>L'enjeu n'est pas de publier plus.</strong> C'est de faire parler les bonnes pièces au bon moment, dans le bon ordre.</p>
+    <p class="en-bref__corps">Le marketing fragmenté, c'est l'état dans lequel les actions marketing d'une PME <strong>existent mais ne se coordonnent pas</strong>. Chaque outil, chaque canal, chaque initiative fonctionne dans sa propre logique — sans que l'ensemble produise une direction, un filtre, ou une machine cohérente. <strong>Ce n'est pas un problème de budget.</strong> C'est un problème d'architecture.</p>
 
-    <!-- ══ ZONE A — Photo Christophe ══
-         REMPLACER : ajoutez <img> juste après la balise ouvrante .photo-encart
-         <img src="christophe-simon.jpg"
-              alt="Christophe Simon — Architecte stratégique NeuroBreak™"
-              style="width:100%;height:100%;object-fit:cover;object-position:top center;" />
-         FORMAT : portrait 3/4, min. 480×640 px
-    ══ -->
     <div class="en-bref__photo">
       <div class="photo-encart" aria-label="Emplacement photo Christophe Simon">
-        <!-- ↓ VOTRE <img> ICI ↓ -->
+        <!-- ↓ VOTRE <img> ICI ↓
+             <img src="christophe-simon.jpg"
+                  alt="Christophe Simon — Architecte stratégique NeuroBreak™"
+                  style="width:100%;height:100%;object-fit:cover;object-position:top center;" />
+             FORMAT : portrait 3/4, min. 480×640 px -->
         <div class="photo-encart__placeholder">
           <span class="photo-encart__badge">Zone A</span>
           <p class="photo-encart__titre">Christophe Simon</p>
@@ -660,14 +565,13 @@
         <span class="en-bref__photo-caption__role">Architecte stratégique</span>
       </div>
     </div>
-
   </div>
 </div>
 
 <!-- TICKER -->
 <div class="ticker" aria-hidden="true">
   <div class="ticker__inner">
-    <span>ACQUISITION</span><span class="hl">·</span><span>CONVERSION</span><span class="hl">·</span><span>ORCHESTRATION</span><span class="hl">·</span><span>20 TERRITOIRES</span><span class="hl">·</span><span>B2B FRANCOPHONE</span><span class="hl">·</span><span>NEUROBREAK™</span><span class="hl">·</span><span>ACQUISITION</span><span class="hl">·</span><span>CONVERSION</span><span class="hl">·</span><span>ORCHESTRATION</span><span class="hl">·</span><span>20 TERRITOIRES</span><span class="hl">·</span><span>B2B FRANCOPHONE</span><span class="hl">·</span><span>NEUROBREAK™</span><span class="hl">·</span>
+    <span>MARKETING FRAGMENTÉ</span><span class="hl">·</span><span>ARCHITECTURE</span><span class="hl">·</span><span>PME B2B</span><span class="hl">·</span><span>ACQUISITION</span><span class="hl">·</span><span>CONVERSION</span><span class="hl">·</span><span>ORCHESTRATION</span><span class="hl">·</span><span>NEUROBREAK™</span><span class="hl">·</span><span>MARKETING FRAGMENTÉ</span><span class="hl">·</span><span>ARCHITECTURE</span><span class="hl">·</span><span>PME B2B</span><span class="hl">·</span><span>ACQUISITION</span><span class="hl">·</span><span>CONVERSION</span><span class="hl">·</span><span>ORCHESTRATION</span><span class="hl">·</span><span>NEUROBREAK™</span><span class="hl">·</span>
   </div>
 </div>
 
@@ -675,135 +579,154 @@
 <main>
 <div class="article-body">
 
-  <!-- §01 -->
-  <div class="block" id="probleme">
+  <!-- §01 — La réunion -->
+  <div class="block" id="fragmentation">
     <div class="block__num-wrap">
       <span class="block__ghost" aria-hidden="true">01</span>
       <span class="block__num">§ 01</span>
-      <span class="block__tag">Diagnostic<br />structural</span>
+      <span class="block__tag">Nommer<br />le problème</span>
     </div>
     <div class="block__content">
-      <h2 class="block__titre">Ce que la fragmentation<br /><em>coûte réellement</em></h2>
+      <h2 class="block__titre">Ce que "fragmenté"<br /><em>veut dire exactement</em></h2>
 
       <!-- ══ ZONE B — Photo contextuelle §01 ══
-           REMPLACER : ajoutez <img src="bureau.jpg" alt="Dirigeant"
-           style="width:100%;height:100%;object-fit:cover;object-position:center;" />
-           Suggestion Unsplash : "entrepreneur office", "business meeting"
+           REMPLACER par :
+           <img src="reunion.jpg" alt="Réunion marketing PME"
+                style="width:100%;height:100%;object-fit:cover;object-position:center;" />
            FORMAT : paysage 4/3, min. 640×480 px -->
       <div class="photo-inline">
         <div class="photo-encart" aria-label="Emplacement photo contextuelle">
-          <!-- ↓ VOTRE <img> ICI ↓ -->
           <div class="photo-encart__placeholder">
             <span class="photo-encart__badge">Zone B · §01</span>
-            <p class="photo-encart__titre">Ambiance bureau</p>
+            <p class="photo-encart__titre">Ambiance réunion</p>
             <p class="photo-encart__spec">Paysage 4/3 · 640×480 px</p>
           </div>
         </div>
-        <div class="photo-inline__caption">Contexte — le dirigeant face au problème</div>
+        <div class="photo-inline__caption">Le problème n'est pas visible en réunion</div>
       </div>
 
-      <p>Un dirigeant regarde son écran. Les chiffres sont corrects. Le site existe. La boîte LinkedIn est active. Une vidéo a été publiée le mois dernier. Il attend. Rien ne bouge vraiment.</p>
-      <p>Pas d'appels qualifiés. Pas de rendez-vous décisionnels. Juste du trafic qui passe, des vues qui s'accumulent, et ce sentiment diffus que quelque chose ne fonctionne pas — sans savoir exactement quoi.</p>
-      <p>Ce n'est pas un manque de contenu. Ce n'est pas un algorithme capricieux. C'est une architecture absente. Le marketing de cette PME fonctionne en silos. <a href="/marketing-fragmente-pme">Ce que la fragmentation produit structurellement dans une PME B2B</a> est rarement visible au premier regard.</p>
-      <ul class="liste" aria-label="Symptômes de fragmentation">
-        <li>Des leads entrent mais ne sont pas qualifiés en amont — chaque appel repart de zéro</li>
-        <li>Le contenu est publié mais ne filtre pas — il informe sans orienter</li>
-        <li>Le CRM est installé mais ne pilote rien — c'est une archive, pas un système</li>
-        <li>Les cycles s'allongent parce que la décision n'a jamais été préparée avant l'appel</li>
-        <li>La direction voit des chiffres, pas une trajectoire</li>
-      </ul>
+      <p>Il y a une réunion, quelque part. Un directeur marketing présente les résultats du trimestre. Les chiffres sont là. Le taux d'ouverture des emails. Les vues sur LinkedIn. Le trafic organique. Le nombre de leads entrants.</p>
+      <p>Tout le monde hoche la tête. Et pourtant, à la fin de la réunion, personne ne sait vraiment pourquoi les ventes n'avancent pas.</p>
+      <p>Ce n'est pas un manque d'effort. Ce n'est pas une mauvaise équipe. Ce n'est pas le marché. C'est la structure. Ou plutôt — son absence.</p>
+      <p>Une PME peut avoir un site correct, une présence LinkedIn active, des campagnes Google, une newsletter mensuelle, un CRM installé — et rester profondément fragmentée. Parce que la fragmentation ne se mesure pas à la quantité d'outils ou d'actions. Elle se mesure à leur cohérence.</p>
+      <p><a href="/francophonie-systeme-marketing-b2b">Ce que le système NeuroBreak™ cherche à construire</a> n'est pas une présence marketing plus dense — c'est une architecture où chaque action sert la suivante, où chaque outil parle aux autres, où le système global produit plus que la somme de ses parties.</p>
+
       <div class="clearfix"></div>
+
+      <p>Quand j'analyse une PME B2B, je cherche trois signaux précis.</p>
+      <ul class="liste" aria-label="Les trois signaux de diagnostic">
+        <li>Est-ce que l'acquisition filtre, ou est-ce qu'elle attire au hasard ?</li>
+        <li>Est-ce que la qualification se fait en amont de l'appel, ou pendant ?</li>
+        <li>Est-ce que les données circulent entre les outils, ou est-ce que chaque plateforme vit dans son propre silo ?</li>
+      </ul>
+
       <div class="pq">
-        <p class="pq__texte">« C'est un problème de cohérence, pas d'intensité. Ajouter plus de contenu, plus d'outils, plus d'appels ne résout rien tant que l'architecture sous-jacente reste fragmentée. »</p>
+        <p class="pq__texte">« Trois signaux. Un seul diagnostic : fragmenté. »</p>
         <p class="pq__src">Christophe Simon — NeuroBreak™ Studio</p>
       </div>
     </div>
   </div>
 
-  <!-- §02 -->
-  <div class="block" id="leviers">
+  <!-- §02 — Exposition PME -->
+  <div class="block" id="exposition">
     <div class="block__num-wrap">
       <span class="block__ghost" aria-hidden="true">02</span>
       <span class="block__num">§ 02</span>
+      <span class="block__tag">Pourquoi<br />les PME</span>
+    </div>
+    <div class="block__content">
+      <h2 class="block__titre">Pourquoi les PME B2B<br /><em>sont particulièrement exposées</em></h2>
+
+      <p>Les grandes entreprises ont des équipes dédiées à chaque fonction. Marketing de contenu. Demand gen. Sales enablement. Ops. Elles sont lentes — mais elles ont des structures qui forcent la coordination.</p>
+      <p>Les PME n'ont pas ces équipes. Elles ont des personnes qui portent plusieurs chapeaux, des outils achetés au fil des besoins, des processus construits par accumulation plutôt que par design. Le résultat naturel — pas le résultat d'une erreur — c'est la fragmentation.</p>
+      <p>Voici les formes qu'elle prend le plus souvent :</p>
+
+      <ul class="liste" aria-label="Formes de fragmentation en PME">
+        <li>Le contenu est produit sans intention de filtrage — il éduque sans orienter vers une décision</li>
+        <li>Le CRM enregistre mais ne pilote pas — c'est une mémoire, pas un système</li>
+        <li>Les campagnes génèrent du trafic sans qualification — les appels repartent de zéro</li>
+        <li>L'équipe commerciale compense avec de l'énergie ce que le système ne fait pas automatiquement</li>
+        <li>La direction pilote à l'intuition parce que les données ne donnent pas de trajectoire</li>
+      </ul>
+
+      <div class="pq">
+        <p class="pq__texte">« Aucun de ces symptômes n'est catastrophique seul. Ensemble, ils forment un plafond invisible. »</p>
+        <p class="pq__src">Christophe Simon — NeuroBreak™ Studio</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- §03 — Ce que ça coûte -->
+  <div class="block" id="cout">
+    <div class="block__num-wrap">
+      <span class="block__ghost" aria-hidden="true">03</span>
+      <span class="block__num">§ 03</span>
+      <span class="block__tag">Le coût<br />en logique</span>
+    </div>
+    <div class="block__content">
+      <h2 class="block__titre">Ce que la fragmentation coûte<br /><em>en logique, pas en chiffres</em></h2>
+
+      <!-- ══ ZONE D — Photo contextuelle §03 ══
+           REMPLACER par :
+           <img src="pipeline.jpg" alt="Pipeline commercial B2B"
+                style="width:100%;height:100%;object-fit:cover;object-position:center;" />
+           FORMAT : paysage 16/9, min. 640×360 px -->
+      <div class="photo-territoire">
+        <div class="photo-encart" aria-label="Emplacement photo pipeline">
+          <div class="photo-encart__placeholder">
+            <span class="photo-encart__badge">Zone C · §03</span>
+            <p class="photo-encart__titre">Pipeline & cycle de vente</p>
+            <p class="photo-encart__spec">16/9 · 640×360 px</p>
+          </div>
+        </div>
+        <div class="photo-territoire__caption">Cycle de vente — réduire avant l'appel</div>
+      </div>
+
+      <p>Je ne vais pas avancer un chiffre inventé sur le coût de la fragmentation. Ce serait intellectuellement malhonnête. Mais je peux décrire la logique.</p>
+      <p>Une PME qui convertit 3% de ses leads en clients avec un cycle moyen de 4 mois — et qui réduit ce cycle à 2,5 mois en structurant sa qualification en amont — ne fait pas juste "aller plus vite". Elle libère une capacité commerciale entière sur l'année.</p>
+      <p><a href="/reduction-cycle-vente-b2b">La réduction du cycle de vente B2B</a> n'est pas un objectif commercial. C'est une conséquence directe de l'architecture — quand le contenu prépare la décision, quand la qualification filtre en amont, quand le système fait le travail que l'équipe faisait manuellement.</p>
+      <div class="clearfix"></div>
+
+      <div class="pq">
+        <p class="pq__texte">« Ce n'est pas la force de vente qui est insuffisante. C'est le système qui lui demande de faire trop. »</p>
+        <p class="pq__src">Lounas — Vente & pipeline, NeuroBreak™ Studio</p>
+      </div>
+
+      <p>La fragmentation persiste parce qu'elle produit des résultats — juste pas à la hauteur des efforts. Une équipe fragmentée n'est pas une équipe qui ne travaille pas. C'est une équipe qui travaille beaucoup, obtient des résultats corrects, et n'arrive pas à comprendre pourquoi la croissance plafonne.</p>
+      <p><a href="/systeme-marketing-b2b-quebec">Dans le marché B2B québécois</a>, ce pattern est particulièrement fréquent. Les PME sont actives. Elles investissent. Elles essaient. Mais l'architecture n'est pas là — et sans elle, chaque effort repart de zéro.</p>
+    </div>
+  </div>
+
+  <!-- §04 — Les trois piliers -->
+  <div class="block" id="piliers">
+    <div class="block__num-wrap">
+      <span class="block__ghost" aria-hidden="true">04</span>
+      <span class="block__num">§ 04</span>
       <span class="block__tag">Architecture<br />système</span>
     </div>
     <div class="block__content">
-      <h2 class="block__titre">Les trois leviers<br /><em>du système</em></h2>
-      <p>Le modèle NeuroBreak™ repose sur trois piliers interdépendants. Chacun peut fonctionner seul. Mais c'est leur articulation qui produit une machine.</p>
+      <h2 class="block__titre">Les trois piliers<br /><em>de l'architecture</em></h2>
+      <p>Le modèle NeuroBreak™ répond à la fragmentation par trois leviers interdépendants. Chacun peut fonctionner seul. Mais c'est leur articulation qui produit une machine.</p>
       <div class="cards" role="list">
         <div class="card" role="listitem">
           <span class="card__num" aria-hidden="true">01</span>
           <p class="card__levier">Levier 01 — Acquisition</p>
-          <p class="card__titre">YouTube B2B structuré</p>
-          <p class="card__corps">YouTube n'est pas un canal de visibilité. C'est une infrastructure d'acquisition. <a href="/chaine-youtube-b2b-generation-leads">Comment structurer une chaîne YouTube B2B qui génère des leads qualifiés</a> — des décideurs qui arrivent à l'appel déjà orientés.</p>
+          <p class="card__titre">Infrastructure YouTube B2B</p>
+          <p class="card__corps"><a href="/chaine-youtube-b2b-generation-leads">Une infrastructure d'acquisition YouTube B2B</a> ne cherche pas la visibilité. Elle cherche à filtrer — à faire en sorte que seuls les prospects déjà alignés sur le problème arrivent dans le pipeline.</p>
         </div>
         <div class="card" role="listitem">
           <span class="card__num" aria-hidden="true">02</span>
           <p class="card__levier">Levier 02 — Conversion</p>
-          <p class="card__titre">Réduire le cycle avant l'appel</p>
-          <p class="card__corps">La plupart des cycles B2B trop longs ont la même cause. Le prospect arrive à l'appel sans avoir préparé la décision. <a href="/reduction-cycle-vente-b2b">Réduire un cycle de vente B2B trop long</a> commence rarement par la vente elle-même.</p>
+          <p class="card__titre">Qualification en amont</p>
+          <p class="card__corps"><a href="/systeme-marketing-centralise-pme">L'orchestration du système marketing</a> garantit que les données circulent, que les séquences s'enchaînent, et que chaque interaction s'appuie sur la précédente.</p>
         </div>
         <div class="card" role="listitem">
           <span class="card__num" aria-hidden="true">03</span>
-          <p class="card__levier">Levier 03 — Orchestration</p>
-          <p class="card__titre">Centraliser sans empiler</p>
-          <p class="card__corps">Centraliser ne veut pas dire installer un CRM. <a href="/systeme-marketing-centralise-pme">Ce que l'orchestration marketing signifie concrètement</a> — une architecture qui aligne les outils existants. La brique qui rend tout durable.</p>
+          <p class="card__levier">Levier 03 — Pilotage</p>
+          <p class="card__titre">Cohérence directionnelle</p>
+          <p class="card__corps">Quand les trois fonctions parlent le même langage, la direction cesse de piloter à l'intuition. Elle pilote à la trajectoire. Ce n'est pas une méthode — c'est une logique de construction.</p>
         </div>
       </div>
-    </div>
-  </div>
-
-  <!-- §03 -->
-  <div class="block" id="francophonie">
-    <div class="block__num-wrap">
-      <span class="block__ghost" aria-hidden="true">03</span>
-      <span class="block__num">§ 03</span>
-      <span class="block__tag">Contexte<br />marché</span>
-    </div>
-    <div class="block__content">
-      <h2 class="block__titre">Pourquoi la francophonie B2B<br /><em>est un terrain distinct</em></h2>
-
-      <!-- ══ ZONE D — Photo territoire §03 ══
-           REMPLACER : ajoutez <img src="quebec.jpg" alt="Québec"
-           style="width:100%;height:100%;object-fit:cover;object-position:center;" />
-           Sur les pages locales : photo de la ville concernée.
-           Unsplash : "Montréal skyline", "Québec city"
-           FORMAT : paysage 16/9, min. 640×360 px -->
-      <div class="photo-territoire">
-        <div class="photo-encart" aria-label="Emplacement photo territoire">
-          <!-- ↓ VOTRE <img> ICI ↓ -->
-          <div class="photo-encart__placeholder">
-            <span class="photo-encart__badge">Zone D · §03</span>
-            <p class="photo-encart__titre">Photo territoire Québec</p>
-            <p class="photo-encart__spec">16/9 · 640×360 px<br />Pages locales : photo de la ville</p>
-          </div>
-        </div>
-        <div class="photo-territoire__caption">Québec — 20 territoires, un système</div>
-      </div>
-
-      <p>Le marché B2B francophone ne fonctionne pas comme le marché anglophone. Les cycles décisionnels sont différents. La culture de preuve est différente. La relation au risque est différente.</p>
-      <p><a href="/systeme-marketing-b2b-quebec">La lecture stratégique du marché B2B québécois</a> révèle des tensions territoriales que la plupart des approches génériques ignorent complètement.</p>
-      <p>Au Québec, cette fenêtre est particulièrement ouverte. Les entreprises B2B sont majoritairement des PME. La concurrence sur les requêtes stratégiques reste faible. Les décideurs cherchent des architectes, pas des prestataires.</p>
-      <div class="clearfix"></div>
-      <div class="pq">
-        <p class="pq__texte">« NeuroBreak™ est une architecture. Elle demande une compréhension du contexte, une rigueur dans l'exécution, et une clarté sur ce que l'on veut construire — pas juste ce que l'on veut vendre. »</p>
-        <p class="pq__src">Christophe Simon</p>
-      </div>
-    </div>
-  </div>
-
-  <!-- §04 -->
-  <div class="block" id="territoires">
-    <div class="block__num-wrap">
-      <span class="block__ghost" aria-hidden="true">04</span>
-      <span class="block__num">§ 04</span>
-      <span class="block__tag">Déploiement<br />territorial</span>
-    </div>
-    <div class="block__content">
-      <h2 class="block__titre">Vingt territoires.<br /><em>Un système.</em></h2>
-      <p>Chaque territoire B2B francophone a ses propres tensions. Montréal n'a pas le même problème que Québec. Gatineau ne décide pas comme Sherbrooke. Rimouski n'a pas la même pression que Laval.</p>
-      <p><a href="/systeme-marketing-b2b-quebec">L'architecture territoriale complète du système NeuroBreak™</a> détaille comment chaque marché est abordé selon ses tensions économiques propres — pas selon un template générique.</p>
-      <p>Activez le diagnostic pour identifier où se situe votre fragmentation — et par quel levier commencer.</p>
     </div>
   </div>
 
@@ -816,29 +739,29 @@
     <div class="faq-q">
       <span class="faq-q__num">Q·01</span>
       <div class="faq-q__inner">
-        <p class="faq-q__q">Qu'est-ce que le marketing fragmenté, exactement&nbsp;?</p>
-        <p class="faq-q__r">C'est un état dans lequel les actions marketing existent mais ne se parlent pas. Chaque outil opère dans sa propre logique, sans que l'ensemble produise une trajectoire cohérente. Le résultat : des efforts réels, des résultats décevants.</p>
+        <p class="faq-q__q">Est-ce que toutes les PME sont concernées par la fragmentation&nbsp;?</p>
+        <p class="faq-q__r">La majorité, oui — pas parce qu'elles font mal leur travail, mais parce que la fragmentation est l'état naturel d'un marketing construit par accumulation plutôt que par design. C'est une question de structure, pas de compétence.</p>
       </div>
     </div>
     <div class="faq-q">
       <span class="faq-q__num">Q·02</span>
       <div class="faq-q__inner">
-        <p class="faq-q__q">Est-ce que ce système fonctionne pour les petites PME&nbsp;?</p>
-        <p class="faq-q__r">Oui — et souvent mieux que pour les grandes structures. Une PME n'a pas de silos organisationnels profonds. L'architecture peut être déployée rapidement, avec un impact visible plus tôt.</p>
+        <p class="faq-q__q">Comment savoir si mon marketing est fragmenté&nbsp;?</p>
+        <p class="faq-q__r">La question la plus simple : est-ce que votre contenu prépare la décision de vos prospects avant qu'ils vous contactent ? Si la réponse est non — ou incertaine — la fragmentation est probablement là.</p>
       </div>
     </div>
     <div class="faq-q">
       <span class="faq-q__num">Q·03</span>
       <div class="faq-q__inner">
-        <p class="faq-q__q">YouTube B2B, est-ce vraiment pertinent au Québec&nbsp;?</p>
-        <p class="faq-q__r">C'est précisément parce que peu d'acteurs B2B québécois l'utilisent stratégiquement que la fenêtre est ouverte. Le marché anglophone l'a compris depuis 3 à 5 ans. Le marché francophone commence à peine à s'y positionner.</p>
+        <p class="faq-q__q">La fragmentation est-elle liée à la taille de l'entreprise&nbsp;?</p>
+        <p class="faq-q__r">Elle est liée à la structure, pas à la taille. Une PME de 15 personnes peut avoir une architecture très cohérente. Une entreprise de 200 personnes peut être profondément fragmentée. Ce qui compte, c'est si les fonctions se parlent.</p>
       </div>
     </div>
     <div class="faq-q">
       <span class="faq-q__num">Q·04</span>
       <div class="faq-q__inner">
-        <p class="faq-q__q">Par où commencer si tout semble fragmenté&nbsp;?</p>
-        <p class="faq-q__r">En général par l'acquisition — c'est là que la fragmentation est la plus visible et que l'impact d'une structure est le plus rapide. Mais le diagnostic territorial précise l'ordre selon le contexte.</p>
+        <p class="faq-q__q">Par où commencer pour sortir de la fragmentation&nbsp;?</p>
+        <p class="faq-q__r">En général par l'acquisition — c'est là que la fragmentation est la plus visible et que l'impact d'une structure est le plus rapide. Le diagnostic précise l'ordre selon le contexte spécifique de votre PME.</p>
       </div>
     </div>
   </section>
@@ -847,7 +770,7 @@
   <div class="signature" aria-label="Signature de page">
     <span style="font-family:var(--f-mono);font-size:.6rem;color:var(--txt-4);letter-spacing:.1em;padding-top:.5rem;">Fin</span>
     <div>
-      <p class="signature__texte">UN SYSTÈME NE<br />CRIE PAS.<br /><span>IL ALIGNE.</span></p>
+      <p class="signature__texte">STRUCTURER<br />AVANT<br /><span>D'AMPLIFIER.</span></p>
     </div>
     <p class="signature__auteur">Christophe Simon — NeuroBreak™ Studio, Québec</p>
   </div>
@@ -863,13 +786,9 @@
     </div>
     <div class="equipe-grille" role="list">
 
-      <!-- E1 — CHRISTOPHE
-           REMPLACER : <img src="christophe.jpg" alt="Christophe Simon"
-           style="width:100%;height:100%;object-fit:cover;object-position:top center;" />
-           FORMAT : carré 1/1, min. 400×400 px -->
       <div class="membre membre--christophe" role="listitem">
         <div class="photo-encart" aria-label="Photo Christophe Simon">
-          <!-- ↓ VOTRE <img> ICI ↓ -->
+          <!-- ↓ <img src="christophe.jpg" alt="Christophe Simon" style="width:100%;height:100%;object-fit:cover;object-position:top center;" /> ↓ -->
           <div class="photo-encart__placeholder">
             <span class="photo-encart__badge">E1 · Christophe</span>
             <p class="photo-encart__titre">Christophe Simon</p>
@@ -885,13 +804,9 @@
         </div>
       </div>
 
-      <!-- E2 — OLIVIER
-           REMPLACER : <img src="olivier.jpg" alt="Olivier"
-           style="width:100%;height:100%;object-fit:cover;object-position:top center;" />
-           FORMAT : carré 1/1, min. 400×400 px -->
       <div class="membre membre--olivier" role="listitem">
         <div class="photo-encart" aria-label="Photo Olivier">
-          <!-- ↓ VOTRE <img> ICI ↓ -->
+          <!-- ↓ <img src="olivier.jpg" alt="Olivier" style="width:100%;height:100%;object-fit:cover;object-position:top center;" /> ↓ -->
           <div class="photo-encart__placeholder">
             <span class="photo-encart__badge">E2 · Olivier</span>
             <p class="photo-encart__titre">Olivier</p>
@@ -907,13 +822,9 @@
         </div>
       </div>
 
-      <!-- E3 — LOUNAS
-           REMPLACER : <img src="lounas.jpg" alt="Lounas"
-           style="width:100%;height:100%;object-fit:cover;object-position:top center;" />
-           FORMAT : carré 1/1, min. 400×400 px -->
       <div class="membre membre--lounas" role="listitem">
         <div class="photo-encart" aria-label="Photo Lounas">
-          <!-- ↓ VOTRE <img> ICI ↓ -->
+          <!-- ↓ <img src="lounas.jpg" alt="Lounas" style="width:100%;height:100%;object-fit:cover;object-position:top center;" /> ↓ -->
           <div class="photo-encart__placeholder">
             <span class="photo-encart__badge">E3 · Lounas</span>
             <p class="photo-encart__titre">Lounas</p>
@@ -942,7 +853,7 @@
       <h2 class="cta__titre">DIAGNOSTIC<br /><i>NeuroBreak™</i></h2>
       <p class="cta__sub">Identifiez où se situe votre fragmentation. Choisissez votre levier. Une conversation, une direction.</p>
     </div>
-    <a href="/cdn-cgi/l/email-protection#12717d7c66737166527c7767607d70607773793c71732d616770787771662f567b73757c7d61667b713720225c7767607d5060777379375720372a26375320" class="cta__btn">
+    <a href="mailto:contact@neurobreak.ca" class="cta__btn">
       DÉMARRER<span>le diagnostic →</span>
     </a>
   </div>
@@ -984,7 +895,7 @@
     cursor.style.left = e.clientX + 'px';
     cursor.style.top  = e.clientY + 'px';
   });
-  document.querySelectorAll('a, button, .card, .membre, .cta__btn, .nav__btn').forEach(el => {
+  document.querySelectorAll('a, button, .card, .cta__btn, .nav__btn').forEach(el => {
     el.addEventListener('mouseenter', () => cursor.classList.add('big'));
     el.addEventListener('mouseleave', () => cursor.classList.remove('big'));
   });
@@ -996,7 +907,7 @@
     bar.style.width = (h.scrollTop / (h.scrollHeight - h.clientHeight) * 100) + '%';
   });
 
-  /* ── Révélation au scroll — robuste ── */
+  /* ── Révélation au scroll ── */
   const blocks = document.querySelectorAll('.block');
   if ('IntersectionObserver' in window) {
     blocks.forEach(b => b.classList.add('anim-init'));
@@ -1010,7 +921,6 @@
       });
     }, { threshold: 0.05, rootMargin: '0px 0px -40px 0px' });
     blocks.forEach(b => io.observe(b));
-    /* Fallback 900ms */
     setTimeout(() => {
       blocks.forEach(b => {
         if (b.classList.contains('anim-init')) {
@@ -1026,7 +936,6 @@
   const btn  = document.getElementById('themeSwitch');
   const saved = localStorage.getItem('nb-theme') || 'light';
   html.setAttribute('data-theme', saved);
-
   btn.addEventListener('click', () => {
     const next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
     html.setAttribute('data-theme', next);
