@@ -1,4 +1,7 @@
 {
   "cleanUrls": true,
-  "trailingSlash": false
+  "trailingSlash": false,
+  "rewrites": [
+    { "source": "/francophonie-systeme-marketing-b2b", "destination": "/francophonie-systeme-marketing-b2b/index.html" }
+  ]
 }
