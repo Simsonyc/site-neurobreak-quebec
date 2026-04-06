@@ -1,0 +1,6 @@
+﻿cat > robots.txt << 'EOF'
+User-agent: *
+Allow: /
+Sitemap: https://neurobreak.ca/sitemap.xml
+EOF
+
