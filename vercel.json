@@ -1,7 +1,18 @@
 {
   "cleanUrls": true,
   "trailingSlash": false,
-  "rewrites": [
-    { "source": "/francophonie-systeme-marketing-b2b", "destination": "/francophonie-systeme-marketing-b2b/index.html" }
+  "routes": [
+    { "src": "/francophonie-systeme-marketing-b2b", "dest": "/francophonie-systeme-marketing-b2b/index.html" },
+    { "src": "/systeme-marketing-b2b-quebec", "dest": "/systeme-marketing-b2b-quebec/index.html" },
+    { "src": "/marketing-fragmente-pme", "dest": "/marketing-fragmente-pme/index.html" },
+    { "src": "/chaine-youtube-b2b-generation-leads", "dest": "/chaine-youtube-b2b-generation-leads/index.html" },
+    { "src": "/reduction-cycle-vente-b2b", "dest": "/reduction-cycle-vente-b2b/index.html" },
+    { "src": "/systeme-marketing-centralise-pme", "dest": "/systeme-marketing-centralise-pme/index.html" },
+    { "src": "/montreal-strategie-b2b", "dest": "/montreal-strategie-b2b/index.html" },
+    { "src": "/quebec-optimisation-b2b", "dest": "/quebec-optimisation-b2b/index.html" },
+    { "src": "/laval-export-b2b", "dest": "/laval-export-b2b/index.html" },
+    { "src": "/sherbrooke-traction-b2b", "dest": "/sherbrooke-traction-b2b/index.html" },
+    { "src": "/gatineau-conformite-b2b", "dest": "/gatineau-conformite-b2b/index.html" },
+    { "src": "/(.*)", "dest": "/$1" }
   ]
 }
