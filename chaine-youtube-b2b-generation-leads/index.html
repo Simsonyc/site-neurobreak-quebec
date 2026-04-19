@@ -997,23 +997,16 @@
   </div>
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
 <script>
-document.addEventListener('DOMContentLoaded', () => {
+  /* ── Curseur rond rouge ── */
   const cursor = document.getElementById('cursor');
-  if (!cursor) return;
-
   document.addEventListener('mousemove', e => {
     cursor.style.left = e.clientX + 'px';
-    cursor.style.top = e.clientY + 'px';
+    cursor.style.top  = e.clientY + 'px';
   });
-
   document.querySelectorAll('a, button, .card, .card-2, .membre, .cta__btn, .nav__btn').forEach(el => {
     el.addEventListener('mouseenter', () => cursor.classList.add('big'));
     el.addEventListener('mouseleave', () => cursor.classList.remove('big'));
-  });
-});
-</script>
   });
 
   /* ── Barre de progression ── */
@@ -1023,7 +1016,7 @@ document.addEventListener('DOMContentLoaded', () => {
     bar.style.width = (h.scrollTop / (h.scrollHeight - h.clientHeight) * 100) + '%';
   });
 
-  /* ── Révélation au scroll ── */
+  /* ── Révélation au scroll — robuste ── */
   const blocks = document.querySelectorAll('.block');
   if ('IntersectionObserver' in window) {
     blocks.forEach(b => b.classList.add('anim-init'));
@@ -1070,4 +1063,10 @@ document.addEventListener('DOMContentLoaded', () => {
               ? 'var(--vif)' : '';
           });
         }
-    
+      });
+    }, { rootMargin: '-40% 0px -40% 0px' });
+    document.querySelectorAll('[id]').forEach(s => ioNav.observe(s));
+  }
+</script>
+</body>
+</html>
