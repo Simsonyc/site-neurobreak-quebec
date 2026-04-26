@@ -123,6 +123,7 @@
     }
   </style>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-J0730CFBB3"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-J0730CFBB3");</script>
+<style>#nb-consent{position:fixed;bottom:0;left:0;right:0;z-index:99999;background:#141210;color:#F0EDE6;padding:1.25rem 2rem;display:flex;align-items:center;justify-content:space-between;gap:1.5rem;flex-wrap:wrap;border-top:2px solid #E63E1C;font-family:"IBM Plex Sans",system-ui,sans-serif;font-size:.82rem;line-height:1.5}#nb-consent p{margin:0;flex:1;min-width:200px;color:rgba(240,237,230,.8)}#nb-consent a{color:#E63E1C;text-decoration:underline}#nb-consent .nb-btns{display:flex;gap:.75rem;flex-shrink:0}#nb-consent .nb-accept{background:#E63E1C;color:#fff;border:none;cursor:pointer;font-family:"Bebas Neue",sans-serif;font-size:.95rem;letter-spacing:.08em;padding:.5rem 1.25rem}#nb-consent .nb-refuse{background:transparent;color:rgba(240,237,230,.6);border:1px solid rgba(240,237,230,.2);cursor:pointer;font-family:"IBM Plex Mono",monospace;font-size:.72rem;letter-spacing:.06em;padding:.5rem 1rem}#nb-consent .nb-accept:hover{background:#c43318}#nb-consent .nb-refuse:hover{color:#F0EDE6;border-color:rgba(240,237,230,.5)}</style>
 </head>
 <body>
 
@@ -274,5 +275,6 @@ Délai de réponse : 30 jours maximum.</p>
     el.addEventListener("mouseleave", () => cursor.classList.remove("big"));
   });
 </script>
+<div id="nb-consent"><p>Nous utilisons des cookies analytiques (Google Analytics) pour mesurer l'audience de ce site. Aucune donnée n'est revendue. <a href="/politique-confidentialite">En savoir plus</a></p><div class="nb-btns"><button class="nb-refuse" onclick="nbRefuse()">Refuser</button><button class="nb-accept" onclick="nbAccept()">Accepter</button></div></div><script>(function(){var c=localStorage.getItem("nb-consent");if(c==="accepted"){nbLoadGA();var b=document.getElementById("nb-consent");if(b)b.style.display="none";}else if(c==="refused"){document.getElementById("nb-consent").style.display="none";}})();function nbAccept(){localStorage.setItem("nb-consent","accepted");document.getElementById("nb-consent").style.display="none";nbLoadGA();}function nbRefuse(){localStorage.setItem("nb-consent","refused");document.getElementById("nb-consent").style.display="none";}function nbLoadGA(){var s=document.createElement("script");s.async=true;s.src="https://www.googletagmanager.com/gtag/js?id=G-J0730CFBB3";document.head.appendChild(s);window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-J0730CFBB3");}</script>
 </body>
 </html>
