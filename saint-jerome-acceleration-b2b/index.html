@@ -1,0 +1,895 @@
+<!DOCTYPE html>
+
+<html data-theme="light" lang="fr">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Système marketing B2B Saint-Jérôme — accélération PME Laurentides</title>
+<meta content="À Saint-Jérôme, la croissance démographique est là. L'infrastructure commerciale B2B, pas encore. NeuroBreak™ structure l'acquisition pour les PME des Laurentides." name="description"/>
+<link href="https://neurobreak.ca/saint-jerome-acceleration-b2b" rel="canonical"/>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Accueil","item":"https://neurobreak.ca/"},{"@type":"ListItem","position":2,"name":"Système marketing B2B au Québec","item":"https://neurobreak.ca/systeme-marketing-b2b-quebec"},{"@type":"ListItem","position":3,"name":"Saint-Jérôme — Accélération B2B","item":"https://neurobreak.ca/saint-jerome-acceleration-b2b"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Système marketing B2B à Saint-Jérôme — accélérer quand la croissance démographique dépasse l'infrastructure commerciale","author":{"@type":"Person","name":"Christophe Simon"},"publisher":{"@type":"Organization","name":"NeuroBreak™ Studio","url":"https://neurobreak.ca"}}</script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&amp;family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,700;0,9..144,900;1,9..144,300;1,9..144,700&amp;family=IBM+Plex+Mono:wght@400;500&amp;family=IBM+Plex+Sans:wght@300;400;500&amp;display=swap" rel="stylesheet"/>
+<style>
+    /* ══ RESET ══ */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    /* ══════════════════════════════════════════════════════
+       PALETTES DARK / LIGHT
+       L'accent rouge-orange --vif reste fixe dans les deux thèmes.
+       Le fond, le texte et les lignes basculent.
+    ══════════════════════════════════════════════════════ */
+    :root {
+      --vif:       #E63E1C;
+      --vif-pale:  rgba(230,62,28,0.08);
+      --vif-dark:  rgba(230,62,28,0.15);
+      --f-display: 'Bebas Neue', sans-serif;
+      --f-serif:   'Fraunces', Georgia, serif;
+      --f-mono:    'IBM Plex Mono', monospace;
+      --f-sans:    'IBM Plex Sans', system-ui, sans-serif;
+      --max:       1200px;
+      --trans:     background .3s ease, color .3s ease, border-color .3s ease;
+    }
+
+    /* THÈME LIGHT (défaut — V3 originale) */
+    [data-theme="light"] {
+      --bg:        #F8F6F1;
+      --bg-2:      #EDEAE2;
+      --bg-3:      #D8D4C8;
+      --txt:       #141210;
+      --txt-2:     #2A2722;
+      --txt-3:     #504B44;
+      --txt-4:     #8C8579;
+      --ligne:     #D0CBC0;
+      --ligne-2:   #D8D4C8;
+      --nav-bg:    #F8F6F1;
+      --encart-bg: #141210;   /* EN BREF, ticker, footer : toujours sombre */
+      --card-bg:   transparent;
+      --card-hover:#EDEAE2;
+      --ghost:     #EDEAE2;
+      --pq-bg:     rgba(230,62,28,0.08);
+      --cta-bg:    #EDEAE2;
+      --cta-border:#141210;
+      --cta-txt:   #141210;
+      --switch-bg: #D0CBC0;
+      --switch-dot:#141210;
+    }
+
+    /* THÈME DARK */
+    [data-theme="dark"] {
+      --bg:        #141210;
+      --bg-2:      #1E1C18;
+      --bg-3:      #2A2722;
+      --txt:       #F0EDE6;
+      --txt-2:     #D4CFC8;
+      --txt-3:     #A09890;
+      --txt-4:     #6A6258;
+      --ligne:     #3A3530;
+      --ligne-2:   #2A2722;
+      --nav-bg:    #0E0D0B;
+      --encart-bg: #0E0D0B;
+      --card-bg:   rgba(255,255,255,.03);
+      --card-hover:rgba(255,255,255,.06);
+      --ghost:     rgba(255,255,255,.05);
+      --pq-bg:     rgba(230,62,28,0.10);
+      --cta-bg:    #1E1C18;
+      --cta-border:#E63E1C;
+      --cta-txt:   #F0EDE6;
+      --switch-bg: #3A3530;
+      --switch-dot:#E63E1C;
+    }
+
+    /* ══ SWITCH ══ */
+    .theme-switch {
+      display: flex; align-items: center; gap: .5rem;
+      background: none; border: none; padding: 0;
+      cursor: pointer !important;
+    }
+    .theme-switch__icon { font-size: .85rem; line-height: 1; user-select: none; transition: opacity .3s; }
+    [data-theme="light"] .theme-switch__icon--sun  { opacity: 1; }
+    [data-theme="light"] .theme-switch__icon--moon { opacity: .3; }
+    [data-theme="dark"]  .theme-switch__icon--sun  { opacity: .3; }
+    [data-theme="dark"]  .theme-switch__icon--moon { opacity: 1; }
+    .theme-switch__track {
+      position: relative; width: 34px; height: 19px;
+      background: var(--switch-bg); border-radius: 10px;
+      flex-shrink: 0; transition: background .3s;
+    }
+    .theme-switch__dot {
+      position: absolute; top: 3px; left: 3px;
+      width: 13px; height: 13px; border-radius: 50%;
+      background: var(--switch-dot); transition: transform .3s, background .3s;
+    }
+    [data-theme="dark"] .theme-switch__dot { transform: translateX(15px); }
+
+    /* ══ CURSEUR ══ */
+    /* Curseur custom — body seulement, éléments interactifs gardent pointer */
+    body { cursor: none; }
+    a, button, [role="button"], .card, .membre, .nav__btn, .cta__btn,
+    .theme-switch, .theme-switch * { cursor: pointer !important; }
+    #cursor {
+      position: fixed; width: 10px; height: 10px;
+      background: var(--vif); border-radius: 50%;
+      pointer-events: none; z-index: 9999;
+      transform: translate(-50%,-50%);
+      transition: width .25s, height .25s, opacity .2s;
+    }
+    #cursor.big { width: 48px; height: 48px; opacity: .5; }
+
+    /* ══ BARRE PROGRESSION ══ */
+    #progress-bar {
+      position: fixed; top: 0; left: 0;
+      height: 3px; width: 0%;
+      background: var(--vif); z-index: 200; transition: width .1s linear;
+    }
+
+    /* ══ BASE ══ */
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--bg); color: var(--txt);
+      font-family: var(--f-sans);
+      font-size: clamp(.95rem, 1vw, 1.05rem);
+      line-height: 1.78; -webkit-font-smoothing: antialiased; overflow-x: hidden;
+      transition: var(--trans);
+    }
+    a { color: var(--vif); text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 1px; transition: opacity .15s; }
+    a:hover { opacity: .72; }
+    p { margin-bottom: 1.35rem; color: var(--txt-2); transition: color .3s; }
+    p:last-child { margin-bottom: 0; }
+    strong { color: var(--txt); font-weight: 500; }
+
+    /* ══════════════════════════════════════════════
+       ENCART PHOTO — identique à la V5
+    ══════════════════════════════════════════════ */
+    .photo-encart {
+      position: relative; overflow: hidden;
+      background: #2A2722; border: 1px solid rgba(255,255,255,.08);
+    }
+    .photo-encart img {
+      width: 100%; height: 100%;
+      object-fit: cover; object-position: top center; display: block;
+    }
+    .photo-encart__placeholder {
+      position: absolute; inset: 0;
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      gap: .6rem; padding: 1rem; text-align: center;
+    }
+    .photo-encart:has(img) .photo-encart__placeholder { display: none; }
+    .photo-encart__badge {
+      display: inline-flex; align-items: center; gap: .4rem;
+      background: rgba(230,62,28,.15); border: 1px dashed rgba(230,62,28,.4);
+      padding: .25rem .6rem; border-radius: 2px;
+      font-family: var(--f-mono); font-size: .58rem;
+      letter-spacing: .1em; text-transform: uppercase; color: var(--vif);
+    }
+    .photo-encart__titre {
+      font-family: var(--f-sans); font-size: .75rem; font-weight: 500;
+      color: rgba(255,255,255,.7); line-height: 1.4;
+    }
+    .photo-encart__spec {
+      font-family: var(--f-mono); font-size: .56rem;
+      letter-spacing: .06em; color: rgba(255,255,255,.25); line-height: 1.7;
+    }
+    .photo-encart::after {
+      content: ''; position: absolute; bottom: 0; left: 0; right: 0;
+      height: 40%; background: linear-gradient(to top, rgba(20,18,16,.55), transparent);
+      pointer-events: none; opacity: 0; transition: opacity .3s;
+    }
+    .photo-encart:has(img)::after { opacity: 1; }
+
+    /* ══ NAVIGATION ══ */
+    .nav {
+      position: fixed; top: 3px; left: 0; right: 0; z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 2.5rem; height: 56px;
+      background: var(--nav-bg); border-bottom: 1px solid var(--ligne);
+      transition: background .3s, border-color .3s;
+    }
+    .nav__logo { font-family: var(--f-display); font-size: 1.4rem; letter-spacing: .08em; color: var(--txt); text-decoration: none; transition: color .3s; }
+    .nav__logo i { color: var(--vif); font-style: normal; }
+    .nav__right { display: flex; align-items: center; gap: 1.75rem; }
+    .nav__pill { font-family: var(--f-mono); font-size: .65rem; letter-spacing: .08em; color: var(--txt-4); text-decoration: none; transition: color .3s; }
+    .nav__pill:hover { color: var(--vif); opacity: 1; }
+    .nav__btn { font-family: var(--f-mono); font-size: .7rem; font-weight: 500; letter-spacing: .1em; text-transform: uppercase; color: var(--bg); background: var(--txt); padding: .55rem 1.25rem; text-decoration: none; transition: background .2s, color .2s; }
+    .nav__btn:hover { background: var(--vif); color: var(--bg); opacity: 1; }
+
+    /* ══ BREADCRUMB ══ */
+    .breadcrumb-wrap { margin-top: 59px; border-bottom: 1px solid var(--ligne); padding: .75rem 2.5rem; background: var(--bg-2); transition: var(--trans); }
+    .breadcrumb { display: flex; gap: .5rem; list-style: none; font-family: var(--f-mono); font-size: .68rem; color: var(--txt-4); max-width: var(--max); margin: 0 auto; }
+    .breadcrumb li + li::before { content: "/"; margin-right: .5rem; color: var(--bg-3); }
+    .breadcrumb a { color: var(--txt-4); text-decoration: none; }
+    .breadcrumb a:hover { color: var(--vif); opacity: 1; }
+
+    /* ══════════════════════════════════════════════
+       HERO — grille 2 colonnes avec photo à droite
+    ══════════════════════════════════════════════ */
+    .hero {
+      max-width: var(--max); margin: 0 auto;
+      padding: 5rem 2.5rem 3rem;
+      display: grid;
+      grid-template-columns: 1fr 280px;
+      gap: 0 4rem;
+      align-items: end;
+    }
+    .hero__left { }
+    .hero__tag {
+      display: inline-flex; align-items: center; gap: .6rem;
+      font-family: var(--f-mono); font-size: .65rem; letter-spacing: .12em; text-transform: uppercase;
+      color: var(--txt-4); margin-bottom: 1.5rem; transition: color .3s;
+    }
+    .hero__tag::before { content: ''; display: inline-block; width: 24px; height: 2px; background: var(--vif); }
+    .hero__h1 {
+      font-family: var(--f-display);
+      font-size: clamp(4rem, 8vw, 9rem); line-height: .92; letter-spacing: .01em;
+      color: var(--txt); margin-bottom: 2rem; transition: color .3s;
+    }
+    .hero__h1 .rouge { color: var(--vif); }
+    .hero__h1 .fin {
+      font-family: var(--f-serif); font-weight: 300; font-style: italic;
+      font-size: clamp(2.5rem, 5vw, 5.5rem); letter-spacing: -.01em;
+      display: block; line-height: 1.1; color: var(--txt-3); transition: color .3s;
+    }
+    .hero__statement {
+      font-family: var(--f-serif); font-size: clamp(1.1rem, 1.5vw, 1.35rem);
+      font-style: italic; font-weight: 300; color: var(--txt-3);
+      line-height: 1.55; max-width: 520px; margin-bottom: 0;
+      padding-left: 1.5rem; border-left: 2px solid var(--vif);
+      transition: color .3s;
+    }
+
+    /* ══ HERO — V3 original, sans photo (identique à la V3) ══ */
+    .hero {
+      max-width: var(--max); margin: 0 auto;
+      padding: 5rem 2.5rem 0;
+      display: grid;
+      grid-template-columns: 1fr 320px;
+      gap: 0 4rem;
+      align-items: start;
+    }
+    .hero__left { }
+    .hero__tag {
+      display: inline-flex; align-items: center; gap: .6rem;
+      font-family: var(--f-mono); font-size: .65rem; letter-spacing: .12em; text-transform: uppercase;
+      color: var(--txt-4); margin-bottom: 1.5rem; transition: color .3s;
+    }
+    .hero__tag::before { content: ''; display: inline-block; width: 24px; height: 2px; background: var(--vif); }
+    .hero__h1 {
+      font-family: var(--f-display);
+      font-size: clamp(4rem, 8vw, 9rem); line-height: .92; letter-spacing: .01em;
+      color: var(--txt); margin-bottom: 2rem; transition: color .3s;
+    }
+    .hero__h1 .rouge { color: var(--vif); }
+    .hero__h1 .fin {
+      font-family: var(--f-serif); font-weight: 300; font-style: italic;
+      font-size: clamp(2.5rem, 5vw, 5.5rem); letter-spacing: -.01em;
+      display: block; line-height: 1.1; color: var(--txt-3); transition: color .3s;
+    }
+    .hero__statement {
+      font-family: var(--f-serif); font-size: clamp(1.1rem, 1.5vw, 1.35rem);
+      font-style: italic; font-weight: 300; color: var(--txt-3);
+      line-height: 1.55; max-width: 520px; margin-bottom: 3rem;
+      padding-left: 1.5rem; border-left: 2px solid var(--vif);
+      transition: color .3s;
+    }
+    /* Panneau droit hero — méta + index (V3 original) */
+    .hero__right { padding-top: 1rem; border-left: 1px solid var(--ligne); padding-left: 2.5rem; transition: border-color .3s; }
+    .hero__meta-label { font-family: var(--f-mono); font-size: .6rem; letter-spacing: .14em; text-transform: uppercase; color: var(--txt-4); margin-bottom: .5rem; }
+    .hero__meta-val { font-family: var(--f-sans); font-size: .82rem; font-weight: 500; color: var(--txt); margin-bottom: 1.75rem; transition: color .3s; }
+    .hero__index { list-style: none; margin-top: 2rem; }
+    .hero__index li { display: flex; align-items: baseline; gap: .75rem; padding: .5rem 0; border-bottom: 1px solid var(--ligne-2); font-family: var(--f-mono); font-size: .7rem; color: var(--txt-4); transition: border-color .3s; }
+    .hero__index li span.idx { color: var(--vif); font-weight: 500; min-width: 1.5rem; }
+    .hero__index a { color: var(--txt-3); text-decoration: none; font-family: var(--f-sans); font-size: .78rem; transition: color .15s; }
+    .hero__index a:hover { color: var(--vif); opacity: 1; }
+
+    /* ══════════════════════════════════════════════
+       EN BREF — fond sombre fixe + ZONE A photo Christophe
+       La photo est dans la colonne droite du EN BREF
+    ══════════════════════════════════════════════ */
+    .en-bref { background: var(--encart-bg); padding: 2.5rem; margin: 4rem 0 0; }
+    .en-bref__inner {
+      max-width: var(--max); margin: 0 auto;
+      display: grid;
+      /* label vertical | texte | photo portrait */
+      grid-template-columns: auto 1fr 240px;
+      gap: 0 3rem;
+      align-items: center;
+    }
+    .en-bref__label { font-family: var(--f-display); font-size: 4rem; line-height: 1; color: var(--vif); letter-spacing: .05em; writing-mode: vertical-rl; text-orientation: mixed; transform: rotate(180deg); padding-bottom: .5rem; align-self: center; }
+    .en-bref__corps { font-family: var(--f-serif); font-size: clamp(1rem, 1.2vw, 1.15rem); font-weight: 300; color: rgba(248,246,241,.75); line-height: 1.75; margin-bottom: 0; }
+    .en-bref__corps strong { color: #F8F6F1; font-weight: 500; }
+
+    /* ══ ZONE A — Photo Christophe dans le EN BREF ══
+       REMPLACER le placeholder par :
+       <img src="christophe-simon.jpg"
+            alt="Christophe Simon — Architecte stratégique NeuroBreak™"
+            style="width:100%;height:100%;object-fit:cover;object-position:top center;" />
+       FORMAT : portrait 3/4, min. 480×640 px
+    ══ */
+    .en-bref__photo {
+      display: flex; flex-direction: column;
+      align-self: stretch;
+    }
+    .en-bref__photo .photo-encart {
+      flex: 1; width: 100%; min-height: 200px;
+      border-radius: 4px 4px 0 0; border-bottom: none;
+      border-color: rgba(255,255,255,.1);
+    }
+    .en-bref__photo-caption {
+      background: var(--vif); padding: .5rem .85rem;
+      display: flex; align-items: center; justify-content: space-between;
+      border-radius: 0 0 4px 4px;
+    }
+    .en-bref__photo-caption__name { font-family: var(--f-display); font-size: .85rem; letter-spacing: .08em; color: #fff; }
+    .en-bref__photo-caption__role { font-family: var(--f-mono); font-size: .52rem; letter-spacing: .08em; text-transform: uppercase; color: rgba(255,255,255,.75); }
+
+    /* ══ TICKER — fond sombre fixe ══ */
+    .ticker { background: var(--encart-bg); padding: .9rem 0; overflow: hidden; white-space: nowrap; border-top: 1px solid rgba(255,255,255,.06); }
+    .ticker__inner { display: inline-block; animation: ticker 28s linear infinite; }
+    .ticker__inner span { font-family: var(--f-display); font-size: 1rem; letter-spacing: .15em; color: rgba(248,246,241,.35); margin-right: 3rem; }
+    .ticker__inner span.hl { color: var(--vif); }
+    @keyframes ticker { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+    /* ══ CORPS ══ */
+    .article-body { max-width: var(--max); margin: 0 auto; padding: 0 2.5rem; }
+
+    /* ══ SECTIONS NUMÉROTÉES ══ */
+    .block {
+      display: grid; grid-template-columns: 120px 1fr; gap: 0 3rem;
+      padding: 5rem 0; border-bottom: 1px solid var(--ligne);
+      position: relative; opacity: 1; transition: border-color .3s;
+    }
+    .block.anim-init { opacity: 0; transform: translateY(24px); }
+    .block.visible   { opacity: 1; transform: translateY(0); transition: opacity .6s ease, transform .6s ease, border-color .3s; }
+
+    .block__num-wrap { position: relative; display: flex; flex-direction: column; align-items: flex-start; }
+    .block__ghost { font-family: var(--f-display); font-size: 8rem; line-height: 1; color: var(--ghost); letter-spacing: -.02em; position: absolute; top: -1rem; left: -1rem; z-index: 0; user-select: none; pointer-events: none; transition: color .3s; }
+    .block__num { font-family: var(--f-mono); font-size: .65rem; font-weight: 500; letter-spacing: .14em; color: var(--vif); position: relative; z-index: 1; margin-top: .5rem; }
+    .block__tag { font-family: var(--f-mono); font-size: .6rem; letter-spacing: .1em; text-transform: uppercase; color: var(--txt-4); margin-top: .5rem; position: relative; z-index: 1; line-height: 1.5; transition: color .3s; }
+    .block__content { }
+    .block__titre { font-family: var(--f-serif); font-size: clamp(1.6rem, 2.5vw, 2.2rem); font-weight: 700; color: var(--txt); line-height: 1.18; margin-bottom: 1.75rem; letter-spacing: -.01em; transition: color .3s; }
+    .block__titre em { font-style: italic; font-weight: 300; color: var(--txt-3); }
+
+    /* ══ ZONE B — Photo contextuelle §01 ══
+       REMPLACER par :
+       <img src="bureau.jpg" alt="Dirigeant"
+            style="width:100%;height:100%;object-fit:cover;" />
+    ══ */
+    .photo-inline { float: right; width: 260px; margin: 0 0 1.5rem 2.5rem; }
+    .photo-inline .photo-encart { width: 100%; aspect-ratio: 4/3; border-radius: 4px; border: 1px solid var(--ligne); }
+    .photo-inline__caption { padding: .4rem .7rem; background: var(--bg-2); border: 1px solid var(--ligne); border-top: none; border-radius: 0 0 4px 4px; font-family: var(--f-mono); font-size: .54rem; letter-spacing: .08em; text-transform: uppercase; color: var(--txt-4); transition: var(--trans); }
+    .clearfix::after { content: ''; display: table; clear: both; }
+
+    /* Pull quote */
+    .pq { margin: 2.5rem 0; padding: 2rem; background: var(--pq-bg); border-left: 4px solid var(--vif); transition: background .3s; }
+    .pq__texte { font-family: var(--f-serif); font-size: clamp(1.1rem, 1.5vw, 1.35rem); font-style: italic; font-weight: 300; color: var(--txt); line-height: 1.5; margin-bottom: .75rem; transition: color .3s; }
+    .pq__src { font-family: var(--f-mono); font-size: .62rem; letter-spacing: .1em; text-transform: uppercase; color: var(--txt-4); }
+
+    /* Cards */
+    .cards { display: grid; grid-template-columns: repeat(3,1fr); gap: 0; margin: 2rem 0; border: 1px solid var(--ligne); transition: border-color .3s; }
+    .card { padding: 2rem 1.75rem; border-right: 1px solid var(--ligne); position: relative; overflow: hidden; background: var(--card-bg); transition: background .25s, border-color .3s; }
+    .card:last-child { border-right: none; }
+    .card:hover { background: var(--card-hover); }
+    .card__num { font-family: var(--f-display); font-size: 4rem; line-height: 1; color: var(--ghost); position: absolute; top: .5rem; right: 1rem; letter-spacing: -.02em; transition: color .25s; }
+    .card:hover .card__num { color: var(--vif); opacity: .2; }
+    .card__levier { font-family: var(--f-mono); font-size: .6rem; letter-spacing: .12em; text-transform: uppercase; color: var(--vif); margin-bottom: .75rem; }
+    .card__titre { font-family: var(--f-serif); font-size: 1.05rem; font-weight: 700; color: var(--txt); margin-bottom: .75rem; line-height: 1.25; transition: color .3s; }
+    .card__corps { font-family: var(--f-sans); font-size: .82rem; color: var(--txt-3); line-height: 1.7; margin-bottom: 0; font-weight: 300; transition: color .3s; }
+
+    /* Liste */
+    .liste { list-style: none; margin: 1.5rem 0; border-top: 1px solid var(--ligne); }
+    .liste li { display: grid; grid-template-columns: 1.5rem 1fr; gap: 0 1rem; padding: .75rem 0; border-bottom: 1px solid var(--ligne-2); font-family: var(--f-sans); font-size: .88rem; color: var(--txt-3); font-weight: 300; line-height: 1.6; transition: color .3s, border-color .3s; }
+    .liste li::before { content: '↳'; color: var(--vif); font-size: .9rem; line-height: 1.6; }
+
+    /* ══ ZONE D — Photo territoire §03 ══
+       REMPLACER par :
+       <img src="quebec.jpg" alt="Québec"
+            style="width:100%;height:100%;object-fit:cover;" />
+       Sur les pages locales : photo de la ville.
+    ══ */
+    .photo-territoire { float: right; width: 300px; margin: 0 0 2rem 2.5rem; }
+    .photo-territoire .photo-encart { width: 100%; aspect-ratio: 16/9; border-radius: 4px; border: 1px solid var(--ligne); }
+    .photo-territoire__caption { padding: .4rem .7rem; background: var(--encart-bg); border-radius: 0 0 4px 4px; font-family: var(--f-mono); font-size: .54rem; letter-spacing: .08em; text-transform: uppercase; color: rgba(248,246,241,.4); }
+
+    /* FAQ */
+    .faq-block { padding: 5rem 0; border-bottom: 1px solid var(--ligne); }
+    .faq-block__header { display: grid; grid-template-columns: 120px 1fr; gap: 0 3rem; margin-bottom: 3rem; }
+    .faq-q { display: grid; grid-template-columns: 120px 1fr; gap: 0 3rem; padding: 1.5rem 0; border-top: 1px solid var(--ligne); }
+    .faq-q__num { font-family: var(--f-mono); font-size: .6rem; color: var(--txt-4); letter-spacing: .1em; padding-top: .2rem; }
+    .faq-q__inner { }
+    .faq-q__q { font-family: var(--f-serif); font-size: 1rem; font-weight: 700; color: var(--txt); margin-bottom: .6rem; transition: color .3s; }
+    .faq-q__r { font-family: var(--f-sans); font-size: .85rem; font-weight: 300; color: var(--txt-3); line-height: 1.72; margin-bottom: 0; transition: color .3s; }
+
+    /* Signature */
+    .signature { padding: 4rem 0 3rem; display: grid; grid-template-columns: 120px 1fr; gap: 0 3rem; border-bottom: 1px solid var(--ligne); }
+    .signature__label { font-family: var(--f-mono); font-size: .6rem; color: var(--txt-4); letter-spacing: .1em; text-transform: uppercase; }
+    .signature__texte { font-family: var(--f-display); font-size: clamp(2rem, 4vw, 4.5rem); line-height: 1; color: var(--txt); letter-spacing: .02em; transition: color .3s; }
+    .signature__texte span { color: var(--vif); }
+    .signature__auteur { font-family: var(--f-mono); font-size: .7rem; color: var(--txt-4); letter-spacing: .1em; margin-top: 1rem; grid-column: 2; }
+
+    /* ══════════════════════════════════════════════
+       SECTION ÉQUIPE — TRIO 3 COLONNES ÉGALES
+       Zones E1 · E2 · E3
+    ══════════════════════════════════════════════ */
+    .equipe-section { background: var(--encart-bg); padding: 4rem 2.5rem; margin-top: 0; }
+    .equipe-inner { max-width: var(--max); margin: 0 auto; }
+    .equipe-header { display: flex; align-items: baseline; gap: 1.5rem; margin-bottom: 2.5rem; }
+    .equipe-header__num { font-family: var(--f-mono); font-size: .65rem; color: var(--vif); letter-spacing: .14em; }
+    .equipe-header__titre { font-family: var(--f-display); font-size: clamp(2rem, 4vw, 3.5rem); color: #F8F6F1; letter-spacing: .04em; line-height: 1; }
+    .equipe-header__titre span { color: var(--vif); }
+    .equipe-grille { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.25rem; }
+
+    /* ══ ZONES E1/E2/E3 — Photos carrées ══
+       REMPLACER dans chaque .photo-encart :
+       <img src="NOM.jpg" alt="Prénom"
+            style="width:100%;height:100%;object-fit:cover;object-position:top center;" />
+    ══ */
+    .membre { display: flex; flex-direction: column; }
+    .membre .photo-encart { width: 100%; aspect-ratio: 1/1; border-radius: 4px 4px 0 0; border-bottom: none; }
+    .membre__bar { padding: .65rem 1rem; display: flex; align-items: center; justify-content: space-between; }
+    .membre--christophe .membre__bar { background: var(--vif); }
+    .membre--olivier    .membre__bar { background: #2A2722; border: 1px solid rgba(255,255,255,.1); }
+    .membre--lounas     .membre__bar { background: #504B44; }
+    .membre__name { font-family: var(--f-display); font-size: .95rem; letter-spacing: .07em; color: #fff; }
+    .membre--christophe .membre__name { color: #fff; }
+    .membre__role { font-family: var(--f-mono); font-size: .54rem; letter-spacing: .07em; text-transform: uppercase; color: rgba(255,255,255,.65); }
+    .membre__bio { padding: 1rem 1rem 1.25rem; background: #1E1C18; flex: 1; border: 1px solid rgba(255,255,255,.06); border-top: none; border-radius: 0 0 4px 4px; }
+    .membre__bio p { font-family: var(--f-sans); font-size: .78rem; font-weight: 300; color: rgba(248,246,241,.5); line-height: 1.65; margin-bottom: 0; }
+    .membre__bio strong { color: rgba(248,246,241,.8); font-weight: 500; }
+
+    /* CTA */
+    .cta { padding: 5rem 2.5rem; background: var(--cta-bg); border-top: 3px solid var(--cta-border); transition: var(--trans); }
+    .cta__inner { max-width: var(--max); margin: 0 auto; display: grid; grid-template-columns: 1fr auto; gap: 2rem 4rem; align-items: center; }
+    .cta__titre { font-family: var(--f-display); font-size: clamp(2.5rem, 4vw, 5rem); line-height: .95; color: var(--cta-txt); letter-spacing: .02em; margin-bottom: 1rem; transition: color .3s; }
+    .cta__titre i { font-family: var(--f-serif); font-style: italic; font-size: .65em; font-weight: 300; color: var(--txt-3); display: block; letter-spacing: -.01em; }
+    .cta__sub { font-family: var(--f-sans); font-size: .88rem; font-weight: 300; color: var(--txt-3); max-width: 380px; line-height: 1.7; margin-bottom: 0; }
+    .cta__btn { display: inline-flex; flex-direction: column; align-items: center; gap: .5rem; background: var(--vif); color: #fff; font-family: var(--f-display); font-size: 1.5rem; letter-spacing: .08em; padding: 1.5rem 2.5rem; text-decoration: none; white-space: nowrap; transition: background .2s, transform .15s; }
+    .cta__btn span { font-family: var(--f-mono); font-size: .6rem; letter-spacing: .12em; text-transform: uppercase; opacity: .7; }
+    .cta__btn:hover { background: var(--txt); opacity: 1; color: var(--bg); transform: translateY(-2px); }
+
+    /* Footer */
+    .footer { background: var(--encart-bg); padding: 3rem 2.5rem; }
+    .footer__inner { max-width: var(--max); margin: 0 auto; display: flex; flex-wrap: wrap; gap: 1.5rem 3rem; align-items: flex-start; justify-content: space-between; }
+    .footer__logo { font-family: var(--f-display); font-size: 2rem; letter-spacing: .08em; color: #F8F6F1; text-decoration: none; }
+    .footer__logo i { color: var(--vif); font-style: normal; }
+    .footer__nav { display: flex; flex-direction: column; gap: .5rem; list-style: none; }
+    .footer__nav a { font-family: var(--f-mono); font-size: .68rem; color: rgba(248,246,241,.45); text-decoration: none; letter-spacing: .06em; }
+    .footer__nav a:hover { color: var(--vif); opacity: 1; }
+    .footer__copy { width: 100%; font-family: var(--f-mono); font-size: .6rem; color: rgba(248,246,241,.25); letter-spacing: .06em; margin-top: 1rem; }
+
+    /* ══════════════════════════════════════════════
+       MOBILE FIRST — base = mobile, on monte ensuite
+    ══════════════════════════════════════════════ */
+
+    /* ── Base mobile (< 560px) ── */
+    .nav { padding: 0 1rem; }
+    .nav__right { gap: .75rem; }
+    /* Masquer "20 territoires" sur mobile — ne rentre pas */
+    .nav__pill { display: none; }
+    .hero { grid-template-columns: 1fr; padding: 3.5rem 1.25rem 0; gap: 0; }
+    .hero__left { }
+    .hero__right { border-left: none; padding-left: 0; border-top: 1px solid var(--ligne); padding-top: 1.5rem; margin-top: 1.5rem; transition: border-color .3s; }
+    .hero__h1 { font-size: clamp(3rem, 12vw, 4rem); }
+    .en-bref { padding: 1.75rem 1.25rem; margin-top: 2rem; }
+    /* Sur mobile : label horizontal + texte + photo dessous */
+    .en-bref__inner { grid-template-columns: 1fr; gap: 1rem; }
+    .en-bref__label { writing-mode: horizontal-tb; transform: none; font-size: 2rem; margin-bottom: .5rem; }
+    /* Photo visible sur mobile — sous le texte, format compact */
+    .en-bref__photo { display: flex; flex-direction: row; align-items: center; gap: 1rem; margin-top: .75rem; }
+    .en-bref__photo .photo-encart { width: 100px; height: 130px; flex-shrink: 0; border-radius: 4px 4px 0 0; }
+    .en-bref__photo-caption { border-radius: 0 0 4px 4px; padding: .35rem .6rem; }
+    .en-bref__photo-caption__role { display: none; }
+    .article-body { padding: 0 1.25rem; }
+    .block { grid-template-columns: 1fr; padding: 3rem 0; }
+    .block__num-wrap { flex-direction: row; align-items: center; gap: 1rem; margin-bottom: 1rem; }
+    .block__ghost { display: none; }
+    .block__tag { margin-top: 0; }
+    .cards { grid-template-columns: 1fr; }
+    .card { border-right: none; border-bottom: 1px solid var(--ligne); }
+    .card:last-child { border-bottom: none; }
+    .photo-inline, .photo-territoire { float: right; margin: 0 0 1.5rem 1.25rem; }
+    .photo-inline { width: 140px; }
+    .photo-territoire { width: 160px; }
+    .faq-block { padding: 3rem 0; }
+    .faq-block__header { grid-template-columns: 1fr; gap: 0; margin-bottom: 1.5rem; }
+    .faq-q { grid-template-columns: 1fr; gap: .25rem; padding: 1.25rem 0; }
+    .faq-q__num { padding-top: 0; }
+    .signature { grid-template-columns: 1fr; padding: 2.5rem 0; }
+    .signature__auteur { grid-column: 1; }
+    .equipe-section { padding: 2.5rem 1.25rem; }
+    .equipe-grille { grid-template-columns: 1fr; }
+    .cta { padding: 3rem 1.25rem; }
+    .cta__inner { grid-template-columns: 1fr; gap: 1.5rem; }
+    .footer { padding: 2rem 1.25rem; }
+    .breadcrumb-wrap { padding: .6rem 1.25rem; }
+    /* Pas de curseur custom sur mobile */
+    #cursor { display: none; }
+    body { cursor: auto; }
+    a, button, [role="button"] { cursor: pointer !important; }
+
+    /* ── Tablette (≥ 560px) ── */
+    @media (min-width: 560px) {
+      .nav { padding: 0 1.75rem; }
+      .nav__right { gap: 1.5rem; }
+      .nav__pill { display: inline; }
+      .hero { padding: 4rem 1.75rem 0; }
+      .hero__h1 { font-size: clamp(4rem, 10vw, 6rem); }
+      .en-bref { padding: 2rem 1.75rem; }
+      .en-bref__inner { grid-template-columns: auto 1fr; }
+      .en-bref__label { writing-mode: vertical-rl; transform: rotate(180deg); font-size: 3rem; }
+      .en-bref__photo { flex-direction: column; margin-top: 0; }
+      .en-bref__photo .photo-encart { width: 100%; height: auto; }
+      .en-bref__photo-caption__role { display: block; }
+      .article-body { padding: 0 1.75rem; }
+      .block { grid-template-columns: 80px 1fr; gap: 0 2rem; padding: 4rem 0; }
+      .block__num-wrap { flex-direction: column; align-items: flex-start; }
+      .block__ghost { display: block; font-size: 6rem; }
+      .faq-block__header { grid-template-columns: 80px 1fr; gap: 0 2rem; }
+      .faq-q { grid-template-columns: 80px 1fr; gap: 0 2rem; }
+      .signature { grid-template-columns: 80px 1fr; gap: 0 2rem; }
+      .signature__auteur { grid-column: 2; }
+      .equipe-grille { grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+      .equipe-section { padding: 3rem 1.75rem; }
+      .cta { padding: 4rem 1.75rem; }
+      .footer { padding: 2.5rem 1.75rem; }
+    }
+
+    /* ── Desktop (≥ 900px) ── */
+    @media (min-width: 900px) {
+      .nav { padding: 0 2.5rem; }
+      .hero { grid-template-columns: 1fr 320px; padding: 5rem 2.5rem 0; gap: 0 4rem; }
+      .hero__right { border-left: 1px solid var(--ligne); padding-left: 2.5rem; border-top: none; margin-top: 0; }
+      .hero__h1 { font-size: clamp(4rem, 8vw, 9rem); }
+      .en-bref { padding: 2.5rem; }
+      .en-bref__inner { grid-template-columns: auto 1fr 240px; gap: 0 3rem; }
+      .en-bref__label { font-size: 4rem; }
+      .en-bref__photo { display: flex; }
+      .article-body { padding: 0 2.5rem; }
+      .block { grid-template-columns: 120px 1fr; gap: 0 3rem; padding: 5rem 0; }
+      .block__ghost { font-size: 8rem; }
+      .faq-block__header { grid-template-columns: 120px 1fr; gap: 0 3rem; }
+      .faq-q { grid-template-columns: 120px 1fr; gap: 0 3rem; }
+      .signature { grid-template-columns: 120px 1fr; gap: 0 3rem; padding: 4rem 0 3rem; }
+      .equipe-section { padding: 4rem 2.5rem; }
+      .equipe-grille { gap: 1.25rem; }
+      .photo-inline { width: 260px; margin: 0 0 1.5rem 2.5rem; }
+      .photo-territoire { width: 300px; margin: 0 0 2rem 2.5rem; }
+      .cta { padding: 5rem 2.5rem; }
+      .cta__inner { grid-template-columns: 1fr auto; gap: 2rem 4rem; }
+      .footer { padding: 3rem 2.5rem; }
+      .breadcrumb-wrap { padding: .75rem 2.5rem; }
+      /* Curseur custom réactivé sur desktop */
+      #cursor { display: block; }
+      body { cursor: none; }
+      a, button, [role="button"], .card, .membre,
+      .nav__btn, .cta__btn, .theme-switch, .theme-switch * { cursor: pointer !important; }
+    }
+  </style>
+</head>
+<body>
+<div id="cursor"></div>
+<div aria-label="Progression de lecture" id="progress-bar" role="progressbar"></div>
+<!-- ══ NAVIGATION ══ -->
+<nav aria-label="Navigation principale" class="nav">
+<a class="nav__logo" href="/">NEURO<i>BREAK</i>™</a>
+<div class="nav__right">
+<a class="nav__pill" href="/systeme-marketing-b2b-quebec">Hub Québec →</a>
+<!-- SWITCH DARK / LIGHT -->
+<button aria-label="Basculer thème clair/sombre" class="theme-switch" id="themeSwitch">
+<span aria-hidden="true" class="theme-switch__icon theme-switch__icon--sun">☀️</span>
+<span class="theme-switch__track"><span class="theme-switch__dot"></span></span>
+<span aria-hidden="true" class="theme-switch__icon theme-switch__icon--moon">🌙</span>
+</button>
+<a class="nav__btn" href="#diagnostic">Diagnostic</a>
+</div>
+</nav>
+<!-- BREADCRUMB -->
+<div class="breadcrumb-wrap">
+<ol aria-label="Fil d'Ariane" class="breadcrumb">
+<li><a href="/">Accueil</a></li>
+<li><a href="/systeme-marketing-b2b-quebec">Système marketing B2B au Québec</a></li>
+<li>Saint-Jérôme — Accélération B2B</li>
+</ol>
+</div>
+<!-- ══ HERO — V3 original ══ -->
+<header class="hero" id="top">
+<div class="hero__left">
+<div class="hero__tag">NeuroBreak™ Studio — Accélération B2B à Saint-Jérôme</div>
+<h1 class="hero__h1">SAINT<br/><span class="rouge">-JÉRÔME</span><br/><span class="fin">accélération B2B</span></h1>
+<p class="hero__statement">La région croît<br/>plus vite que ses PME<br/>ne se structurent.</p>
+</div>
+<div class="hero__right">
+<p class="hero__meta-label">Auteur</p>
+<p class="hero__meta-val">Christophe Simon<br/>Architecte stratégique</p>
+<p class="hero__meta-label">Territoire</p>
+<p class="hero__meta-val">Saint-Jérôme — Laurentides</p>
+<p class="hero__meta-label">Levier dominant</p>
+<p class="hero__meta-val">Acquisition · Accélération structurée</p>
+<ul aria-label="Sommaire" class="hero__index">
+
+
+
+
+
+<li><span class="idx">01</span><a href="#croissance">La croissance qui dépasse la structure</a></li><li><span class="idx">02</span><a href="#laurentides">Ce que les Laurentides concentrent</a></li><li><span class="idx">03</span><a href="#acquisition">Ce que l'acquisition structurée change</a></li><li><span class="idx">04</span><a href="#territoire">Saint-Jérôme dans l'architecture B2B</a></li><li><span class="idx">05</span><a href="#faq">Questions fréquentes</a></li></ul>
+</div>
+</header>
+<!-- EN BREF + ZONE A — Photo Christophe à droite du texte -->
+<div class="en-bref" id="en-bref">
+<div class="en-bref__inner">
+<p aria-hidden="true" class="en-bref__label">EN<br/>BREF</p>
+<p class="en-bref__corps">Saint-Jérôme est la capitale administrative des Laurentides — une région de <strong>679 190 habitants</strong> avec un PIB de 30,3 G$. Les Laurentides affichent la plus forte croissance démographique prévue du Québec : +4,7% entre 2024 et 2029. Le taux de chômage régional est à 3,8% — parmi les plus bas. Les secteurs dominants : aéronautique, finance et assurances, services professionnels, fabrication. La tension dominante n'est pas le manque de marché — <strong>c'est l'absence d'infrastructure commerciale B2B à la hauteur de cette croissance.</strong> La région grossit. Les systèmes d'acquisition des PME, pas encore.</p>
+<div class="en-bref__photo">
+<div aria-label="Emplacement photo Christophe Simon" class="photo-encart">
+<div class="photo-encart__placeholder">
+<span class="photo-encart__badge">Zone A</span>
+<p class="photo-encart__titre">Christophe Simon</p>
+<p class="photo-encart__spec">Portrait 3/4<br/>480×640 px min.</p>
+</div>
+</div>
+<div class="en-bref__photo-caption">
+<span class="en-bref__photo-caption__name">CHRISTOPHE SIMON</span>
+<span class="en-bref__photo-caption__role">Architecte stratégique</span>
+</div>
+</div>
+</div>
+</div>
+<!-- TICKER -->
+<div aria-hidden="true" class="ticker">
+<div class="ticker__inner"><span>SAINT-JÉRÔME</span><span class="hl">·</span><span>LAURENTIDES</span><span class="hl">·</span><span>ACCÉLÉRATION B2B</span><span class="hl">·</span><span>ACQUISITION</span><span class="hl">·</span><span>CROISSANCE PME</span><span class="hl">·</span><span>NEUROBREAK™</span><span class="hl">·</span><span>SAINT-JÉRÔME</span><span class="hl">·</span><span>LAURENTIDES</span><span class="hl">·</span><span>ACCÉLÉRATION B2B</span><span class="hl">·</span><span>ACQUISITION</span><span class="hl">·</span><span>CROISSANCE PME</span><span class="hl">·</span><span>NEUROBREAK™</span><span class="hl">·</span></div>
+</div>
+<!-- ══ CORPS ══ -->
+<main>
+<div class="article-body">
+<!-- §01 -->
+<div class="block" id="croissance">
+<div class="block__num-wrap">
+<span aria-hidden="true" class="block__ghost">01</span>
+<span class="block__num">§ 01</span>
+<span class="block__tag">La croissance<br/>qui dépasse</span>
+</div>
+<div class="block__content"><h2 class="block__titre">Système marketing B2B à Saint-Jérôme — <em>accélérer quand la croissance démographique dépasse l'infrastructure commerciale</em></h2><div class="photo-inline"><div aria-label="Photo contextuelle Saint-Jérôme" class="photo-encart"><div class="photo-encart__placeholder"><span class="photo-encart__badge">Zone B · §01</span><p class="photo-encart__titre">Contexte Laurentides B2B</p><p class="photo-encart__spec">Paysage 4/3 · 640×480 px<br/>Saint-Jérôme — capitale d'une région en accélération</p></div></div><div class="photo-inline__caption">Contexte — Saint-Jérôme, capitale des Laurentides</div></div><p>Les Laurentides sont la région du Québec dont la croissance démographique sera la plus forte des cinq prochaines années. +4,7% entre 2024 et 2029 — alors que l'ensemble du Québec devrait reculer de 0,3%. Saint-Jérôme, capitale administrative de cette région, est au centre de cette dynamique.</p><p>Cette croissance n'est pas accidentelle. Elle reflète une attractivité réelle : qualité de vie, accessibilité à Montréal, marchés immobiliers encore abordables, économie diversifiée. Des familles, des travailleurs, des entrepreneurs s'installent dans les Laurentides. Le tissu économique s'épaissit. Les besoins en services professionnels, en conseil, en solutions B2B augmentent.</p><p>Mais cette croissance crée aussi une tension spécifique. Elle arrive plus vite que les PME locales ne se structurent commercialement. De nouveaux clients potentiels arrivent dans la région — mais les PME de Saint-Jérôme ne disposent pas encore des infrastructures d'acquisition qui leur permettraient de les capter systématiquement.</p><p>La croissance démographique génère de la demande. Elle ne génère pas automatiquement des clients. Il faut un système pour transformer l'une en l'autre.</p><p><a href="/marketing-fragmente-pme">La fragmentation marketing dans les PME des Laurentides</a> prend ici une forme particulière : ce n'est pas une fragmentation par stagnation, mais une fragmentation par débordement. Les PME répondent aux demandes qui viennent à elles. Elles n'ont pas encore bâti l'infrastructure qui leur permet d'aller chercher proactivement les opportunités que la croissance régionale génère.<div class="clearfix"></div></p></div>
+</div>
+
+<!-- §02 -->
+<div class="block" id="laurentides">
+<div class="block__num-wrap">
+<span aria-hidden="true" class="block__ghost">02</span>
+<span class="block__num">§ 02</span>
+<span class="block__tag">Ce que les<br/>Laurentides concentrent</span>
+</div>
+<div class="block__content"><h2 class="block__titre">Ce que les Laurentides <em>concentrent — et ce qui manque encore</em></h2><div class="photo-territoire"><div aria-label="Photo territoire Saint-Jérôme" class="photo-encart"><div class="photo-encart__placeholder"><span class="photo-encart__badge">Zone D · §02</span><p class="photo-encart__titre">Photo Saint-Jérôme</p><p class="photo-encart__spec">16/9 · 640×360 px<br/>Saint-Jérôme — Laurentides</p></div></div><div class="photo-territoire__caption">Saint-Jérôme — Laurentides B2B</div></div><p>La région des Laurentides concentre trois atouts B2B rarement réunis : une économie diversifiée, une croissance démographique soutenue, et une proximité immédiate avec le marché montréalais.</p><p>La diversification sectorielle est réelle. L'aéronautique représente un pôle manufacturier majeur — les Laurentides sont l'une des régions où la fabrication de matériel de transport pèse le plus lourd dans le PIB. La finance et les assurances constituent le premier secteur de l'économie régionale. Les services professionnels, la construction, le commerce — le tissu est dense et varié.</p><p>Mais cette diversité crée aussi une vulnérabilité. La région est identifiée comme l'une des plus exposées aux tarifs américains sur le secteur manufacturier. Les PME qui dépendent de commandes export vers les États-Unis font face à une incertitude structurelle qui rend la diversification de leur clientèle non seulement utile, mais urgente.</p><p>C'est ici qu'une infrastructure d'acquisition B2B structurée prend toute sa valeur. <a href="/chaine-youtube-b2b-generation-leads">Une infrastructure YouTube B2B</a> qui construit une autorité sectorielle en français, sur des requêtes précises, permet aux PME des Laurentides de diversifier leurs sources de clients — sans dépendre exclusivement des donneurs d'ordres américains ou des réseaux locaux existants.</p><p>Lounas l'observe dans les PME manufacturières qu'il accompagne : celles qui ont anticipé la diversification de leur pipeline avant la pression tarifaire ont des cycles de vente plus courts et des marges plus stables. Celles qui attendent sont dans une posture réactive. La fenêtre pour construire une infrastructure d'acquisition est ouverte — mais elle se referme à mesure que la pression s'installe.<div class="clearfix"></div></p></div>
+</div>
+
+<!-- §03 -->
+<div class="block" id="acquisition">
+<div class="block__num-wrap">
+<span aria-hidden="true" class="block__ghost">03</span>
+<span class="block__num">§ 03</span>
+<span class="block__tag">Ce que l'acquisition<br/>structurée change</span>
+</div>
+<div class="block__content"><h2 class="block__titre">Ce que l'acquisition structurée <em>change à Saint-Jérôme</em></h2><p>Elle transforme la croissance démographique régionale en pipeline commercial structuré. Au lieu d'attendre que les nouveaux arrivants et les nouveaux acteurs économiques des Laurentides trouvent la PME par hasard ou par recommandation — la PME les trouve. Par son contenu, par sa présence en ligne, par son autorité sur des sujets précis que ces acheteurs recherchent.</p><p><a href="/reduction-cycle-vente-b2b">Le cycle de vente se raccourcit mécaniquement</a> quand les prospects arrivent déjà informés. Un acheteur qui a regardé deux vidéos et lu un article avant de prendre contact n'est pas au début du cycle de vente. Il est au milieu. Le commercial confirme ce que le prospect a déjà décidé. Il conclut plus vite, avec moins d'efforts.</p><p>Dans un marché à 3,8% de chômage où recruter un commercial est difficile et coûteux, ce gain de capacité sans recrutement est particulièrement précieux. La PME de Saint-Jérôme qui structure son acquisition peut croître avec la région — sans avoir à embaucher proportionnellement à sa croissance.</p><p><a href="/systeme-marketing-centralise-pme">Un système marketing centralisé pour une PME des Laurentides</a> orchestre les contenus, les séquences et les signaux CRM pour que chaque prospect entrant soit qualifié, suivi et converti sans intervention manuelle à chaque étape. Olivier déploie cette infrastructure en respectant les contraintes spécifiques du marché régional — proximité relationnelle attendue, cycles de décision variables selon les secteurs, double marché local et montréalais à adresser simultanément.</p></div>
+</div>
+
+<!-- §04 -->
+<div class="block" id="territoire">
+<div class="block__num-wrap">
+<span aria-hidden="true" class="block__ghost">04</span>
+<span class="block__num">§ 04</span>
+<span class="block__tag">Saint-Jérôme<br/>dans l'architecture B2B</span>
+</div>
+<div class="block__content"><h2 class="block__titre">Saint-Jérôme <em>dans l'architecture territoriale NeuroBreak™</em></h2><p>Saint-Jérôme représente dans le système NeuroBreak™ le cas de figure des capitales régionales en accélération démographique — des villes dont le marché grossit plus vite que les systèmes commerciaux des PME locales ne se structurent.</p><p>Ce pattern se retrouve dans d'autres territoires du système : Terrebonne dans Lanaudière, Drummondville dans le Centre-du-Québec, Granby en Estrie. La logique est identique : la croissance est là, l'infrastructure d'acquisition ne suit pas encore.</p><p><a href="/systeme-marketing-b2b-quebec">Dans le système NeuroBreak™ au Québec</a>, Saint-Jérôme illustre comment une capitale régionale peut transformer sa croissance démographique en avantage commercial structurel — en bâtissant une présence d'acquisition qui capte les opportunités que la croissance génère, avant que des concurrents mieux structurés ne le fassent.</p></div>
+</div>
+
+<section class="faq-block" id="faq">
+<div class="faq-block__header">
+<span style="font-family:var(--f-mono);font-size:.6rem;color:var(--txt-4);letter-spacing:.1em;padding-top:.3rem;">§ 05</span>
+<h2 class="block__titre" style="margin-bottom:0;">Questions<br/><em>fréquentes</em></h2>
+</div>
+<div class="faq-q"><span class="faq-q__num">Q·01</span><div class="faq-q__inner"><p class="faq-q__q">Comment une PME de Saint-Jérôme peut-elle s'adresser à la fois au marché local des Laurentides et au marché montréalais ?</p><p class="faq-q__r">Par un contenu qui ne géolocalise pas l'expertise, mais la sectorise. Un contenu sur les enjeux d'une industrie précise — aéronautique, services financiers, construction — est pertinent pour un acheteur de Saint-Jérôme comme pour un de Montréal. La localisation géographique ne freine pas la visibilité en ligne. Elle la rend même crédible : une expertise ancrée localement avec une portée régionale est plus convaincante qu'une expertise générique sans ancrage.</p></div></div><div class="faq-q"><span class="faq-q__num">Q·02</span><div class="faq-q__inner"><p class="faq-q__q">Est-ce que la vulnérabilité aux tarifs américains devrait pousser les PME manufacturières des Laurentides à accélérer leur structuration commerciale ?</p><p class="faq-q__r">Oui — et c'est une fenêtre d'opportunité, pas seulement une contrainte. Les PME qui diversifient leur pipeline client avant la pression tarifaire entrent dans un contexte difficile avec des options. Celles qui attendent se retrouvent à structurer leur acquisition en mode urgence, avec moins de temps et plus de pression. La structuration commerciale est un investissement qui se rentabilise d'autant plus vite quand le marché devient moins prévisible.</p></div></div><div class="faq-q"><span class="faq-q__num">Q·03</span><div class="faq-q__inner"><p class="faq-q__q">Combien de temps pour qu'une PME des Laurentides devienne visible en ligne sur ses sujets cibles ?</p><p class="faq-q__r">Entre 3 et 6 mois pour les premiers signaux organiques. En B2B francophone québécois, la compétition reste faible sur la grande majorité des niches sectorielles. Les Laurentides n'ont pas encore de PME qui occupent sérieusement ces terrains de contenu. La première qui s'y positionne avec rigueur bénéficie d'un avantage structurel durable — d'autant plus précieux dans une région en forte croissance démographique.</p></div></div></section>
+
+<div aria-label="Signature de page" class="signature">
+<span style="font-family:var(--f-mono);font-size:.6rem;color:var(--txt-4);letter-spacing:.1em;padding-top:.5rem;">Fin</span>
+<div>
+<p class="signature__texte">LA RÉGION CROÎT.<br/>LES SYSTÈMES D'ACQUISITION<br/><span>DES PME, PAS ENCORE.</span></p>
+</div>
+<p class="signature__auteur">Christophe Simon — NeuroBreak™ Studio, Québec</p>
+</div>
+
+</div><!-- /article-body -->
+<section class="equipe-section" id="equipe">
+<div class="equipe-inner">
+<div class="equipe-header">
+<span class="equipe-header__num">§ 06</span>
+<h2 class="equipe-header__titre">LE <span>TRIO</span></h2>
+</div>
+<div class="equipe-grille" role="list">
+<!-- E1 — CHRISTOPHE
+           REMPLACER : <img src="christophe.jpg" alt="Christophe Simon"
+           style="width:100%;height:100%;object-fit:cover;object-position:top center;" />
+           FORMAT : carré 1/1, min. 400×400 px -->
+<div class="membre membre--christophe" role="listitem">
+<div aria-label="Photo Christophe Simon" class="photo-encart">
+<!-- ↓ VOTRE <img> ICI ↓ -->
+<img src="/assets/christophe-simon.jpg" alt="Christophe Simon" style="width:100%;height:100%;object-fit:cover;object-position:top center;" />
+<img src="/assets/christophe-simon.jpg" alt="Christophe Simon" style="width:100%;height:100%;object-fit:cover;object-position:top center;" />
+<div class="photo-encart__placeholder">
+<span class="photo-encart__badge">E1 · Christophe</span>
+<p class="photo-encart__titre">Christophe Simon</p>
+<p class="photo-encart__spec">Carré 1/1 · 400×400 px</p>
+</div>
+</div>
+<div class="membre__bar">
+<span class="membre__name">C. SIMON</span>
+<span class="membre__role">Architecte stratégique</span>
+</div>
+<div class="membre__bio">
+<p>Voix principale du système. <strong>Architecte de l'approche SEO territoriale B2B</strong>, il conçoit les stratégies et signe chaque page.</p>
+</div>
+</div>
+<!-- E2 — OLIVIER
+           REMPLACER : <img src="olivier.jpg" alt="Olivier"
+           style="width:100%;height:100%;object-fit:cover;object-position:top center;" />
+           FORMAT : carré 1/1, min. 400×400 px -->
+<div class="membre membre--olivier" role="listitem">
+<div aria-label="Photo Olivier" class="photo-encart">
+<!-- ↓ VOTRE <img> ICI ↓ -->
+<img src="/assets/olivier.jpg" alt="Olivier" style="width:100%;height:100%;object-fit:cover;object-position:top center;" />
+<img src="/assets/olivier.jpg" alt="Olivier" style="width:100%;height:100%;object-fit:cover;object-position:top center;" />
+<div class="photo-encart__placeholder">
+<span class="photo-encart__badge">E2 · Olivier</span>
+<p class="photo-encart__titre">Olivier</p>
+<p class="photo-encart__spec">Carré 1/1 · 400×400 px</p>
+</div>
+</div>
+<div class="membre__bar">
+<span class="membre__name">OLIVIER</span>
+<span class="membre__role">Déploiement &amp; intégration</span>
+</div>
+<div class="membre__bio">
+<p>Responsable technique. <strong>Il déploie l'infrastructure d'acquisition pour le double marché</strong> — Laurentides local et montréalais, séquences calibrées sur les cycles sectoriels régionaux.</p>
+</div>
+</div>
+<!-- E3 — LOUNAS
+           REMPLACER : <img src="lounas.jpg" alt="Lounas"
+           style="width:100%;height:100%;object-fit:cover;object-position:top center;" />
+           FORMAT : carré 1/1, min. 400×400 px -->
+<div class="membre membre--lounas" role="listitem">
+<div aria-label="Photo Lounas" class="photo-encart">
+<!-- ↓ VOTRE <img> ICI ↓ -->
+<img src="/assets/lounas.jpg" alt="Lounas" style="width:100%;height:100%;object-fit:cover;object-position:top center;" />
+<img src="/assets/lounas.jpg" alt="Lounas" style="width:100%;height:100%;object-fit:cover;object-position:top center;" />
+<div class="photo-encart__placeholder">
+<span class="photo-encart__badge">E3 · Lounas</span>
+<p class="photo-encart__titre">Lounas</p>
+<p class="photo-encart__spec">Carré 1/1 · 400×400 px</p>
+</div>
+</div>
+<div class="membre__bar">
+<span class="membre__name">LOUNAS</span>
+<span class="membre__role">Vente &amp; pipeline</span>
+</div>
+<div class="membre__bio">
+<p>25 ans de management commercial international. <strong>Il structure les équipes et la pratique commerciale</strong> avec la lecture que seule l'expérience produit.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- CTA -->
+<div class="cta" id="diagnostic">
+<div class="cta__inner">
+<div>
+<h2 class="cta__titre">DIAGNOSTIC<br/><i>NeuroBreak™</i></h2>
+<p class="cta__sub">Identifiez comment transformer la croissance des Laurentides en pipeline commercial structuré. Une conversation, une direction, une infrastructure qui capte les opportunités.</p>
+</div>
+<a class="cta__btn" href="/cdn-cgi/l/email-protection#12717d7c66737166527c7767607d70607773793c71732d616770787771662f567b73757c7d61667b713720225c7767607d5060777379375720372a26375320">
+      DÉMARRER<span>le diagnostic →</span>
+</a>
+</div>
+</div>
+<!-- FOOTER -->
+<footer class="footer">
+<div class="footer__inner">
+<a class="footer__logo" href="/">NEURO<i>BREAK</i>™</a>
+<ul aria-label="Navigation" class="footer__nav">
+<li><a href="/marketing-fragmente-pme">Marketing fragmenté</a></li>
+<li><a href="/chaine-youtube-b2b-generation-leads">YouTube B2B</a></li>
+<li><a href="/reduction-cycle-vente-b2b">Cycle de vente</a></li>
+<li><a href="/systeme-marketing-centralise-pme">Orchestration</a></li>
+<li><a href="/systeme-marketing-b2b-quebec">Hub Québec</a></li>
+</ul>
+<ul aria-label="Territoires" class="footer__nav">
+<li><a href="/montreal-strategie-b2b">Montréal</a></li>
+<li><a href="/quebec-optimisation-b2b">Québec</a></li>
+<li><a href="/laval-export-b2b">Laval</a></li>
+<li><a href="/sherbrooke-traction-b2b">Sherbrooke</a></li>
+<li><a href="/gatineau-conformite-b2b">Gatineau</a></li>
+</ul>
+<p class="footer__copy">© 2026 NeuroBreak™ Studio — Christophe Simon. Tous droits réservés.</p>
+<p class="footer__copy" style="margin-top:.35rem;">
+<a href="/mentions-legales" style="color:rgba(248,246,241,.35);text-decoration:none;letter-spacing:.06em;font-family:var(--f-mono);font-size:.6rem;">Mentions légales</a>
+<span style="color:rgba(248,246,241,.15);margin:0 .75rem;">·</span>
+<a href="/politique-confidentialite" style="color:rgba(248,246,241,.35);text-decoration:none;letter-spacing:.06em;font-family:var(--f-mono);font-size:.6rem;">Politique de confidentialité</a>
+<span style="color:rgba(248,246,241,.15);margin:0 .75rem;">·</span>
+<a href="/rgpd" style="color:rgba(248,246,241,.35);text-decoration:none;letter-spacing:.06em;font-family:var(--f-mono);font-size:.6rem;">RGPD</a>
+</p>
+</div>
+</footer>
+<script>
+  /* ── Curseur rond rouge ── */
+  const cursor = document.getElementById('cursor');
+  document.addEventListener('mousemove', e => {
+    cursor.style.left = e.clientX + 'px';
+    cursor.style.top  = e.clientY + 'px';
+  });
+  document.querySelectorAll('a, button, .card, .membre, .cta__btn, .nav__btn').forEach(el => {
+    el.addEventListener('mouseenter', () => cursor.classList.add('big'));
+    el.addEventListener('mouseleave', () => cursor.classList.remove('big'));
+  });
+
+  /* ── Barre de progression ── */
+  const bar = document.getElementById('progress-bar');
+  window.addEventListener('scroll', () => {
+    const h = document.documentElement;
+    bar.style.width = (h.scrollTop / (h.scrollHeight - h.clientHeight) * 100) + '%';
+  });
+
+  /* ── Révélation au scroll — robuste ── */
+  const blocks = document.querySelectorAll('.block');
+  if ('IntersectionObserver' in window) {
+    blocks.forEach(b => b.classList.add('anim-init'));
+    const io = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.remove('anim-init');
+          e.target.classList.add('visible');
+          io.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.05, rootMargin: '0px 0px -40px 0px' });
+    blocks.forEach(b => io.observe(b));
+    /* Fallback 900ms */
+    setTimeout(() => {
+      blocks.forEach(b => {
+        if (b.classList.contains('anim-init')) {
+          b.classList.remove('anim-init');
+          b.classList.add('visible');
+        }
+      });
+    }, 900);
+  }
+
+  /* ── Switch dark / light ── */
+  const html = document.documentElement;
+  const btn  = document.getElementById('themeSwitch');
+  const saved = localStorage.getItem('nb-theme') || 'light';
+  html.setAttribute('data-theme', saved);
+
+  btn.addEventListener('click', () => {
+    const next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+    html.setAttribute('data-theme', next);
+    localStorage.setItem('nb-theme', next);
+  });
+
+  /* ── Nav index active ── */
+  const navLinks = document.querySelectorAll('.hero__index a');
+  if (navLinks.length) {
+    const ioNav = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          navLinks.forEach(a => {
+            a.style.color = a.getAttribute('href') === '#' + e.target.id
+              ? 'var(--vif)' : '';
+          });
+        }
+      });
+    }, { rootMargin: '-40% 0px -40% 0px' });
+    document.querySelectorAll('[id]').forEach(s => ioNav.observe(s));
+  }
+</script>
+</body>
+</html>
