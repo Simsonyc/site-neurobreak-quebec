@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Réduire un cycle de vente B2B trop long | NeuroBreak™</title>
-  <meta name="description" content="Votre cycle de vente B2B est trop long ? Structurez la qualification stratégique pour préparer la décision avant l'appel — et raccourcir durablement vos cycles." />
-  <link rel="canonical" href="https://neurobreak.ca/reduction-cycle-vente-b2b" />
+  <title>Marketing fragmenté PME : le vrai problème de croissance | NeuroBreak™</title>
+  <meta name="description" content="Vos actions marketing existent. Elles ne se parlent pas. Découvrez pourquoi le marketing fragmenté freine les PME B2B — et comment l'architecture change tout." />
+  <link rel="canonical" href="https://neurobreak.eu/marketing-fragmente-pme" />
 
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Accueil","item":"https://neurobreak.ca/"},{"@type":"ListItem","position":2,"name":"Réduire un cycle de vente B2B trop long","item":"https://neurobreak.ca/reduction-cycle-vente-b2b"}]}</script>
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Réduire un cycle de vente B2B trop long — l'architecture de conversion NeuroBreak™","author":{"@type":"Person","name":"Lounas"},"publisher":{"@type":"Organization","name":"NeuroBreak™ Studio","url":"https://neurobreak.ca"}}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Accueil","item":"https://neurobreak.eu/"},{"@type":"ListItem","position":2,"name":"Système marketing B2B","item":"https://neurobreak.eu/francophonie-systeme-marketing-b2b"},{"@type":"ListItem","position":3,"name":"Marketing fragmenté PME","item":"https://neurobreak.eu/marketing-fragmente-pme"}]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Marketing fragmenté PME — nommer le problème que personne ne voit","author":{"@type":"Person","name":"Christophe Simon"},"publisher":{"@type":"Organization","name":"NeuroBreak™ Studio","url":"https://neurobreak.ca"}}</script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -18,6 +18,9 @@
     /* ══ RESET ══ */
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
+    /* ══════════════════════════════════════════════════════
+       PALETTES DARK / LIGHT
+    ══════════════════════════════════════════════════════ */
     :root {
       --vif:       #E63E1C;
       --vif-pale:  rgba(230,62,28,0.08);
@@ -101,7 +104,7 @@
 
     /* ══ CURSEUR ══ */
     body { cursor: none; }
-    a, button, [role="button"], .card, .membre, .nav__btn, .cta__btn,
+    a, button, [role="button"], .card, .nav__btn, .cta__btn,
     .theme-switch, .theme-switch * { cursor: pointer !important; }
     #cursor {
       position: fixed; width: 10px; height: 10px;
@@ -134,7 +137,7 @@
     p:last-child { margin-bottom: 0; }
     strong { color: var(--txt); font-weight: 500; }
 
-    /* ══ ENCART PHOTO ══ */
+    /* ══ PHOTO ENCART ══ */
     .photo-encart {
       position: relative; overflow: hidden;
       background: #2A2722; border: 1px solid rgba(255,255,255,.08);
@@ -249,8 +252,6 @@
     .en-bref__label { font-family: var(--f-display); font-size: 4rem; line-height: 1; color: var(--vif); letter-spacing: .05em; writing-mode: vertical-rl; text-orientation: mixed; transform: rotate(180deg); padding-bottom: .5rem; align-self: center; }
     .en-bref__corps { font-family: var(--f-serif); font-size: clamp(1rem, 1.2vw, 1.15rem); font-weight: 300; color: rgba(248,246,241,.75); line-height: 1.75; margin-bottom: 0; }
     .en-bref__corps strong { color: #F8F6F1; font-weight: 500; }
-
-    /* ZONE A — Photo Lounas */
     .en-bref__photo {
       display: flex; flex-direction: column;
       align-self: stretch;
@@ -291,11 +292,10 @@
     .block__ghost { font-family: var(--f-display); font-size: 8rem; line-height: 1; color: var(--ghost); letter-spacing: -.02em; position: absolute; top: -1rem; left: -1rem; z-index: 0; user-select: none; pointer-events: none; transition: color .3s; }
     .block__num { font-family: var(--f-mono); font-size: .65rem; font-weight: 500; letter-spacing: .14em; color: var(--vif); position: relative; z-index: 1; margin-top: .5rem; }
     .block__tag { font-family: var(--f-mono); font-size: .6rem; letter-spacing: .1em; text-transform: uppercase; color: var(--txt-4); margin-top: .5rem; position: relative; z-index: 1; line-height: 1.5; transition: color .3s; }
-    .block__content { }
     .block__titre { font-family: var(--f-serif); font-size: clamp(1.6rem, 2.5vw, 2.2rem); font-weight: 700; color: var(--txt); line-height: 1.18; margin-bottom: 1.75rem; letter-spacing: -.01em; transition: color .3s; }
     .block__titre em { font-style: italic; font-weight: 300; color: var(--txt-3); }
 
-    /* Photo inline */
+    /* Photo inline flottante */
     .photo-inline { float: right; width: 260px; margin: 0 0 1.5rem 2.5rem; }
     .photo-inline .photo-encart { width: 100%; aspect-ratio: 4/3; border-radius: 4px; border: 1px solid var(--ligne); }
     .photo-inline__caption { padding: .4rem .7rem; background: var(--bg-2); border: 1px solid var(--ligne); border-top: none; border-radius: 0 0 4px 4px; font-family: var(--f-mono); font-size: .54rem; letter-spacing: .08em; text-transform: uppercase; color: var(--txt-4); transition: var(--trans); }
@@ -307,7 +307,7 @@
     .pq__src { font-family: var(--f-mono); font-size: .62rem; letter-spacing: .1em; text-transform: uppercase; color: var(--txt-4); }
 
     /* Cards */
-    .cards { display: grid; grid-template-columns: repeat(2,1fr); gap: 0; margin: 2rem 0; border: 1px solid var(--ligne); transition: border-color .3s; }
+    .cards { display: grid; grid-template-columns: repeat(3,1fr); gap: 0; margin: 2rem 0; border: 1px solid var(--ligne); transition: border-color .3s; }
     .card { padding: 2rem 1.75rem; border-right: 1px solid var(--ligne); position: relative; overflow: hidden; background: var(--card-bg); transition: background .25s, border-color .3s; }
     .card:last-child { border-right: none; }
     .card:hover { background: var(--card-hover); }
@@ -327,17 +327,6 @@
     .photo-territoire .photo-encart { width: 100%; aspect-ratio: 16/9; border-radius: 4px; border: 1px solid var(--ligne); }
     .photo-territoire__caption { padding: .4rem .7rem; background: var(--encart-bg); border-radius: 0 0 4px 4px; font-family: var(--f-mono); font-size: .54rem; letter-spacing: .08em; text-transform: uppercase; color: rgba(248,246,241,.4); }
 
-    /* Niveaux d'architecture — 3 colonnes spéciales */
-    .niveaux { display: grid; grid-template-columns: repeat(3,1fr); gap: 0; margin: 2rem 0; border: 1px solid var(--ligne); transition: border-color .3s; }
-    .niveau { padding: 2rem 1.75rem; border-right: 1px solid var(--ligne); position: relative; overflow: hidden; background: var(--card-bg); transition: background .25s, border-color .3s; }
-    .niveau:last-child { border-right: none; }
-    .niveau:hover { background: var(--card-hover); }
-    .niveau__num { font-family: var(--f-display); font-size: 4rem; line-height: 1; color: var(--ghost); position: absolute; top: .5rem; right: 1rem; letter-spacing: -.02em; transition: color .25s; }
-    .niveau:hover .niveau__num { color: var(--vif); opacity: .2; }
-    .niveau__label { font-family: var(--f-mono); font-size: .6rem; letter-spacing: .12em; text-transform: uppercase; color: var(--vif); margin-bottom: .75rem; }
-    .niveau__titre { font-family: var(--f-serif); font-size: 1.05rem; font-weight: 700; color: var(--txt); margin-bottom: .75rem; line-height: 1.25; transition: color .3s; }
-    .niveau__corps { font-family: var(--f-sans); font-size: .82rem; color: var(--txt-3); line-height: 1.7; margin-bottom: 0; font-weight: 300; transition: color .3s; }
-
     /* FAQ */
     .faq-block { padding: 5rem 0; border-bottom: 1px solid var(--ligne); }
     .faq-block__header { display: grid; grid-template-columns: 120px 1fr; gap: 0 3rem; margin-bottom: 3rem; }
@@ -352,7 +341,7 @@
     .signature__texte span { color: var(--vif); }
     .signature__auteur { font-family: var(--f-mono); font-size: .7rem; color: var(--txt-4); letter-spacing: .1em; margin-top: 1rem; grid-column: 2; }
 
-    /* Section équipe */
+    /* ══ SECTION ÉQUIPE ══ */
     .equipe-section { background: var(--encart-bg); padding: 4rem 2.5rem; margin-top: 0; }
     .equipe-inner { max-width: var(--max); margin: 0 auto; }
     .equipe-header { display: flex; align-items: baseline; gap: 1.5rem; margin-bottom: 2.5rem; }
@@ -360,7 +349,6 @@
     .equipe-header__titre { font-family: var(--f-display); font-size: clamp(2rem, 4vw, 3.5rem); color: #F8F6F1; letter-spacing: .04em; line-height: 1; }
     .equipe-header__titre span { color: var(--vif); }
     .equipe-grille { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.25rem; }
-
     .membre { display: flex; flex-direction: column; }
     .membre .photo-encart { width: 100%; aspect-ratio: 1/1; border-radius: 4px 4px 0 0; border-bottom: none; }
     .membre__bar { padding: .65rem 1rem; display: flex; align-items: center; justify-content: space-between; }
@@ -393,7 +381,7 @@
     .footer__nav a:hover { color: var(--vif); opacity: 1; }
     .footer__copy { width: 100%; font-family: var(--f-mono); font-size: .6rem; color: rgba(248,246,241,.25); letter-spacing: .06em; margin-top: 1rem; }
 
-    /* ══ MOBILE FIRST ══ */
+    /* ══ MOBILE ══ */
     .nav { padding: 0 1rem; }
     .nav__right { gap: .75rem; }
     .nav__pill { display: none; }
@@ -415,9 +403,6 @@
     .cards { grid-template-columns: 1fr; }
     .card { border-right: none; border-bottom: 1px solid var(--ligne); }
     .card:last-child { border-bottom: none; }
-    .niveaux { grid-template-columns: 1fr; }
-    .niveau { border-right: none; border-bottom: 1px solid var(--ligne); }
-    .niveau:last-child { border-bottom: none; }
     .photo-inline, .photo-territoire { float: right; margin: 0 0 1.5rem 1.25rem; }
     .photo-inline { width: 140px; }
     .photo-territoire { width: 160px; }
@@ -453,9 +438,6 @@
       .block { grid-template-columns: 80px 1fr; gap: 0 2rem; padding: 4rem 0; }
       .block__num-wrap { flex-direction: column; align-items: flex-start; }
       .block__ghost { display: block; font-size: 6rem; }
-      .niveaux { grid-template-columns: repeat(3,1fr); }
-      .niveau { border-right: 1px solid var(--ligne); border-bottom: none; }
-      .niveau:last-child { border-right: none; }
       .faq-block__header { grid-template-columns: 80px 1fr; gap: 0 2rem; }
       .faq-q { grid-template-columns: 80px 1fr; gap: 0 2rem; }
       .signature { grid-template-columns: 80px 1fr; gap: 0 2rem; }
@@ -495,6 +477,9 @@
       .nav__btn, .cta__btn, .theme-switch, .theme-switch * { cursor: pointer !important; }
     }
   </style>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-J0730CFBB3"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-J0730CFBB3");</script>
+<style>#nb-consent{position:fixed;bottom:0;left:0;right:0;z-index:99999;background:#141210;color:#F0EDE6;padding:1.25rem 2rem;display:flex;align-items:center;justify-content:space-between;gap:1.5rem;flex-wrap:wrap;border-top:2px solid #E63E1C;font-family:"IBM Plex Sans",system-ui,sans-serif;font-size:.82rem;line-height:1.5}#nb-consent p{margin:0;flex:1;min-width:200px;color:rgba(240,237,230,.8)}#nb-consent a{color:#E63E1C;text-decoration:underline}#nb-consent .nb-btns{display:flex;gap:.75rem;flex-shrink:0}#nb-consent .nb-accept{background:#E63E1C;color:#fff;border:none;cursor:pointer;font-family:"Bebas Neue",sans-serif;font-size:.95rem;letter-spacing:.08em;padding:.5rem 1.25rem}#nb-consent .nb-refuse{background:transparent;color:rgba(240,237,230,.6);border:1px solid rgba(240,237,230,.2);cursor:pointer;font-family:"IBM Plex Mono",monospace;font-size:.72rem;letter-spacing:.06em;padding:.5rem 1rem}#nb-consent .nb-accept:hover{background:#c43318}#nb-consent .nb-refuse:hover{color:#F0EDE6;border-color:rgba(240,237,230,.5)}</style>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("consent","default",{"ad_storage":"denied","ad_user_data":"denied","ad_personalization":"denied","analytics_storage":"denied"});</script><script async src="https://www.googletagmanager.com/gtag/js?id=G-J0730CFBB3"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-J0730CFBB3");</script>
 </head>
 
 <body>
@@ -505,7 +490,7 @@
 <nav class="nav" aria-label="Navigation principale">
   <a href="/" class="nav__logo">NEURO<i>BREAK</i>™</a>
   <div class="nav__right">
-    <a href="/systeme-marketing-b2b-quebec" class="nav__pill">20 territoires →</a>
+    <a href="/" class="nav__pill">Système complet →</a>
 
     <button class="theme-switch" id="themeSwitch" aria-label="Basculer thème clair/sombre">
       <span class="theme-switch__icon theme-switch__icon--sun" aria-hidden="true">☀️</span>
@@ -521,79 +506,71 @@
 <div class="breadcrumb-wrap">
   <ol class="breadcrumb" aria-label="Fil d'Ariane">
     <li><a href="/">Accueil</a></li>
-    <li><a href="/francophonie-systeme-marketing-b2b">Système B2B</a></li>
-    <li>Réduction du cycle de vente</li>
+    <li><a href="/">Système B2B</a></li>
+    <li>Marketing fragmenté PME</li>
   </ol>
 </div>
 
 <!-- ══ HERO ══ -->
 <header class="hero" id="top">
   <div class="hero__left">
-    <div class="hero__tag">NeuroBreak™ — Pilier 03 · Conversion</div>
+    <div class="hero__tag">NeuroBreak™ Studio — Pilier 01 · Diagnostic</div>
     <h1 class="hero__h1">
-      CYCLE<br />
-      <span class="rouge">TROP LONG</span><br />
-      <span class="fin">Voilà pourquoi.</span>
+      MARKE<br />
+      <span class="rouge">TING</span><br />
+      <span class="fin">fragmenté PME</span>
     </h1>
     <p class="hero__statement">
-      Le cycle ne s'allonge pas par hasard.<br />
-      La décision n'a jamais été préparée<br />
-      avant l'appel.
+      Le problème n'est pas visible.<br />
+      C'est une absence de structure,<br />
+      pas un manque d'effort.
     </p>
   </div>
 
   <div class="hero__right">
     <p class="hero__meta-label">Auteur</p>
-    <p class="hero__meta-val">Lounas<br />Vente &amp; pipeline B2B</p>
+    <p class="hero__meta-val">Christophe Simon<br />Architecte stratégique</p>
     <p class="hero__meta-label">Pilier</p>
-    <p class="hero__meta-val">03 — Conversion</p>
+    <p class="hero__meta-val">01 — Diagnostic territorial</p>
     <p class="hero__meta-label">Système</p>
-    <p class="hero__meta-val">Qualification · Séquences · Multi-parties</p>
+    <p class="hero__meta-val">Acquisition · Conversion · Orchestration</p>
     <ul class="hero__index" aria-label="Sommaire">
-      <li><span class="idx">01</span><a href="#diagnostic">Ce que le cycle long révèle</a></li>
-      <li><span class="idx">02</span><a href="#distinction">La distinction qui change tout</a></li>
-      <li><span class="idx">03</span><a href="#erreurs">Les erreurs invisibles</a></li>
-      <li><span class="idx">04</span><a href="#architecture">L'architecture de conversion</a></li>
+      <li><span class="idx">01</span><a href="#fragmentation">Ce que fragmenté signifie</a></li>
+      <li><span class="idx">02</span><a href="#exposition">Pourquoi les PME B2B sont exposées</a></li>
+      <li><span class="idx">03</span><a href="#cout">Ce que ça coûte — en logique</a></li>
+      <li><span class="idx">04</span><a href="#piliers">Les trois piliers de l'architecture</a></li>
       <li><span class="idx">05</span><a href="#faq">Questions fréquentes</a></li>
     </ul>
   </div>
 </header>
 
-<!-- EN BREF + ZONE A — Photo Lounas -->
+<!-- EN BREF -->
 <div class="en-bref" id="en-bref">
   <div class="en-bref__inner">
     <p class="en-bref__label" aria-hidden="true">EN<br/>BREF</p>
-    <p class="en-bref__corps">Un cycle de vente B2B trop long est rarement un problème commercial. C'est un <strong>problème de qualification amont</strong>. Quand le prospect arrive à l'appel sans avoir compris le problème, la méthode et la valeur — l'équipe commerciale passe son temps à convaincre plutôt qu'à confirmer. <strong>Structurer la qualification avant le rendez-vous</strong> réduit le cycle, améliore le taux de transformation et libère une capacité commerciale entière.</p>
+    <p class="en-bref__corps">Le marketing fragmenté, c'est l'état dans lequel les actions marketing d'une PME <strong>existent mais ne se coordonnent pas</strong>. Chaque outil, chaque canal, chaque initiative fonctionne dans sa propre logique — sans que l'ensemble produise une direction, un filtre, ou une machine cohérente. <strong>Ce n'est pas un problème de budget.</strong> C'est un problème d'architecture.</p>
 
-    <!-- ══ ZONE A — Photo Lounas ══
-         REMPLACER : ajoutez <img> juste après la balise ouvrante .photo-encart
-         <img src="lounas.jpg"
-              alt="Lounas — Vente & pipeline NeuroBreak™"
-              style="width:100%;height:100%;object-fit:cover;object-position:top center;" />
-         FORMAT : portrait 3/4, min. 480×640 px
-    ══ -->
     <div class="en-bref__photo">
-      <div class="photo-encart" aria-label="Emplacement photo Lounas">
-        <!-- ↓ VOTRE <img> ICI ↓ -->
-        <div class="photo-encart__placeholder">
+      <div class="photo-encart" aria-label="Emplacement photo Christophe Simon">
+<img src="/assets/christophe.jpg" alt="Christophe Simon" style="width:100%;height:100%;object-fit:cover;object-position:center center;" />
+<div class="photo-encart__placeholder">
           <span class="photo-encart__badge">Zone A</span>
-          <p class="photo-encart__titre">Lounas</p>
+          <p class="photo-encart__titre">Christophe Simon</p>
           <p class="photo-encart__spec">Portrait 3/4<br />480×640 px min.</p>
         </div>
       </div>
       <div class="en-bref__photo-caption">
-        <span class="en-bref__photo-caption__name">LOUNAS</span>
-        <span class="en-bref__photo-caption__role">Vente &amp; pipeline</span>
+        <span class="en-bref__photo-caption__name">CHRISTOPHE SIMON</span>
+        <span class="en-bref__photo-caption__role">Architecte stratégique</span>
       </div>
     </div>
-
   </div>
 </div>
 
 <!-- TICKER -->
 <div class="ticker" aria-hidden="true">
   <div class="ticker__inner">
-    <span>QUALIFICATION AMONT</span><span class="hl">·</span><span>CYCLE RÉDUIT</span><span class="hl">·</span><span>CONVERSION</span><span class="hl">·</span><span>SÉQUENCES DÉCISIONNELLES</span><span class="hl">·</span><span>B2B FRANCOPHONE</span><span class="hl">·</span><span>NEUROBREAK™</span><span class="hl">·</span><span>QUALIFICATION AMONT</span><span class="hl">·</span><span>CYCLE RÉDUIT</span><span class="hl">·</span><span>CONVERSION</span><span class="hl">·</span><span>SÉQUENCES DÉCISIONNELLES</span><span class="hl">·</span><span>B2B FRANCOPHONE</span><span class="hl">·</span><span>NEUROBREAK™</span><span class="hl">·</span>
+    <span>MARKETING FRAGMENTÉ</span><span class="hl">·</span><span>ARCHITECTURE</span><span class="hl">·</span><span>PME B2B</span><span class="hl">·</span><span>ACQUISITION</span><span class="hl">·</span><span>CONVERSION</span><span class="hl">·</span><span>ORCHESTRATION</span><span class="hl">·</span><span>NEUROBREAK™</span><span class="hl">·</span><span>MARKETING FRAGMENTÉ</span><span class="hl">·</span><span>ARCHITECTURE</span><span class="hl">·</span><span>PME B2B</span><span class="hl">·</span><span>ACQUISITION</span><span class="hl">·</span><span>CONVERSION</span><span class="hl">·</span><span>ORCHESTRATION</span><span class="hl">·</span><span>NEUROBREAK™</span><span class="hl">·</span>
   </div>
 </div>
 
@@ -601,160 +578,154 @@
 <main>
 <div class="article-body">
 
-  <!-- §01 — Ce que le cycle long révèle -->
-  <div class="block" id="diagnostic">
+  <!-- §01 — La réunion -->
+  <div class="block" id="fragmentation">
     <div class="block__num-wrap">
       <span class="block__ghost" aria-hidden="true">01</span>
       <span class="block__num">§ 01</span>
-      <span class="block__tag">Diagnostic<br />structural</span>
+      <span class="block__tag">Nommer<br />le problème</span>
     </div>
     <div class="block__content">
-      <h2 class="block__titre">Ce que le cycle long<br /><em>révèle vraiment</em></h2>
+      <h2 class="block__titre">Ce que "fragmenté"<br /><em>veut dire exactement</em></h2>
 
       <!-- ══ ZONE B — Photo contextuelle §01 ══
-           REMPLACER : ajoutez <img src="appel-commercial.jpg" alt="Appel commercial B2B"
-           style="width:100%;height:100%;object-fit:cover;object-position:center;" />
-           Suggestion : "business phone call", "sales meeting B2B"
+           REMPLACER par :
+           <img src="reunion.jpg" alt="Réunion marketing PME"
+                style="width:100%;height:100%;object-fit:cover;object-position:center;" />
            FORMAT : paysage 4/3, min. 640×480 px -->
       <div class="photo-inline">
         <div class="photo-encart" aria-label="Emplacement photo contextuelle">
-          <!-- ↓ VOTRE <img> ICI ↓ -->
           <div class="photo-encart__placeholder">
             <span class="photo-encart__badge">Zone B · §01</span>
-            <p class="photo-encart__titre">Appel commercial B2B</p>
+            <p class="photo-encart__titre">Ambiance réunion</p>
             <p class="photo-encart__spec">Paysage 4/3 · 640×480 px</p>
           </div>
         </div>
-        <div class="photo-inline__caption">Le cycle — ce qu'il cache vraiment</div>
+        <div class="photo-inline__caption">Le problème n'est pas visible en réunion</div>
       </div>
 
-      <p>Un appel. Quarante minutes. Le prospect est intéressé. Il pose des questions pertinentes. La conversation est bonne. À la fin : <em>"Je vais en parler à mon associé. On se rappelle la semaine prochaine."</em></p>
-      <p>La semaine suivante, un autre appel. Trente minutes. On reprend depuis le début — l'associé n'a pas eu le temps de regarder la documentation. On réexplique. On répond aux mêmes objections. Deux semaines plus tard : <em>"On est intéressés, mais on a besoin d'un devis plus détaillé."</em></p>
-      <p>Le cycle dure depuis 6 semaines. Il n'est pas terminé. Ce n'est pas une mauvaise force de vente. Ce n'est pas un prospect difficile. C'est un système qui fait faire à l'équipe commerciale un travail que le contenu aurait dû faire en amont.</p>
-      <p>Lounas a vu ce pattern des centaines de fois en 25 ans de terrain commercial. Dans des PME de 10 personnes comme dans des équipes de 80 commerciaux. Dans le conseil, le manufacturier, les services professionnels, la tech B2B. La conclusion est toujours la même : <strong>un cycle long n'est presque jamais un problème de closing. C'est un problème de préparation.</strong></p>
-      <p><a href="/marketing-fragmente-pme">Le marketing fragmenté produit exactement ça</a> — des prospects qui entrent dans le pipeline sans avoir été qualifiés en amont, qui arrivent à l'appel avec des questions de base, qui ont besoin d'être convaincus de l'existence du problème avant même qu'on puisse parler de solution.</p>
+      <p>Il y a une réunion, quelque part. Un directeur marketing présente les résultats du trimestre. Les chiffres sont là. Le taux d'ouverture des emails. Les vues sur LinkedIn. Le trafic organique. Le nombre de leads entrants.</p>
+      <p>Tout le monde hoche la tête. Et pourtant, à la fin de la réunion, personne ne sait vraiment pourquoi les ventes n'avancent pas.</p>
+      <p>Ce n'est pas un manque d'effort. Ce n'est pas une mauvaise équipe. Ce n'est pas le marché. C'est la structure. Ou plutôt — son absence.</p>
+      <p>Une PME peut avoir un site correct, une présence LinkedIn active, des campagnes Google, une newsletter mensuelle, un CRM installé — et rester profondément fragmentée. Parce que la fragmentation ne se mesure pas à la quantité d'outils ou d'actions. Elle se mesure à leur cohérence.</p>
+      <p><a href="/">Ce que le système NeuroBreak™ cherche à construire</a> n'est pas une présence marketing plus dense — c'est une architecture où chaque action sert la suivante, où chaque outil parle aux autres, où le système global produit plus que la somme de ses parties.</p>
 
-      <ul class="liste" aria-label="Ce que le cycle long coûte concrètement">
-        <li>Chaque appel repart de zéro — le temps commercial est gaspillé en pédagogie</li>
-        <li>Les objections se répètent d'un prospect à l'autre — elles ne sont jamais traitées structurellement</li>
-        <li>Les décisions sont reportées parce que le prospect n'a pas eu le temps de mûrir</li>
-        <li>Les comités internes ralentissent parce que personne n'a préparé les parties prenantes</li>
-        <li>Le taux de transformation reste bas malgré un pipeline actif</li>
-      </ul>
       <div class="clearfix"></div>
+
+      <p>Quand j'analyse une PME B2B, je cherche trois signaux précis.</p>
+      <ul class="liste" aria-label="Les trois signaux de diagnostic">
+        <li>Est-ce que l'acquisition filtre, ou est-ce qu'elle attire au hasard ?</li>
+        <li>Est-ce que la qualification se fait en amont de l'appel, ou pendant ?</li>
+        <li>Est-ce que les données circulent entre les outils, ou est-ce que chaque plateforme vit dans son propre silo ?</li>
+      </ul>
+
       <div class="pq">
-        <p class="pq__texte">« Ce ne sont pas des symptômes commerciaux. Ce sont des symptômes d'architecture. Changer l'équipe ne les résout pas. »</p>
-        <p class="pq__src">Lounas — NeuroBreak™ Studio, 25 ans de terrain</p>
+        <p class="pq__texte">« Trois signaux. Un seul diagnostic : fragmenté. »</p>
+        <p class="pq__src">Christophe Simon — NeuroBreak™ Studio</p>
       </div>
     </div>
   </div>
 
-  <!-- §02 — La distinction qui change tout -->
-  <div class="block" id="distinction">
+  <!-- §02 — Exposition PME -->
+  <div class="block" id="exposition">
     <div class="block__num-wrap">
       <span class="block__ghost" aria-hidden="true">02</span>
       <span class="block__num">§ 02</span>
-      <span class="block__tag">Conversion<br />avant l'appel</span>
+      <span class="block__tag">Pourquoi<br />les PME</span>
     </div>
     <div class="block__content">
-      <h2 class="block__titre">La distinction<br /><em>qui change tout</em></h2>
-      <p>Il y a deux types de rendez-vous B2B. Tout se joue là.</p>
-      <div class="cards">
-        <div class="card" role="listitem">
-          <span class="card__num" aria-hidden="true">01</span>
-          <p class="card__levier">Rendez-vous non préparé</p>
-          <p class="card__titre">Le prospect arrive sans contexte</p>
-          <p class="card__corps">L'équipe commerciale passe les 20 premières minutes à expliquer le problème, les 20 suivantes à présenter la méthode, et les 10 dernières à gérer des objections qui auraient pu être anticipées. Si le rendez-vous se passe bien, on en fixe un deuxième.</p>
-        </div>
-        <div class="card" role="listitem">
-          <span class="card__num" aria-hidden="true">02</span>
-          <p class="card__levier">Rendez-vous préparé</p>
-          <p class="card__titre">Le prospect a déjà décidé en grande partie</p>
-          <p class="card__corps">Le prospect arrive après avoir consommé du contenu qui a préparé sa décision. Il connaît le problème. Il a compris la méthode. Il a déjà répondu à ses propres objections. Le rendez-vous confirme ce qu'il a déjà décidé.</p>
-        </div>
+      <h2 class="block__titre">Pourquoi les PME B2B<br /><em>sont particulièrement exposées</em></h2>
+
+      <p>Les grandes entreprises ont des équipes dédiées à chaque fonction. Marketing de contenu. Demand gen. Sales enablement. Ops. Elles sont lentes — mais elles ont des structures qui forcent la coordination.</p>
+      <p>Les PME n'ont pas ces équipes. Elles ont des personnes qui portent plusieurs chapeaux, des outils achetés au fil des besoins, des processus construits par accumulation plutôt que par design. Le résultat naturel — pas le résultat d'une erreur — c'est la fragmentation.</p>
+      <p>Voici les formes qu'elle prend le plus souvent :</p>
+
+      <ul class="liste" aria-label="Formes de fragmentation en PME">
+        <li>Le contenu est produit sans intention de filtrage — il éduque sans orienter vers une décision</li>
+        <li>Le CRM enregistre mais ne pilote pas — c'est une mémoire, pas un système</li>
+        <li>Les campagnes génèrent du trafic sans qualification — les appels repartent de zéro</li>
+        <li>L'équipe commerciale compense avec de l'énergie ce que le système ne fait pas automatiquement</li>
+        <li>La direction pilote à l'intuition parce que les données ne donnent pas de trajectoire</li>
+      </ul>
+
+      <div class="pq">
+        <p class="pq__texte">« Aucun de ces symptômes n'est catastrophique seul. Ensemble, ils forment un plafond invisible. »</p>
+        <p class="pq__src">Christophe Simon — NeuroBreak™ Studio</p>
       </div>
-      <p><a href="/chaine-youtube-b2b-generation-leads">Une infrastructure d'acquisition YouTube B2B structurée</a> produit le deuxième type de prospect — pas le premier. C'est la connexion directe entre acquisition et conversion que la plupart des systèmes n'établissent jamais. Le cycle se réduit. Pas parce qu'on a poussé plus fort. Parce qu'on a préparé mieux.</p>
     </div>
   </div>
 
-  <!-- §03 — Les erreurs invisibles -->
-  <div class="block" id="erreurs">
+  <!-- §03 — Ce que ça coûte -->
+  <div class="block" id="cout">
     <div class="block__num-wrap">
       <span class="block__ghost" aria-hidden="true">03</span>
       <span class="block__num">§ 03</span>
-      <span class="block__tag">Causes<br />structurelles</span>
+      <span class="block__tag">Le coût<br />en logique</span>
     </div>
     <div class="block__content">
-      <h2 class="block__titre">Les erreurs invisibles<br /><em>qui allongent le cycle</em></h2>
+      <h2 class="block__titre">Ce que la fragmentation coûte<br /><em>en logique, pas en chiffres</em></h2>
 
       <!-- ══ ZONE D — Photo contextuelle §03 ══
-           REMPLACER : <img src="pipeline.jpg" alt="Pipeline B2B"
-           style="width:100%;height:100%;object-fit:cover;object-position:center;" />
+           REMPLACER par :
+           <img src="pipeline.jpg" alt="Pipeline commercial B2B"
+                style="width:100%;height:100%;object-fit:cover;object-position:center;" />
            FORMAT : paysage 16/9, min. 640×360 px -->
       <div class="photo-territoire">
         <div class="photo-encart" aria-label="Emplacement photo pipeline">
-          <!-- ↓ VOTRE <img> ICI ↓ -->
           <div class="photo-encart__placeholder">
-            <span class="photo-encart__badge">Zone D · §03</span>
-            <p class="photo-encart__titre">Pipeline B2B</p>
+            <span class="photo-encart__badge">Zone C · §03</span>
+            <p class="photo-encart__titre">Pipeline & cycle de vente</p>
             <p class="photo-encart__spec">16/9 · 640×360 px</p>
           </div>
         </div>
-        <div class="photo-territoire__caption">Le pipeline — là où le cycle s'allonge</div>
+        <div class="photo-territoire__caption">Cycle de vente — réduire avant l'appel</div>
       </div>
 
-      <p>Ces erreurs sont structurelles, pas comportementales. Changer l'équipe ne les résout pas.</p>
-      <ul class="liste" aria-label="Erreurs structurelles qui allongent le cycle">
-        <li><strong>Qualification trop tardive :</strong> on qualifie pendant l'appel, pas avant. Le filtre arrive trop tard dans le processus.</li>
-        <li><strong>Contenu déconnecté du cycle d'achat :</strong> les vidéos, les articles, les emails informent — mais ne font pas avancer la décision. Ils ne traitent pas les objections au bon moment.</li>
-        <li><strong>Absence de séquence décisionnelle :</strong> entre le premier contact et le rendez-vous, il n'y a rien. Le prospect est livré à lui-même pour construire sa conviction.</li>
-        <li><strong>Un seul interlocuteur préparé :</strong> l'initiateur du projet est convaincu. Son associé, son directeur financier, son responsable technique — ne le sont pas. Le comité interne bloque.</li>
-        <li><strong>Le rendez-vous comme premier filtre :</strong> c'est l'appel qui doit convaincre, pas le contenu. C'est trop tard, trop coûteux, trop long.</li>
-      </ul>
+      <p>Je ne vais pas avancer un chiffre inventé sur le coût de la fragmentation. Ce serait intellectuellement malhonnête. Mais je peux décrire la logique.</p>
+      <p>Une PME qui convertit 3% de ses leads en clients avec un cycle moyen de 4 mois — et qui réduit ce cycle à 2,5 mois en structurant sa qualification en amont — ne fait pas juste "aller plus vite". Elle libère une capacité commerciale entière sur l'année.</p>
+      <p><a href="/reduction-cycle-vente-b2b">La réduction du cycle de vente B2B</a> n'est pas un objectif commercial. C'est une conséquence directe de l'architecture — quand le contenu prépare la décision, quand la qualification filtre en amont, quand le système fait le travail que l'équipe faisait manuellement.</p>
       <div class="clearfix"></div>
+
       <div class="pq">
-        <p class="pq__texte">« Le cycle s'allonge parce que la décision n'a jamais été préparée avant l'appel. Ce n'est pas un problème de vente. C'est un problème d'architecture. »</p>
-        <p class="pq__src">Lounas — NeuroBreak™ Studio</p>
+        <p class="pq__texte">« Ce n'est pas la force de vente qui est insuffisante. C'est le système qui lui demande de faire trop. »</p>
+        <p class="pq__src">Lounas — Vente & pipeline, NeuroBreak™ Studio</p>
       </div>
+
+      <p>La fragmentation persiste parce qu'elle produit des résultats — juste pas à la hauteur des efforts. Une équipe fragmentée n'est pas une équipe qui ne travaille pas. C'est une équipe qui travaille beaucoup, obtient des résultats corrects, et n'arrive pas à comprendre pourquoi la croissance plafonne.</p>
+      <p><a href="/systeme-marketing-b2b-quebec">Dans le marché B2B québécois</a>, ce pattern est particulièrement fréquent. Les PME sont actives. Elles investissent. Elles essaient. Mais l'architecture n'est pas là — et sans elle, chaque effort repart de zéro.</p>
     </div>
   </div>
 
-  <!-- §04 — L'architecture de conversion -->
-  <div class="block" id="architecture">
+  <!-- §04 — Les trois piliers -->
+  <div class="block" id="piliers">
     <div class="block__num-wrap">
       <span class="block__ghost" aria-hidden="true">04</span>
       <span class="block__num">§ 04</span>
       <span class="block__tag">Architecture<br />système</span>
     </div>
     <div class="block__content">
-      <h2 class="block__titre">L'architecture<br /><em>de conversion</em></h2>
-      <p>Réduire le cycle ne s'obtient pas en formant mieux les commerciaux. Ça s'obtient en restructurant ce qui se passe avant qu'ils interviennent.</p>
-      <p><a href="/francophonie-systeme-marketing-b2b">Le modèle NeuroBreak™ structure trois niveaux de préparation</a> avant le premier appel commercial.</p>
-
-      <div class="niveaux">
-        <div class="niveau" role="listitem">
-          <span class="niveau__num" aria-hidden="true">01</span>
-          <p class="niveau__label">Niveau 1 — Qualification</p>
-          <p class="niveau__titre">Par le contenu</p>
-          <p class="niveau__corps">Chaque contenu publié traite un problème précis à un stade précis de la réflexion d'achat. Le prospect qui regarde jusqu'au bout se qualifie lui-même. Il signale son niveau de maturité par son comportement.</p>
+      <h2 class="block__titre">Les trois piliers<br /><em>de l'architecture</em></h2>
+      <p>Le modèle NeuroBreak™ répond à la fragmentation par trois leviers interdépendants. Chacun peut fonctionner seul. Mais c'est leur articulation qui produit une machine.</p>
+      <div class="cards" role="list">
+        <div class="card" role="listitem">
+          <span class="card__num" aria-hidden="true">01</span>
+          <p class="card__levier">Levier 01 — Acquisition</p>
+          <p class="card__titre">Infrastructure YouTube B2B</p>
+          <p class="card__corps"><a href="/chaine-youtube-b2b-generation-leads">Une infrastructure d'acquisition YouTube B2B</a> ne cherche pas la visibilité. Elle cherche à filtrer — à faire en sorte que seuls les prospects déjà alignés sur le problème arrivent dans le pipeline.</p>
         </div>
-        <div class="niveau" role="listitem">
-          <span class="niveau__num" aria-hidden="true">02</span>
-          <p class="niveau__label">Niveau 2 — Séquence</p>
-          <p class="niveau__titre">Décisionnelle</p>
-          <p class="niveau__corps">Entre le premier contact et le rendez-vous, une séquence structurée traite les objections principales, présente la méthode, et pose les questions qui permettent de calibrer l'appel. Le commercial arrive avec du contexte — pas une page blanche.</p>
+        <div class="card" role="listitem">
+          <span class="card__num" aria-hidden="true">02</span>
+          <p class="card__levier">Levier 02 — Conversion</p>
+          <p class="card__titre">Qualification en amont</p>
+          <p class="card__corps"><a href="/systeme-marketing-centralise-pme">L'orchestration du système marketing</a> garantit que les données circulent, que les séquences s'enchaînent, et que chaque interaction s'appuie sur la précédente.</p>
         </div>
-        <div class="niveau" role="listitem">
-          <span class="niveau__num" aria-hidden="true">03</span>
-          <p class="niveau__label">Niveau 3 — Multi-parties</p>
-          <p class="niveau__titre">Prenantes</p>
-          <p class="niveau__corps">Dans les cycles B2B complexes, la décision implique plusieurs personnes. Le contenu doit parler à chacune d'elles — le DG, le directeur financier, le responsable opérationnel — avec les arguments qui correspondent à leurs préoccupations respectives.</p>
+        <div class="card" role="listitem">
+          <span class="card__num" aria-hidden="true">03</span>
+          <p class="card__levier">Levier 03 — Pilotage</p>
+          <p class="card__titre">Cohérence directionnelle</p>
+          <p class="card__corps">Quand les trois fonctions parlent le même langage, la direction cesse de piloter à l'intuition. Elle pilote à la trajectoire. Ce n'est pas une méthode — c'est une logique de construction.</p>
         </div>
       </div>
-
-      <p>Une PME B2B avec un cycle moyen de 90 jours et 3 rendez-vous par deal — qui réduit ce cycle à 55 jours en structurant la qualification amont — ne fait pas juste vendre plus vite. Elle augmente mécaniquement le nombre de deals traités sur l'année avec la même équipe.</p>
-      <p><a href="/systeme-marketing-b2b-quebec">Dans le marché B2B québécois</a>, où les cycles sont souvent allongés par des prises de décision en comité et une culture de validation formelle, cette structuration a un impact particulièrement visible. Les cycles longs ne sont pas une fatalité culturelle. Ils sont le résultat d'une architecture insuffisante.</p>
-      <p>Olivier, côté déploiement, configure les séquences et les automatisations qui font vivre cette architecture dans les outils réels — CRM, email, séquences de nurturing — pour que la préparation décisionnelle se fasse sans intervention manuelle à chaque prospect.</p>
     </div>
   </div>
 
@@ -767,29 +738,29 @@
     <div class="faq-q">
       <span class="faq-q__num">Q·01</span>
       <div class="faq-q__inner">
-        <p class="faq-q__q">Est-ce que réduire le cycle signifie précipiter la décision&nbsp;?</p>
-        <p class="faq-q__r">Non. Ça signifie que la décision est préparée plus tôt dans le processus — par le contenu, pas par la pression commerciale. Le prospect décide quand il est prêt. L'architecture fait en sorte qu'il soit prêt plus tôt.</p>
+        <p class="faq-q__q">Est-ce que toutes les PME sont concernées par la fragmentation&nbsp;?</p>
+        <p class="faq-q__r">La majorité, oui — pas parce qu'elles font mal leur travail, mais parce que la fragmentation est l'état naturel d'un marketing construit par accumulation plutôt que par design. C'est une question de structure, pas de compétence.</p>
       </div>
     </div>
     <div class="faq-q">
       <span class="faq-q__num">Q·02</span>
       <div class="faq-q__inner">
-        <p class="faq-q__q">Ça fonctionne pour les cycles très longs — 6 mois, 12 mois&nbsp;?</p>
-        <p class="faq-q__r">Oui — et c'est même là que l'impact est le plus fort. Les cycles très longs sont presque toujours des cycles où la décision n'a pas été préparée en amont. Structurer la qualification et les séquences décisionnelles raccourcit même les cycles institutionnels longs.</p>
+        <p class="faq-q__q">Comment savoir si mon marketing est fragmenté&nbsp;?</p>
+        <p class="faq-q__r">La question la plus simple : est-ce que votre contenu prépare la décision de vos prospects avant qu'ils vous contactent ? Si la réponse est non — ou incertaine — la fragmentation est probablement là.</p>
       </div>
     </div>
     <div class="faq-q">
       <span class="faq-q__num">Q·03</span>
       <div class="faq-q__inner">
-        <p class="faq-q__q">Et si les décideurs ne consomment pas de contenu vidéo&nbsp;?</p>
-        <p class="faq-q__r">La préparation décisionnelle n'est pas uniquement vidéo. Elle peut prendre la forme d'articles, de séquences email, de documents de qualification, de cas fictifs. YouTube est un levier puissant — pas le seul.</p>
+        <p class="faq-q__q">La fragmentation est-elle liée à la taille de l'entreprise&nbsp;?</p>
+        <p class="faq-q__r">Elle est liée à la structure, pas à la taille. Une PME de 15 personnes peut avoir une architecture très cohérente. Une entreprise de 200 personnes peut être profondément fragmentée. Ce qui compte, c'est si les fonctions se parlent.</p>
       </div>
     </div>
     <div class="faq-q">
       <span class="faq-q__num">Q·04</span>
       <div class="faq-q__inner">
-        <p class="faq-q__q">Comment savoir si mon cycle est structurellement trop long&nbsp;?</p>
-        <p class="faq-q__r">La question n'est pas la durée absolue — certains cycles longs sont normaux. La question est : combien de ce cycle est passé à convaincre de l'existence du problème&nbsp;? Si la réponse est "beaucoup" — le cycle est structurellement trop long.</p>
+        <p class="faq-q__q">Par où commencer pour sortir de la fragmentation&nbsp;?</p>
+        <p class="faq-q__r">En général par l'acquisition — c'est là que la fragmentation est la plus visible et que l'impact d'une structure est le plus rapide. Le diagnostic précise l'ordre selon le contexte spécifique de votre PME.</p>
       </div>
     </div>
   </section>
@@ -798,9 +769,9 @@
   <div class="signature" aria-label="Signature de page">
     <span style="font-family:var(--f-mono);font-size:.6rem;color:var(--txt-4);letter-spacing:.1em;padding-top:.5rem;">Fin</span>
     <div>
-      <p class="signature__texte">CLARIFIER<br />AVANT DE<br /><span>CONVAINCRE.</span></p>
+      <p class="signature__texte">STRUCTURER<br />AVANT<br /><span>D'AMPLIFIER.</span></p>
     </div>
-    <p class="signature__auteur">Lounas — NeuroBreak™ Studio, Québec</p>
+    <p class="signature__auteur">Christophe Simon — NeuroBreak™ Studio, Québec</p>
   </div>
 
 </div><!-- /article-body -->
@@ -814,31 +785,11 @@
     </div>
     <div class="equipe-grille" role="list">
 
-      <!-- E1 — LOUNAS (voix principale de cette page) -->
-      <div class="membre membre--lounas" role="listitem">
-        <div class="photo-encart" aria-label="Photo Lounas">
-          <!-- ↓ VOTRE <img> ICI ↓ -->
-          <div class="photo-encart__placeholder">
-            <span class="photo-encart__badge">E1 · Lounas</span>
-            <p class="photo-encart__titre">Lounas</p>
-            <p class="photo-encart__spec">Carré 1/1 · 400×400 px</p>
-          </div>
-        </div>
-        <div class="membre__bar">
-          <span class="membre__name">LOUNAS</span>
-          <span class="membre__role">Vente &amp; pipeline</span>
-        </div>
-        <div class="membre__bio">
-          <p>25 ans de terrain. <strong>Il structure les pipelines et qualifie les leads</strong> avec la lecture que seule l'expérience produit. Voix de ce pilier.</p>
-        </div>
-      </div>
-
-      <!-- E2 — CHRISTOPHE -->
       <div class="membre membre--christophe" role="listitem">
         <div class="photo-encart" aria-label="Photo Christophe Simon">
-          <!-- ↓ VOTRE <img> ICI ↓ -->
-          <div class="photo-encart__placeholder">
-            <span class="photo-encart__badge">E2 · Christophe</span>
+<img src="/assets/christophe-simon.jpg" alt="Christophe Simon" style="width:100%;height:100%;object-fit:cover;object-position:top center;" />
+<div class="photo-encart__placeholder">
+            <span class="photo-encart__badge">E1 · Christophe</span>
             <p class="photo-encart__titre">Christophe Simon</p>
             <p class="photo-encart__spec">Carré 1/1 · 400×400 px</p>
           </div>
@@ -852,22 +803,39 @@
         </div>
       </div>
 
-      <!-- E3 — OLIVIER -->
       <div class="membre membre--olivier" role="listitem">
         <div class="photo-encart" aria-label="Photo Olivier">
-          <!-- ↓ VOTRE <img> ICI ↓ -->
-          <div class="photo-encart__placeholder">
-            <span class="photo-encart__badge">E3 · Olivier</span>
+<img src="/assets/olivier.jpg" alt="Olivier" style="width:100%;height:100%;object-fit:cover;object-position:top center;" />
+<div class="photo-encart__placeholder">
+            <span class="photo-encart__badge">E2 · Olivier</span>
             <p class="photo-encart__titre">Olivier</p>
             <p class="photo-encart__spec">Carré 1/1 · 400×400 px</p>
           </div>
         </div>
         <div class="membre__bar">
           <span class="membre__name">OLIVIER</span>
-          <span class="membre__role">Déploiement &amp; intégration</span>
+          <span class="membre__role">Déploiement & intégration</span>
         </div>
         <div class="membre__bio">
-          <p>Responsable technique. <strong>Il intègre le système dans les outils réels</strong> — CRM, séquences, maillage — pour que la préparation décisionnelle tourne sans intervention manuelle.</p>
+          <p>Responsable technique. <strong>Il intègre le système dans les outils réels</strong> — CRM, séquences, maillage.</p>
+        </div>
+      </div>
+
+      <div class="membre membre--lounas" role="listitem">
+        <div class="photo-encart" aria-label="Photo Lounas">
+<img src="/assets/lounas.jpg" alt="Lounas" style="width:100%;height:100%;object-fit:cover;object-position:top center;" />
+<div class="photo-encart__placeholder">
+            <span class="photo-encart__badge">E3 · Lounas</span>
+            <p class="photo-encart__titre">Lounas</p>
+            <p class="photo-encart__spec">Carré 1/1 · 400×400 px</p>
+          </div>
+        </div>
+        <div class="membre__bar">
+          <span class="membre__name">LOUNAS</span>
+          <span class="membre__role">Vente & pipeline</span>
+        </div>
+        <div class="membre__bio">
+          <p>25 ans de management commercial international. <strong>Il structure les équipes et la pratique commerciale</strong> avec la lecture que seule l'expérience produit.</p>
         </div>
       </div>
 
@@ -878,13 +846,13 @@
 </main>
 
 <!-- CTA -->
-<div class="cta" id="diagnostic-cta">
+<div class="cta" id="diagnostic">
   <div class="cta__inner">
     <div>
       <h2 class="cta__titre">DIAGNOSTIC<br /><i>NeuroBreak™</i></h2>
       <p class="cta__sub">Identifiez où se situe votre fragmentation. Choisissez votre levier. Une conversation, une direction.</p>
     </div>
-    <a href="mailto:diagnostic@neurobreak.ca" class="cta__btn">
+    <a href="mailto:contact@neurobreak.ca" class="cta__btn">
       DÉMARRER<span>le diagnostic →</span>
     </a>
   </div>
@@ -926,7 +894,7 @@
     cursor.style.left = e.clientX + 'px';
     cursor.style.top  = e.clientY + 'px';
   });
-  document.querySelectorAll('a, button, .card, .niveau, .membre, .cta__btn, .nav__btn').forEach(el => {
+  document.querySelectorAll('a, button, .card, .cta__btn, .nav__btn').forEach(el => {
     el.addEventListener('mouseenter', () => cursor.classList.add('big'));
     el.addEventListener('mouseleave', () => cursor.classList.remove('big'));
   });
@@ -967,7 +935,6 @@
   const btn  = document.getElementById('themeSwitch');
   const saved = localStorage.getItem('nb-theme') || 'light';
   html.setAttribute('data-theme', saved);
-
   btn.addEventListener('click', () => {
     const next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
     html.setAttribute('data-theme', next);
@@ -991,5 +958,6 @@
   }
 </script>
 
+<div id="nb-consent"><p>Nous utilisons des cookies analytiques (Google Analytics) pour mesurer l'audience de ce site. Aucune donnée n'est revendue. <a href="/politique-confidentialite">En savoir plus</a></p><div class="nb-btns"><button class="nb-refuse" onclick="nbRefuse()">Refuser</button><button class="nb-accept" onclick="nbAccept()">Accepter</button></div></div><script>(function(){var c=localStorage.getItem("nb-consent");if(c==="accepted"){nbLoadGA();var b=document.getElementById("nb-consent");if(b)b.style.display="none";}else if(c==="refused"){document.getElementById("nb-consent").style.display="none";}})();function nbAccept(){localStorage.setItem("nb-consent","accepted");document.getElementById("nb-consent").style.display="none";nbLoadGA();}function nbRefuse(){localStorage.setItem("nb-consent","refused");document.getElementById("nb-consent").style.display="none";}function nbLoadGA(){var s=document.createElement("script");s.async=true;s.src="https://www.googletagmanager.com/gtag/js?id=G-J0730CFBB3";document.head.appendChild(s);window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-J0730CFBB3");}</script>
 </body>
 </html>

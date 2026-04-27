@@ -1,14 +1,14 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="fr" data-theme="light">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Système marketing B2B au Québec — PME francophones</title>
-  <meta name="description" content="Le marché B2B québécois a ses propres tensions. Découvrez comment NeuroBreak™ structure l'acquisition, la conversion et l'orchestration territoire par territoire." />
-  <link rel="canonical" href="https://neurobreak.eu/systeme-marketing-b2b-quebec" />
+  <title>Système d'acquisition YouTube B2B au Québec | NeuroBreak™</title>
+  <meta name="description" content="Structurez une chaîne YouTube B2B qui génère des leads qualifiés au Québec. Un système d'acquisition stratégique — pas une simple production vidéo." />
+  <link rel="canonical" href="https://neurobreak.ca/chaine-youtube-b2b-generation-leads" />
 
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Accueil","item":"https://neurobreak.eu/"},{"@type":"ListItem","position":2,"name":"Système marketing B2B au Québec","item":"https://neurobreak.eu/systeme-marketing-b2b-quebec"}]}</script>
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Système marketing B2B au Québec — architecture territoriale pour PME","author":{"@type":"Person","name":"Christophe Simon"},"publisher":{"@type":"Organization","name":"NeuroBreak™ Studio","url":"https://neurobreak.ca"}}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Accueil","item":"https://neurobreak.ca/"},{"@type":"ListItem","position":2,"name":"Système marketing B2B","item":"https://neurobreak.ca/francophonie-systeme-marketing-b2b"},{"@type":"ListItem","position":3,"name":"Acquisition YouTube B2B","item":"https://neurobreak.ca/chaine-youtube-b2b-generation-leads"}]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Système d'acquisition YouTube B2B structuré pour PME au Québec","author":{"@type":"Person","name":"Christophe Simon"},"publisher":{"@type":"Organization","name":"NeuroBreak™ Studio","url":"https://neurobreak.ca"}}</script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -20,8 +20,6 @@
 
     /* ══════════════════════════════════════════════════════
        PALETTES DARK / LIGHT
-       L'accent rouge-orange --vif reste fixe dans les deux thèmes.
-       Le fond, le texte et les lignes basculent.
     ══════════════════════════════════════════════════════ */
     :root {
       --vif:       #E63E1C;
@@ -35,7 +33,7 @@
       --trans:     background .3s ease, color .3s ease, border-color .3s ease;
     }
 
-    /* THÈME LIGHT (défaut — V3 originale) */
+    /* THÈME LIGHT */
     [data-theme="light"] {
       --bg:        #F8F6F1;
       --bg-2:      #EDEAE2;
@@ -47,7 +45,7 @@
       --ligne:     #D0CBC0;
       --ligne-2:   #D8D4C8;
       --nav-bg:    #F8F6F1;
-      --encart-bg: #141210;   /* EN BREF, ticker, footer : toujours sombre */
+      --encart-bg: #141210;
       --card-bg:   transparent;
       --card-hover:#EDEAE2;
       --ghost:     #EDEAE2;
@@ -107,7 +105,6 @@
     [data-theme="dark"] .theme-switch__dot { transform: translateX(15px); }
 
     /* ══ CURSEUR ══ */
-    /* Curseur custom — body seulement, éléments interactifs gardent pointer */
     body { cursor: none; }
     a, button, [role="button"], .card, .membre, .nav__btn, .cta__btn,
     .theme-switch, .theme-switch * { cursor: pointer !important; }
@@ -142,9 +139,7 @@
     p:last-child { margin-bottom: 0; }
     strong { color: var(--txt); font-weight: 500; }
 
-    /* ══════════════════════════════════════════════
-       ENCART PHOTO — identique à la V5
-    ══════════════════════════════════════════════ */
+    /* ══ PHOTO ENCART ══ */
     .photo-encart {
       position: relative; overflow: hidden;
       background: #2A2722; border: 1px solid rgba(255,255,255,.08);
@@ -205,44 +200,7 @@
     .breadcrumb a { color: var(--txt-4); text-decoration: none; }
     .breadcrumb a:hover { color: var(--vif); opacity: 1; }
 
-    /* ══════════════════════════════════════════════
-       HERO — grille 2 colonnes avec photo à droite
-    ══════════════════════════════════════════════ */
-    .hero {
-      max-width: var(--max); margin: 0 auto;
-      padding: 5rem 2.5rem 3rem;
-      display: grid;
-      grid-template-columns: 1fr 280px;
-      gap: 0 4rem;
-      align-items: end;
-    }
-    .hero__left { }
-    .hero__tag {
-      display: inline-flex; align-items: center; gap: .6rem;
-      font-family: var(--f-mono); font-size: .65rem; letter-spacing: .12em; text-transform: uppercase;
-      color: var(--txt-4); margin-bottom: 1.5rem; transition: color .3s;
-    }
-    .hero__tag::before { content: ''; display: inline-block; width: 24px; height: 2px; background: var(--vif); }
-    .hero__h1 {
-      font-family: var(--f-display);
-      font-size: clamp(4rem, 8vw, 9rem); line-height: .92; letter-spacing: .01em;
-      color: var(--txt); margin-bottom: 2rem; transition: color .3s;
-    }
-    .hero__h1 .rouge { color: var(--vif); }
-    .hero__h1 .fin {
-      font-family: var(--f-serif); font-weight: 300; font-style: italic;
-      font-size: clamp(2.5rem, 5vw, 5.5rem); letter-spacing: -.01em;
-      display: block; line-height: 1.1; color: var(--txt-3); transition: color .3s;
-    }
-    .hero__statement {
-      font-family: var(--f-serif); font-size: clamp(1.1rem, 1.5vw, 1.35rem);
-      font-style: italic; font-weight: 300; color: var(--txt-3);
-      line-height: 1.55; max-width: 520px; margin-bottom: 0;
-      padding-left: 1.5rem; border-left: 2px solid var(--vif);
-      transition: color .3s;
-    }
-
-    /* ══ HERO — V3 original, sans photo (identique à la V3) ══ */
+    /* ══ HERO ══ */
     .hero {
       max-width: var(--max); margin: 0 auto;
       padding: 5rem 2.5rem 0;
@@ -276,7 +234,6 @@
       padding-left: 1.5rem; border-left: 2px solid var(--vif);
       transition: color .3s;
     }
-    /* Panneau droit hero — méta + index (V3 original) */
     .hero__right { padding-top: 1rem; border-left: 1px solid var(--ligne); padding-left: 2.5rem; transition: border-color .3s; }
     .hero__meta-label { font-family: var(--f-mono); font-size: .6rem; letter-spacing: .14em; text-transform: uppercase; color: var(--txt-4); margin-bottom: .5rem; }
     .hero__meta-val { font-family: var(--f-sans); font-size: .82rem; font-weight: 500; color: var(--txt); margin-bottom: 1.75rem; transition: color .3s; }
@@ -286,15 +243,13 @@
     .hero__index a { color: var(--txt-3); text-decoration: none; font-family: var(--f-sans); font-size: .78rem; transition: color .15s; }
     .hero__index a:hover { color: var(--vif); opacity: 1; }
 
-    /* ══════════════════════════════════════════════
-       EN BREF — fond sombre fixe + ZONE A photo Christophe
-       La photo est dans la colonne droite du EN BREF
-    ══════════════════════════════════════════════ */
+
+
+    /* ══ EN BREF ══ */
     .en-bref { background: var(--encart-bg); padding: 2.5rem; margin: 4rem 0 0; }
     .en-bref__inner {
       max-width: var(--max); margin: 0 auto;
       display: grid;
-      /* label vertical | texte | photo portrait */
       grid-template-columns: auto 1fr 240px;
       gap: 0 3rem;
       align-items: center;
@@ -302,14 +257,6 @@
     .en-bref__label { font-family: var(--f-display); font-size: 4rem; line-height: 1; color: var(--vif); letter-spacing: .05em; writing-mode: vertical-rl; text-orientation: mixed; transform: rotate(180deg); padding-bottom: .5rem; align-self: center; }
     .en-bref__corps { font-family: var(--f-serif); font-size: clamp(1rem, 1.2vw, 1.15rem); font-weight: 300; color: rgba(248,246,241,.75); line-height: 1.75; margin-bottom: 0; }
     .en-bref__corps strong { color: #F8F6F1; font-weight: 500; }
-
-    /* ══ ZONE A — Photo Christophe dans le EN BREF ══
-       REMPLACER le placeholder par :
-       <img src="christophe-simon.jpg"
-            alt="Christophe Simon — Architecte stratégique NeuroBreak™"
-            style="width:100%;height:100%;object-fit:cover;object-position:top center;" />
-       FORMAT : portrait 3/4, min. 480×640 px
-    ══ */
     .en-bref__photo {
       display: flex; flex-direction: column;
       align-self: stretch;
@@ -327,7 +274,7 @@
     .en-bref__photo-caption__name { font-family: var(--f-display); font-size: .85rem; letter-spacing: .08em; color: #fff; }
     .en-bref__photo-caption__role { font-family: var(--f-mono); font-size: .52rem; letter-spacing: .08em; text-transform: uppercase; color: rgba(255,255,255,.75); }
 
-    /* ══ TICKER — fond sombre fixe ══ */
+    /* ══ TICKER ══ */
     .ticker { background: var(--encart-bg); padding: .9rem 0; overflow: hidden; white-space: nowrap; border-top: 1px solid rgba(255,255,255,.06); }
     .ticker__inner { display: inline-block; animation: ticker 28s linear infinite; }
     .ticker__inner span { font-family: var(--f-display); font-size: 1rem; letter-spacing: .15em; color: rgba(248,246,241,.35); margin-right: 3rem; }
@@ -345,7 +292,6 @@
     }
     .block.anim-init { opacity: 0; transform: translateY(24px); }
     .block.visible   { opacity: 1; transform: translateY(0); transition: opacity .6s ease, transform .6s ease, border-color .3s; }
-
     .block__num-wrap { position: relative; display: flex; flex-direction: column; align-items: flex-start; }
     .block__ghost { font-family: var(--f-display); font-size: 8rem; line-height: 1; color: var(--ghost); letter-spacing: -.02em; position: absolute; top: -1rem; left: -1rem; z-index: 0; user-select: none; pointer-events: none; transition: color .3s; }
     .block__num { font-family: var(--f-mono); font-size: .65rem; font-weight: 500; letter-spacing: .14em; color: var(--vif); position: relative; z-index: 1; margin-top: .5rem; }
@@ -354,22 +300,33 @@
     .block__titre { font-family: var(--f-serif); font-size: clamp(1.6rem, 2.5vw, 2.2rem); font-weight: 700; color: var(--txt); line-height: 1.18; margin-bottom: 1.75rem; letter-spacing: -.01em; transition: color .3s; }
     .block__titre em { font-style: italic; font-weight: 300; color: var(--txt-3); }
 
-    /* ══ ZONE B — Photo contextuelle §01 ══
-       REMPLACER par :
-       <img src="bureau.jpg" alt="Dirigeant"
-            style="width:100%;height:100%;object-fit:cover;" />
-    ══ */
+    /* ══ PHOTO INLINE ══ */
     .photo-inline { float: right; width: 260px; margin: 0 0 1.5rem 2.5rem; }
     .photo-inline .photo-encart { width: 100%; aspect-ratio: 4/3; border-radius: 4px; border: 1px solid var(--ligne); }
     .photo-inline__caption { padding: .4rem .7rem; background: var(--bg-2); border: 1px solid var(--ligne); border-top: none; border-radius: 0 0 4px 4px; font-family: var(--f-mono); font-size: .54rem; letter-spacing: .08em; text-transform: uppercase; color: var(--txt-4); transition: var(--trans); }
     .clearfix::after { content: ''; display: table; clear: both; }
+
+    /* ══ PHOTO TERRITOIRE ══ */
+    .photo-territoire { float: right; width: 300px; margin: 0 0 2rem 2.5rem; }
+    .photo-territoire .photo-encart { width: 100%; aspect-ratio: 16/9; border-radius: 4px; border: 1px solid var(--ligne); }
+    .photo-territoire__caption { padding: .4rem .7rem; background: var(--encart-bg); border-radius: 0 0 4px 4px; font-family: var(--f-mono); font-size: .54rem; letter-spacing: .08em; text-transform: uppercase; color: rgba(248,246,241,.4); }
 
     /* Pull quote */
     .pq { margin: 2.5rem 0; padding: 2rem; background: var(--pq-bg); border-left: 4px solid var(--vif); transition: background .3s; }
     .pq__texte { font-family: var(--f-serif); font-size: clamp(1.1rem, 1.5vw, 1.35rem); font-style: italic; font-weight: 300; color: var(--txt); line-height: 1.5; margin-bottom: .75rem; transition: color .3s; }
     .pq__src { font-family: var(--f-mono); font-size: .62rem; letter-spacing: .1em; text-transform: uppercase; color: var(--txt-4); }
 
-    /* Cards */
+    /* Cards 2 colonnes — canal vs infrastructure */
+    .cards-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 0; margin: 2rem 0; border: 1px solid var(--ligne); transition: border-color .3s; }
+    .card-2 { padding: 2rem 1.75rem; border-right: 1px solid var(--ligne); position: relative; overflow: hidden; background: var(--card-bg); transition: background .25s, border-color .3s; }
+    .card-2:last-child { border-right: none; }
+    .card-2:hover { background: var(--card-hover); }
+    .card-2__label { font-family: var(--f-mono); font-size: .6rem; letter-spacing: .12em; text-transform: uppercase; color: var(--txt-4); margin-bottom: .75rem; }
+    .card-2--infra .card-2__label { color: var(--vif); }
+    .card-2__titre { font-family: var(--f-serif); font-size: 1.05rem; font-weight: 700; color: var(--txt); margin-bottom: 1rem; line-height: 1.25; transition: color .3s; }
+    .card-2--infra .card-2__titre { color: var(--vif); }
+
+    /* Cards 3 colonnes */
     .cards { display: grid; grid-template-columns: repeat(3,1fr); gap: 0; margin: 2rem 0; border: 1px solid var(--ligne); transition: border-color .3s; }
     .card { padding: 2rem 1.75rem; border-right: 1px solid var(--ligne); position: relative; overflow: hidden; background: var(--card-bg); transition: background .25s, border-color .3s; }
     .card:last-child { border-right: none; }
@@ -385,15 +342,13 @@
     .liste li { display: grid; grid-template-columns: 1.5rem 1fr; gap: 0 1rem; padding: .75rem 0; border-bottom: 1px solid var(--ligne-2); font-family: var(--f-sans); font-size: .88rem; color: var(--txt-3); font-weight: 300; line-height: 1.6; transition: color .3s, border-color .3s; }
     .liste li::before { content: '↳'; color: var(--vif); font-size: .9rem; line-height: 1.6; }
 
-    /* ══ ZONE D — Photo territoire §03 ══
-       REMPLACER par :
-       <img src="quebec.jpg" alt="Québec"
-            style="width:100%;height:100%;object-fit:cover;" />
-       Sur les pages locales : photo de la ville.
-    ══ */
-    .photo-territoire { float: right; width: 300px; margin: 0 0 2rem 2.5rem; }
-    .photo-territoire .photo-encart { width: 100%; aspect-ratio: 16/9; border-radius: 4px; border: 1px solid var(--ligne); }
-    .photo-territoire__caption { padding: .4rem .7rem; background: var(--encart-bg); border-radius: 0 0 4px 4px; font-family: var(--f-mono); font-size: .54rem; letter-spacing: .08em; text-transform: uppercase; color: rgba(248,246,241,.4); }
+    /* Tableau comparatif canal / infrastructure */
+    .compare-table { width: 100%; border-collapse: collapse; margin: 2rem 0; font-family: var(--f-sans); font-size: .85rem; }
+    .compare-table th { font-family: var(--f-mono); font-size: .6rem; letter-spacing: .12em; text-transform: uppercase; padding: .75rem 1.25rem; border-bottom: 2px solid var(--ligne); text-align: left; color: var(--txt-4); }
+    .compare-table th.col-infra { color: var(--vif); border-bottom-color: var(--vif); }
+    .compare-table td { padding: .7rem 1.25rem; border-bottom: 1px solid var(--ligne-2); color: var(--txt-3); font-weight: 300; line-height: 1.6; transition: color .3s, border-color .3s; }
+    .compare-table td.col-infra { color: var(--txt); font-weight: 400; }
+    .compare-table tr:hover td { background: var(--vif-pale); }
 
     /* FAQ */
     .faq-block { padding: 5rem 0; border-bottom: 1px solid var(--ligne); }
@@ -411,10 +366,7 @@
     .signature__texte span { color: var(--vif); }
     .signature__auteur { font-family: var(--f-mono); font-size: .7rem; color: var(--txt-4); letter-spacing: .1em; margin-top: 1rem; grid-column: 2; }
 
-    /* ══════════════════════════════════════════════
-       SECTION ÉQUIPE — TRIO 3 COLONNES ÉGALES
-       Zones E1 · E2 · E3
-    ══════════════════════════════════════════════ */
+    /* ══ SECTION ÉQUIPE ══ */
     .equipe-section { background: var(--encart-bg); padding: 4rem 2.5rem; margin-top: 0; }
     .equipe-inner { max-width: var(--max); margin: 0 auto; }
     .equipe-header { display: flex; align-items: baseline; gap: 1.5rem; margin-bottom: 2.5rem; }
@@ -422,12 +374,6 @@
     .equipe-header__titre { font-family: var(--f-display); font-size: clamp(2rem, 4vw, 3.5rem); color: #F8F6F1; letter-spacing: .04em; line-height: 1; }
     .equipe-header__titre span { color: var(--vif); }
     .equipe-grille { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.25rem; }
-
-    /* ══ ZONES E1/E2/E3 — Photos carrées ══
-       REMPLACER dans chaque .photo-encart :
-       <img src="NOM.jpg" alt="Prénom"
-            style="width:100%;height:100%;object-fit:cover;object-position:top center;" />
-    ══ */
     .membre { display: flex; flex-direction: column; }
     .membre .photo-encart { width: 100%; aspect-ratio: 1/1; border-radius: 4px 4px 0 0; border-bottom: none; }
     .membre__bar { padding: .65rem 1rem; display: flex; align-items: center; justify-content: space-between; }
@@ -435,7 +381,6 @@
     .membre--olivier    .membre__bar { background: #2A2722; border: 1px solid rgba(255,255,255,.1); }
     .membre--lounas     .membre__bar { background: #504B44; }
     .membre__name { font-family: var(--f-display); font-size: .95rem; letter-spacing: .07em; color: #fff; }
-    .membre--christophe .membre__name { color: #fff; }
     .membre__role { font-family: var(--f-mono); font-size: .54rem; letter-spacing: .07em; text-transform: uppercase; color: rgba(255,255,255,.65); }
     .membre__bio { padding: 1rem 1rem 1.25rem; background: #1E1C18; flex: 1; border: 1px solid rgba(255,255,255,.06); border-top: none; border-radius: 0 0 4px 4px; }
     .membre__bio p { font-family: var(--f-sans); font-size: .78rem; font-weight: 300; color: rgba(248,246,241,.5); line-height: 1.65; margin-bottom: 0; }
@@ -462,23 +407,17 @@
     .footer__copy { width: 100%; font-family: var(--f-mono); font-size: .6rem; color: rgba(248,246,241,.25); letter-spacing: .06em; margin-top: 1rem; }
 
     /* ══════════════════════════════════════════════
-       MOBILE FIRST — base = mobile, on monte ensuite
+       MOBILE FIRST
     ══════════════════════════════════════════════ */
-
-    /* ── Base mobile (< 560px) ── */
     .nav { padding: 0 1rem; }
     .nav__right { gap: .75rem; }
-    /* Masquer "20 territoires" sur mobile — ne rentre pas */
     .nav__pill { display: none; }
     .hero { grid-template-columns: 1fr; padding: 3.5rem 1.25rem 0; gap: 0; }
-    .hero__left { }
     .hero__right { border-left: none; padding-left: 0; border-top: 1px solid var(--ligne); padding-top: 1.5rem; margin-top: 1.5rem; transition: border-color .3s; }
     .hero__h1 { font-size: clamp(3rem, 12vw, 4rem); }
     .en-bref { padding: 1.75rem 1.25rem; margin-top: 2rem; }
-    /* Sur mobile : label horizontal + texte + photo dessous */
     .en-bref__inner { grid-template-columns: 1fr; gap: 1rem; }
     .en-bref__label { writing-mode: horizontal-tb; transform: none; font-size: 2rem; margin-bottom: .5rem; }
-    /* Photo visible sur mobile — sous le texte, format compact */
     .en-bref__photo { display: flex; flex-direction: row; align-items: center; gap: 1rem; margin-top: .75rem; }
     .en-bref__photo .photo-encart { width: 100px; height: 130px; flex-shrink: 0; border-radius: 4px 4px 0 0; }
     .en-bref__photo-caption { border-radius: 0 0 4px 4px; padding: .35rem .6rem; }
@@ -489,8 +428,11 @@
     .block__ghost { display: none; }
     .block__tag { margin-top: 0; }
     .cards { grid-template-columns: 1fr; }
+    .cards-2 { grid-template-columns: 1fr; }
     .card { border-right: none; border-bottom: 1px solid var(--ligne); }
     .card:last-child { border-bottom: none; }
+    .card-2 { border-right: none; border-bottom: 1px solid var(--ligne); }
+    .card-2:last-child { border-bottom: none; }
     .photo-inline, .photo-territoire { float: right; margin: 0 0 1.5rem 1.25rem; }
     .photo-inline { width: 140px; }
     .photo-territoire { width: 160px; }
@@ -506,12 +448,12 @@
     .cta__inner { grid-template-columns: 1fr; gap: 1.5rem; }
     .footer { padding: 2rem 1.25rem; }
     .breadcrumb-wrap { padding: .6rem 1.25rem; }
-    /* Pas de curseur custom sur mobile */
+    .compare-table { font-size: .78rem; }
+    .compare-table th, .compare-table td { padding: .6rem .75rem; }
     #cursor { display: none; }
     body { cursor: auto; }
     a, button, [role="button"] { cursor: pointer !important; }
 
-    /* ── Tablette (≥ 560px) ── */
     @media (min-width: 560px) {
       .nav { padding: 0 1.75rem; }
       .nav__right { gap: 1.5rem; }
@@ -536,9 +478,10 @@
       .equipe-section { padding: 3rem 1.75rem; }
       .cta { padding: 4rem 1.75rem; }
       .footer { padding: 2.5rem 1.75rem; }
+      .cards { grid-template-columns: repeat(2,1fr); }
+      .cards-2 { grid-template-columns: 1fr 1fr; }
     }
 
-    /* ── Desktop (≥ 900px) ── */
     @media (min-width: 900px) {
       .nav { padding: 0 2.5rem; }
       .hero { grid-template-columns: 1fr 320px; padding: 5rem 2.5rem 0; gap: 0 4rem; }
@@ -562,16 +505,13 @@
       .cta__inner { grid-template-columns: 1fr auto; gap: 2rem 4rem; }
       .footer { padding: 3rem 2.5rem; }
       .breadcrumb-wrap { padding: .75rem 2.5rem; }
-      /* Curseur custom réactivé sur desktop */
+      .cards { grid-template-columns: repeat(3,1fr); }
       #cursor { display: block; }
       body { cursor: none; }
-      a, button, [role="button"], .card, .membre,
+      a, button, [role="button"], .card, .card-2, .membre,
       .nav__btn, .cta__btn, .theme-switch, .theme-switch * { cursor: pointer !important; }
     }
   </style>
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-J0730CFBB3"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-J0730CFBB3");</script>
-<style>#nb-consent{position:fixed;bottom:0;left:0;right:0;z-index:99999;background:#141210;color:#F0EDE6;padding:1.25rem 2rem;display:flex;align-items:center;justify-content:space-between;gap:1.5rem;flex-wrap:wrap;border-top:2px solid #E63E1C;font-family:"IBM Plex Sans",system-ui,sans-serif;font-size:.82rem;line-height:1.5}#nb-consent p{margin:0;flex:1;min-width:200px;color:rgba(240,237,230,.8)}#nb-consent a{color:#E63E1C;text-decoration:underline}#nb-consent .nb-btns{display:flex;gap:.75rem;flex-shrink:0}#nb-consent .nb-accept{background:#E63E1C;color:#fff;border:none;cursor:pointer;font-family:"Bebas Neue",sans-serif;font-size:.95rem;letter-spacing:.08em;padding:.5rem 1.25rem}#nb-consent .nb-refuse{background:transparent;color:rgba(240,237,230,.6);border:1px solid rgba(240,237,230,.2);cursor:pointer;font-family:"IBM Plex Mono",monospace;font-size:.72rem;letter-spacing:.06em;padding:.5rem 1rem}#nb-consent .nb-accept:hover{background:#c43318}#nb-consent .nb-refuse:hover{color:#F0EDE6;border-color:rgba(240,237,230,.5)}</style>
-<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("consent","default",{"ad_storage":"denied","ad_user_data":"denied","ad_personalization":"denied","analytics_storage":"denied"});</script><script async src="https://www.googletagmanager.com/gtag/js?id=G-J0730CFBB3"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-J0730CFBB3");</script>
 </head>
 
 <body>
@@ -582,9 +522,8 @@
 <nav class="nav" aria-label="Navigation principale">
   <a href="/" class="nav__logo">NEURO<i>BREAK</i>™</a>
   <div class="nav__right">
-    <a href="#territoires" class="nav__pill">20 territoires →</a>
+    <a href="/systeme-marketing-b2b-quebec" class="nav__pill">20 territoires →</a>
 
-    <!-- SWITCH DARK / LIGHT -->
     <button class="theme-switch" id="themeSwitch" aria-label="Basculer thème clair/sombre">
       <span class="theme-switch__icon theme-switch__icon--sun" aria-hidden="true">☀️</span>
       <span class="theme-switch__track"><span class="theme-switch__dot"></span></span>
@@ -599,52 +538,59 @@
 <div class="breadcrumb-wrap">
   <ol class="breadcrumb" aria-label="Fil d'Ariane">
     <li><a href="/">Accueil</a></li>
-    <li>Système marketing B2B au Québec</li>
+    <li><a href="/">Architecture B2B francophone</a></li>
+    <li>YouTube B2B — Acquisition</li>
   </ol>
 </div>
 
-<!-- ══ HERO — V3 original ══ -->
+<!-- ══ HERO ══ -->
 <header class="hero" id="top">
   <div class="hero__left">
-    <div class="hero__tag">NeuroBreak™ Studio — Architecture territoriale B2B</div>
+    <div class="hero__tag">NeuroBreak™ Studio — Système B2B Francophone</div>
     <h1 class="hero__h1">
-      SYSTÈME<br />
-      <span class="rouge">MARKETING</span><br />
-      <span class="fin">B2B au Québec</span>
+      YOU<br />
+      <span class="rouge">TUBE</span><br />
+      <span class="fin">infrastructure B2B</span>
     </h1>
     <p class="hero__statement">
-      Le Québec n'est pas un marché.<br />
-      C'est vingt marchés.<br />
-      Et ils ne décident pas de la même façon.
+      Tout le monde publie.<br />
+      Peu orientent.<br />
+      Ce n'est pas la même chose.
     </p>
   </div>
 
   <div class="hero__right">
+    <p class="hero__meta-label">Pilier</p>
+    <p class="hero__meta-val">02 — Acquisition</p>
     <p class="hero__meta-label">Auteur</p>
     <p class="hero__meta-val">Christophe Simon<br />Architecte stratégique</p>
     <p class="hero__meta-label">Territoire</p>
-    <p class="hero__meta-val">Québec — 20 territoires B2B</p>
-    <p class="hero__meta-label">Système</p>
-    <p class="hero__meta-val">Acquisition · Conversion · Orchestration</p>
+    <p class="hero__meta-val">Québec — PME B2B francophones</p>
     <ul class="hero__index" aria-label="Sommaire">
-      <li><span class="idx">01</span><a href="#lecture">Ce que la lecture territoriale change</a></li>
-      <li><span class="idx">02</span><a href="#fenetre">Pourquoi la francophonie ouvre une fenêtre</a></li>
-      <li><span class="idx">03</span><a href="#leviers">Les trois leviers appliqués au territoire</a></li>
-      <li><span class="idx">04</span><a href="#territoires">Les 20 territoires du système</a></li>
+      <li><span class="idx">01</span><a href="#intention">Le problème d'intention</a></li>
+      <li><span class="idx">02</span><a href="#distinction">Canal vs infrastructure</a></li>
+      <li><span class="idx">03</span><a href="#erreurs">Les erreurs invisibles</a></li>
+      <li><span class="idx">04</span><a href="#fenetreqc">La fenêtre québécoise</a></li>
       <li><span class="idx">05</span><a href="#faq">Questions fréquentes</a></li>
     </ul>
   </div>
 </header>
 
-<!-- EN BREF + ZONE A — Photo Christophe à droite du texte -->
+<!-- EN BREF -->
 <div class="en-bref" id="en-bref">
   <div class="en-bref__inner">
     <p class="en-bref__label" aria-hidden="true">EN<br/>BREF</p>
-    <p class="en-bref__corps">Le marché B2B québécois regroupe <strong>plus de 230&nbsp;000 PME</strong> réparties sur des territoires aux réalités économiques distinctes. <strong>NeuroBreak™ structure l'acquisition, la conversion et l'orchestration</strong> en tenant compte de ces tensions locales — pas selon un template uniforme. Chaque territoire a un problème central, un levier dominant, et une architecture adaptée.</p>
+    <p class="en-bref__corps">Une chaîne YouTube B2B structurée n'est pas un canal de contenu. C'est une <strong>infrastructure d'acquisition</strong>. Elle filtre les prospects en amont, prépare la décision avant l'appel, et produit des leads qualifiés plutôt que du trafic générique. La distinction est structurelle : un canal diffuse à tout le monde, une infrastructure sélectionne ceux qui sont prêts à décider.</p>
 
+    <!-- ZONE A — Photo Christophe
+         REMPLACER : <img src="christophe-simon.jpg"
+              alt="Christophe Simon — Architecte stratégique NeuroBreak™"
+              style="width:100%;height:100%;object-fit:cover;object-position:top center;" />
+         FORMAT : portrait 3/4, min. 480×640 px -->
     <div class="en-bref__photo">
       <div class="photo-encart" aria-label="Emplacement photo Christophe Simon">
-        <div class="photo-encart__placeholder">
+<img src="/assets/christophe.jpg" alt="Christophe Simon" style="width:100%;height:100%;object-fit:cover;object-position:center center;" />
+<div class="photo-encart__placeholder">
           <span class="photo-encart__badge">Zone A</span>
           <p class="photo-encart__titre">Christophe Simon</p>
           <p class="photo-encart__spec">Portrait 3/4<br />480×640 px min.</p>
@@ -662,158 +608,224 @@
 <!-- TICKER -->
 <div class="ticker" aria-hidden="true">
   <div class="ticker__inner">
-    <span>QUÉBEC</span><span class="hl">·</span><span>20 TERRITOIRES</span><span class="hl">·</span><span>ACQUISITION</span><span class="hl">·</span><span>CONVERSION</span><span class="hl">·</span><span>ORCHESTRATION</span><span class="hl">·</span><span>PME FRANCOPHONES</span><span class="hl">·</span><span>NEUROBREAK™</span><span class="hl">·</span><span>QUÉBEC</span><span class="hl">·</span><span>20 TERRITOIRES</span><span class="hl">·</span><span>ACQUISITION</span><span class="hl">·</span><span>CONVERSION</span><span class="hl">·</span><span>ORCHESTRATION</span><span class="hl">·</span><span>PME FRANCOPHONES</span><span class="hl">·</span><span>NEUROBREAK™</span><span class="hl">·</span>
+    <span>INFRASTRUCTURE</span><span class="hl">·</span><span>ACQUISITION</span><span class="hl">·</span><span>LEADS QUALIFIÉS</span><span class="hl">·</span><span>YOUTUBE B2B</span><span class="hl">·</span><span>QUÉBEC FRANCOPHONE</span><span class="hl">·</span><span>NEUROBREAK™</span><span class="hl">·</span><span>INFRASTRUCTURE</span><span class="hl">·</span><span>ACQUISITION</span><span class="hl">·</span><span>LEADS QUALIFIÉS</span><span class="hl">·</span><span>YOUTUBE B2B</span><span class="hl">·</span><span>QUÉBEC FRANCOPHONE</span><span class="hl">·</span><span>NEUROBREAK™</span><span class="hl">·</span>
   </div>
 </div>
 
 <!-- ══ CORPS ══ -->
 <main>
-
 <div class="article-body">
 
-  <!-- §01 -->
-  <div class="block" id="lecture">
+  <!-- §01 — Le problème d'intention -->
+  <div class="block" id="intention">
     <div class="block__num-wrap">
       <span class="block__ghost" aria-hidden="true">01</span>
       <span class="block__num">§ 01</span>
-      <span class="block__tag">Lecture<br />territoriale</span>
+      <span class="block__tag">Diagnostic<br />structural</span>
     </div>
     <div class="block__content">
-      <h2 class="block__titre">Ce que la lecture territoriale<br /><em>change réellement</em></h2>
+      <h2 class="block__titre">Ce que YouTube fait —<br /><em>et ce qu'il ne fait pas seul</em></h2>
 
+      <!-- ZONE B — Photo contextuelle §01
+           REMPLACER : <img src="studio-video.jpg" alt="Studio vidéo B2B"
+           style="width:100%;height:100%;object-fit:cover;object-position:center;" />
+           FORMAT : paysage 4/3, min. 640×480 px -->
       <div class="photo-inline">
         <div class="photo-encart" aria-label="Emplacement photo contextuelle">
+          <!-- ↓ VOTRE <img> ICI ↓ -->
           <div class="photo-encart__placeholder">
             <span class="photo-encart__badge">Zone B · §01</span>
-            <p class="photo-encart__titre">Décideur B2B</p>
+            <p class="photo-encart__titre">Studio / tournage vidéo</p>
             <p class="photo-encart__spec">Paysage 4/3 · 640×480 px</p>
           </div>
         </div>
-        <div class="photo-inline__caption">Contexte — une décision B2B n'a pas la même logique partout</div>
+        <div class="photo-inline__caption">Contexte — la chaîne qui diffuse sans orienter</div>
       </div>
 
-      <p>Le Québec B2B est souvent traité comme un bloc homogène. Un marché francophone. Des PME. Des décideurs.</p>
-      <p>C'est une erreur d'analyse.</p>
-      <p>Un dirigeant de Saguenay ne prend pas de décision comme un dirigeant de Laval. Une PME manufacturière de Sherbrooke n'a pas le même problème qu'une PME de services professionnels à Gatineau. Le cycle de vente d'une entreprise agro-industrielle de Saint-Hyacinthe n'est pas le cycle d'une boîte tech de Montréal.</p>
-      <p><a href="/marketing-fragmente-pme">La fragmentation marketing commence souvent là</a> — dans une stratégie conçue sans tenir compte du territoire réel où elle doit opérer. Un message calibré pour un décideur montréalais multi-acteurs ne résonne pas de la même façon chez un dirigeant manufacturier de Drummondville qui cherche à structurer sa croissance rapide.</p>
-      <ul class="liste" aria-label="Ce que le territoire change">
-        <li>Chaque territoire a sa propre tension économique dominante</li>
-        <li>Les contraintes de main-d'œuvre ne sont pas les mêmes d'une ville à l'autre</li>
-        <li>La maturité numérique varie fortement selon la structure sectorielle locale</li>
-        <li>La relation au risque, à l'investissement et à la décision n'est pas homogène</li>
-        <li>Une architecture générique devient correcte partout, pertinente nulle part</li>
-      </ul>
+      <p>Une chaîne YouTube existe. Des vidéos sortent. Régulièrement. Certaines ont quelques centaines de vues. D'autres quelques milliers. Les commentaires sont positifs. L'audience semble intéressée.</p>
+      <p>Et pourtant. Aucun rendez-vous qualifié ne vient de là. Aucun prospect ne mentionne YouTube comme point d'entrée. La chaîne tourne — mais elle ne travaille pas.</p>
+      <p>Ce n'est pas un problème de qualité vidéo. Ce n'est pas un problème de fréquence. Ce n'est pas l'algorithme. C'est un problème d'intention.</p>
+      <p>La chaîne diffuse. Elle n'oriente pas. Elle accumule une audience — sans jamais construire un pipeline. Et la différence entre ces deux états n'est pas une question de production. C'est une question d'architecture.</p>
+      <p>YouTube est la deuxième plateforme de recherche mondiale. Les décideurs B2B l'utilisent. Ils cherchent des réponses à des problèmes précis, des méthodes pour résoudre des situations concrètes, des preuves que quelqu'un comprend leur réalité. C'est un terrain d'acquisition exceptionnel — mais seulement si la chaîne est construite pour orienter, pas juste pour informer.</p>
+      <p><a href="/marketing-fragmente-pme">Le marketing fragmenté coûte précisément ça</a> — des actions qui existent, qui fonctionnent chacune dans leur logique, mais qui ne se parlent pas. Une chaîne YouTube déconnectée du pipeline commercial en est l'exemple le plus visible.</p>
+
       <div class="clearfix"></div>
       <div class="pq">
-        <p class="pq__texte">« Le Québec n'est pas un marché. C'est vingt marchés. Et une architecture qui ignore cette réalité produit du contenu localisé en surface, mais jamais une autorité territoriale réelle. »</p>
+        <p class="pq__texte">« Je ne regarde pas d'abord la qualité des vidéos. Je regarde l'intention derrière chaque contenu. Est-ce que cette vidéo attire quelqu'un de précis, avec un problème précis, à un stade précis de sa réflexion ? Ou est-ce qu'elle informe un public large qui ne prendra jamais de rendez-vous ? »</p>
         <p class="pq__src">Christophe Simon — NeuroBreak™ Studio</p>
       </div>
     </div>
   </div>
 
-  <!-- §02 -->
-  <div class="block" id="fenetre">
+  <!-- §02 — Canal vs infrastructure -->
+  <div class="block" id="distinction">
     <div class="block__num-wrap">
       <span class="block__ghost" aria-hidden="true">02</span>
       <span class="block__num">§ 02</span>
-      <span class="block__tag">Fenêtre<br />francophone</span>
+      <span class="block__tag">Architecture<br />système</span>
     </div>
     <div class="block__content">
-      <h2 class="block__titre">Pourquoi la francophonie crée<br /><em>une fenêtre unique</em></h2>
-      <p><a href="/">Le modèle NeuroBreak™ est conçu pour la francophonie B2B</a> — et le Québec en est le terrain le plus immédiat.</p>
-      <p>La raison est structurelle.</p>
-      <p>Le marché anglophone a résolu ces problèmes il y a 3 à 5 ans. Les stratégies d'acquisition YouTube B2B, les architectures de qualification amont, les systèmes de nurturing automatisés — ils existent, ils sont documentés, ils sont compétitifs.</p>
-      <p>En français, au Québec, ce marché est encore ouvert.</p>
-      <div class="cards" role="list">
-        <div class="card" role="listitem">
-          <span class="card__num" aria-hidden="true">01</span>
-          <p class="card__levier">Visibilité</p>
-          <p class="card__titre">Les requêtes sont encore peu disputées</p>
-          <p class="card__corps">Les requêtes B2B stratégiques en français restent moins concurrentielles que leurs équivalents anglophones. Cela crée une avance possible pour les premiers acteurs qui structurent leur présence.</p>
+      <h2 class="block__titre">Canal vs infrastructure —<br /><em>la distinction qui change tout</em></h2>
+      <p>Un canal de contenu cherche des vues. Une infrastructure d'acquisition cherche des décisions. Ce ne sont pas deux degrés d'ambition. Ce sont deux logiques de construction.</p>
+
+      <div class="cards-2" role="list">
+        <div class="card-2 card-2--canal" role="listitem">
+          <p class="card-2__label">Le canal</p>
+          <p class="card-2__titre">Diffuse à tout le monde</p>
+          <ul class="liste" aria-label="Caractéristiques du canal">
+            <li>Produit du contenu éducatif large</li>
+            <li>Mesure les vues, abonnés, temps de visionnage</li>
+            <li>Attire une audience intéressée</li>
+            <li>Génère de la notoriété</li>
+          </ul>
         </div>
-        <div class="card" role="listitem">
-          <span class="card__num" aria-hidden="true">02</span>
-          <p class="card__levier">Autorité</p>
-          <p class="card__titre">Les chaînes d'autorité restent rares</p>
-          <p class="card__corps">Dans des niches comme le conseil, le manufacturier avancé ou les services professionnels, les architectures de contenu qui préparent la décision avant l'appel existent à peine encore.</p>
+        <div class="card-2 card-2--infra" role="listitem">
+          <p class="card-2__label">L'infrastructure</p>
+          <p class="card-2__titre">Sélectionne ceux qui décident</p>
+          <ul class="liste" aria-label="Caractéristiques de l'infrastructure">
+            <li>Produit du contenu orienté vers un problème décisionnel précis</li>
+            <li>Mesure les rendez-vous qualifiés générés</li>
+            <li>Filtre les prospects selon leur niveau de maturité</li>
+            <li>Prépare la conversation commerciale avant qu'elle commence</li>
+          </ul>
         </div>
-        <div class="card" role="listitem">
-          <span class="card__num" aria-hidden="true">03</span>
-          <p class="card__levier">Timing</p>
-          <p class="card__titre">La fenêtre ne restera pas ouverte</p>
-          <p class="card__corps">Le premier acteur qui structure sérieusement son système territorial en français prend une avance durable. Cette avance se construit maintenant, pas après saturation du marché.</p>
-        </div>
+      </div>
+
+      <p>La majorité des chaînes B2B québécoises sont des canaux. Elles informent bien. Elles ne convertissent pas.</p>
+      <p><a href="/">L'architecture NeuroBreak™ part de ce constat</a> pour construire différemment — en définissant l'intention de chaque vidéo avant de définir son contenu.</p>
+
+      <h3 style="font-family:var(--f-serif);font-size:1.15rem;font-weight:700;color:var(--txt);margin:2.5rem 0 1.25rem;letter-spacing:-.01em;">Comment une infrastructure d'acquisition fonctionne</h3>
+      <p>Le principe est simple. L'exécution demande de la rigueur. Chaque vidéo a une intention déclarée avant d'être produite. Elle s'adresse à un profil précis, à un stade précis de sa réflexion, avec un problème précis qu'elle traite en profondeur.</p>
+      <p>Le contenu ne cherche pas à plaire. Il cherche à filtrer. Un prospect qui regarde une vidéo sur "comment qualifier ses leads B2B avant l'appel" et qui la regarde jusqu'au bout — c'est quelqu'un qui a ce problème, qui cherche une solution, et qui est potentiellement prêt à avoir une conversation.</p>
+      <p><a href="/reduction-cycle-vente-b2b">C'est exactement ce qui réduit le cycle de vente</a> — le prospect arrive à l'appel déjà convaincu du problème, déjà familier de la méthode, déjà disposé à décider. La conversation commerciale confirme. Elle ne convainc pas.</p>
+
+      <div class="pq">
+        <p class="pq__texte">Lounas, qui structure des pipelines depuis 25 ans, reconnaît immédiatement ce pattern. Les équipes commerciales les plus performantes qu'il a accompagnées n'étaient pas les plus agressives. C'étaient celles dont les prospects arrivaient déjà éduqués.</p>
+        <p class="pq__src">Lounas — Vente & Pipeline, NeuroBreak™</p>
       </div>
     </div>
   </div>
 
-  <!-- §03 -->
-  <div class="block" id="leviers">
+  <!-- §03 — Les erreurs invisibles -->
+  <div class="block" id="erreurs">
     <div class="block__num-wrap">
       <span class="block__ghost" aria-hidden="true">03</span>
       <span class="block__num">§ 03</span>
-      <span class="block__tag">Leviers<br />du système</span>
+      <span class="block__tag">Erreurs<br />structurelles</span>
     </div>
     <div class="block__content">
-      <h2 class="block__titre">Les trois leviers appliqués<br /><em>au territoire québécois</em></h2>
+      <h2 class="block__titre">Les erreurs invisibles<br /><em>qui bloquent l'acquisition</em></h2>
+      <p>Ce sont rarement des erreurs de production. Ce sont des erreurs de structure.</p>
 
-      <div class="photo-territoire">
-        <div class="photo-encart" aria-label="Emplacement photo territoire Québec">
-          <div class="photo-encart__placeholder">
-            <span class="photo-encart__badge">Zone D · §03</span>
-            <p class="photo-encart__titre">Territoire québécois</p>
-            <p class="photo-encart__spec">16/9 · 640×360 px</p>
-          </div>
-        </div>
-        <div class="photo-territoire__caption">Québec — un même système, des applications différentes</div>
-      </div>
-
-      <p>Le modèle repose sur les mêmes trois piliers partout. Ce qui change, c'est leur application selon la tension dominante du territoire.</p>
-      <p>À Montréal, le problème central est souvent l'alignement entre plusieurs acteurs décisionnels. À Québec, la pression porte davantage sur la productivité sous rareté de main-d'œuvre. À Sherbrooke, l'excellence technique précède souvent la structuration commerciale. À Saguenay, la modernisation se fait sous contrainte d'héritage industriel. À Saint-Hyacinthe, l'agro-industrie structurée n'a pas encore pleinement converti sa richesse de données en architecture marketing.</p>
       <div class="cards" role="list">
         <div class="card" role="listitem">
           <span class="card__num" aria-hidden="true">01</span>
-          <p class="card__levier">Acquisition</p>
-          <p class="card__titre">Visibilité et qualification amont</p>
-          <p class="card__corps"><a href="/chaine-youtube-b2b-generation-leads">Une infrastructure YouTube B2B structurée</a> produit des prospects qui arrivent à l'appel déjà orientés — particulièrement efficace dans les territoires où la concurrence digitale est encore faible.</p>
+          <p class="card__levier">Erreur 01</p>
+          <p class="card__titre">Absence de fil décisionnel</p>
+          <p class="card__corps">Les vidéos s'enchaînent sans logique de progression. Un prospect peut regarder 10 vidéos sans jamais être orienté vers une action concrète.</p>
         </div>
         <div class="card" role="listitem">
           <span class="card__num" aria-hidden="true">02</span>
-          <p class="card__levier">Conversion</p>
-          <p class="card__titre">Préparer la décision avant le rendez-vous</p>
-          <p class="card__corps"><a href="/reduction-cycle-vente-b2b">La qualification stratégique amont</a> réduit le cycle en préparant la décision avant le premier rendez-vous — particulièrement pertinente dans les territoires à forte influence institutionnelle comme Québec ou Gatineau.</p>
+          <p class="card__levier">Erreur 02</p>
+          <p class="card__titre">Contenu trop large</p>
+          <p class="card__corps">On parle à tout le monde, donc à personne de précis. Les décideurs ne se reconnaissent pas dans le contenu diffusé.</p>
         </div>
         <div class="card" role="listitem">
           <span class="card__num" aria-hidden="true">03</span>
-          <p class="card__levier">Orchestration</p>
-          <p class="card__titre">Aligner les fonctions sans diluer le message</p>
-          <p class="card__corps"><a href="/systeme-marketing-centralise-pme">Le système marketing centralisé</a> aligne acquisition, qualification et pilotage — particulièrement critique dans les territoires en reconversion ou en croissance rapide comme Shawinigan ou Drummondville.</p>
+          <p class="card__levier">Erreur 03</p>
+          <p class="card__titre">Aucun mécanisme de filtrage</p>
+          <p class="card__corps">Les vidéos attirent mais ne qualifient pas. Il n'y a pas de signal qui distingue le curieux du prospect prêt à décider.</p>
         </div>
       </div>
-      <div class="clearfix"></div>
-      <p>Lounas reconnaît immédiatement quel levier activer selon le territoire. Après 25 ans de terrain commercial dans des contextes variés, la lecture de la tension dominante se fait vite — avant même d'ouvrir un tableau de bord.</p>
+
+      <div class="cards" role="list" style="margin-top:0;border-top:none;">
+        <div class="card" role="listitem">
+          <span class="card__num" aria-hidden="true">04</span>
+          <p class="card__levier">Erreur 04</p>
+          <p class="card__titre">Déconnexion pipeline</p>
+          <p class="card__corps">YouTube et le CRM vivent séparément. Les données de visionnage ne nourrissent pas la qualification commerciale.</p>
+        </div>
+        <div class="card" role="listitem">
+          <span class="card__num" aria-hidden="true">05</span>
+          <p class="card__levier">Erreur 05</p>
+          <p class="card__titre">Fréquence prioritaire sur intention</p>
+          <p class="card__corps">On publie parce qu'il faut publier, pas parce que ce contenu précis sert un objectif précis dans le cycle d'achat.</p>
+        </div>
+        <div class="card" role="listitem" style="background:var(--vif-pale);">
+          <span class="card__num" aria-hidden="true" style="color:var(--vif);opacity:.15;">→</span>
+          <p class="card__levier">Ce que ça change</p>
+          <p class="card__titre">Sans orchestration</p>
+          <p class="card__corps"><a href="/systeme-marketing-centralise-pme">L'orchestration de ce système</a> — faire en sorte que les signaux YouTube alimentent le CRM — c'est la brique qui rend l'acquisition durable.</p>
+        </div>
+      </div>
     </div>
   </div>
 
-  <!-- §04 -->
-  <div class="block" id="territoires">
+  <!-- §04 — La fenêtre québécoise -->
+  <div class="block" id="fenetreqc">
     <div class="block__num-wrap">
       <span class="block__ghost" aria-hidden="true">04</span>
       <span class="block__num">§ 04</span>
-      <span class="block__tag">Déploiement<br />territorial</span>
+      <span class="block__tag">Contexte<br />marché</span>
     </div>
     <div class="block__content">
-      <h2 class="block__titre">Les 20 territoires du système<br /><em>NeuroBreak™ au Québec</em></h2>
-      <p>Chaque territoire a été analysé selon ses données économiques réelles — taux de chômage, PIB régional, structure sectorielle, maturité numérique, tensions du marché du travail.</p>
-      <ul class="liste" aria-label="Liste des territoires du système NeuroBreak au Québec">
-        <li>Couronne métropolitaine : Montréal, Laval, Longueuil, Brossard, Terrebonne, Blainville, Repentigny</li>
-        <li>Capitales régionales : Québec, Sherbrooke, Trois-Rivières, Saguenay, Gatineau</li>
-        <li>Pôles industriels et agro : Saint-Hyacinthe, Drummondville, Victoriaville, Granby, Saint-Jean-sur-Richelieu</li>
-        <li>Territoires en transformation : Shawinigan, Lévis, Rimouski</li>
-      </ul>
-      <p>Chaque territoire a une page dédiée. Chaque page part d'un problème central unique — non interchangeable avec les autres. Ce n'est pas du contenu localisé. C'est une lecture économique adaptée.</p>
-      <p>Ce que cette approche n'est pas : du référencement local au sens classique. Insérer le nom d'une ville dans un texte générique, c'est ce que font 95% des acteurs. Google le détecte. Les prospects le sentent. Ça ne construit rien.</p>
-      <p>Ce que NeuroBreak™ construit, c'est une autorité territoriale réelle — fondée sur une compréhension des tensions économiques locales, pas sur un remplacement de variable. Olivier, côté déploiement, veille à ce que l'architecture technique reflète cette logique — structure de maillage, hiérarchie des URLs, signaux d'autorité distribués depuis le Hub vers les territoires, pas l'inverse.</p>
+      <h2 class="block__titre">La fenêtre québécoise<br /><em>— une opportunité structurelle</em></h2>
+
+      <!-- ZONE D — Photo territoire §04
+           REMPLACER : <img src="montreal-skyline.jpg" alt="Montréal B2B"
+           style="width:100%;height:100%;object-fit:cover;object-position:center;" />
+           FORMAT : paysage 16/9, min. 640×360 px -->
+      <div class="photo-territoire">
+        <div class="photo-encart" aria-label="Emplacement photo territoire Québec">
+          <!-- ↓ VOTRE <img> ICI ↓ -->
+          <div class="photo-encart__placeholder">
+            <span class="photo-encart__badge">Zone D · §04</span>
+            <p class="photo-encart__titre">Paysage urbain Québec / Montréal</p>
+            <p class="photo-encart__spec">16/9 · 640×360 px</p>
+          </div>
+        </div>
+        <div class="photo-territoire__caption">Québec — la fenêtre francophone encore ouverte</div>
+      </div>
+
+      <p>Le marché B2B francophone québécois est en retard d'environ 3 à 5 ans sur le marché anglophone pour l'adoption de YouTube comme levier d'acquisition. Ce n'est pas un problème. C'est une opportunité.</p>
+      <p>Les requêtes B2B stratégiques en français restent peu compétitives. Les chaînes d'autorité dans des niches comme le conseil, le manufacturier avancé, les services professionnels ou la logistique — elles n'existent presque pas encore.</p>
+      <p><a href="/systeme-marketing-b2b-quebec">Dans le marché québécois</a>, le premier acteur qui structure une présence YouTube B2B dans une niche donnée la domine durablement. Ce n'est pas de la théorie — c'est ce que les marchés anglophones ont démontré.</p>
+
+      <div class="clearfix"></div>
+
+      <table class="compare-table" aria-label="Comparaison marché anglophone vs francophone">
+        <thead>
+          <tr>
+            <th>Marché anglophone</th>
+            <th class="col-infra">Marché francophone québécois</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Chaînes d'autorité B2B établies dans la plupart des niches</td>
+            <td class="col-infra">Niches encore largement sans leader YouTube B2B</td>
+          </tr>
+          <tr>
+            <td>Compétition forte sur les requêtes stratégiques</td>
+            <td class="col-infra">Requêtes stratégiques en français peu disputées</td>
+          </tr>
+          <tr>
+            <td>Coût d'entrée élevé — saturation du contenu</td>
+            <td class="col-infra">Coût d'entrée faible — terrain de positionnement ouvert</td>
+          </tr>
+          <tr>
+            <td>Adoption massive : YouTube = infrastructure standard</td>
+            <td class="col-infra">Adoption naissante : avantage du premier entrant</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>Olivier, côté déploiement, veille à ce que cette fenêtre ne soit pas gaspillée sur de la production générique. La vitesse d'exécution compte — mais seulement si l'architecture est posée correctement avant.</p>
+
+      <div class="pq">
+        <p class="pq__texte">Une PME qui structure son acquisition YouTube correctement n'obtient pas « plus de vues ». Elle obtient des rendez-vous avec des prospects qui savent déjà pourquoi ils appellent.</p>
+        <p class="pq__src">Christophe Simon — NeuroBreak™ Studio</p>
+      </div>
     </div>
   </div>
 
@@ -826,29 +838,36 @@
     <div class="faq-q">
       <span class="faq-q__num">Q·01</span>
       <div class="faq-q__inner">
-        <p class="faq-q__q">Pourquoi 20 villes et pas plus&nbsp;?</p>
-        <p class="faq-q__r">Parce que 20 territoires couvrent l'essentiel du marché B2B québécois en termes de volume décisionnel. L'objectif n'est pas l'exhaustivité géographique — c'est la profondeur stratégique sur les marchés où les PME B2B ont une densité suffisante pour justifier une architecture dédiée.</p>
+        <p class="faq-q__q">Faut-il déjà avoir une audience pour que ça fonctionne&nbsp;?</p>
+        <p class="faq-q__r">Non. Une infrastructure d'acquisition fonctionne avec une petite audience ciblée mieux qu'avec une grande audience générique. Ce qui compte, c'est la précision de l'intention — pas le volume.</p>
       </div>
     </div>
     <div class="faq-q">
       <span class="faq-q__num">Q·02</span>
       <div class="faq-q__inner">
-        <p class="faq-q__q">Les petites villes sont-elles pertinentes en B2B&nbsp;?</p>
-        <p class="faq-q__r">Oui — à condition que l'approche soit adaptée. Une ville de 50&nbsp;000 habitants avec une base industrielle forte et peu de concurrence digitale est souvent plus facile à dominer qu'une grande ville saturée. La taille n'est pas le critère. La tension économique l'est.</p>
+        <p class="faq-q__q">Combien de vidéos faut-il pour voir des résultats&nbsp;?</p>
+        <p class="faq-q__r">Ça dépend de la niche et de la compétition. En B2B francophone québécois, une dizaine de vidéos bien structurées sur un problème précis suffisent souvent à positionner une autorité réelle. Le volume ne compense pas l'intention.</p>
       </div>
     </div>
     <div class="faq-q">
       <span class="faq-q__num">Q·03</span>
       <div class="faq-q__inner">
-        <p class="faq-q__q">Est-ce que cette architecture peut s'étendre hors Québec&nbsp;?</p>
-        <p class="faq-q__r">Oui. La logique territoriale s'applique à toute la francophonie — France, Belgique, Suisse romande. Le Québec est le point d'entrée. L'architecture est conçue pour être dupliquée avec des données territoriales adaptées.</p>
+        <p class="faq-q__q">YouTube remplace-t-il LinkedIn en B2B&nbsp;?</p>
+        <p class="faq-q__r">Non — ils ne font pas le même travail. LinkedIn crée des connexions et de la proximité relationnelle. YouTube prépare la décision en profondeur. Les deux se complètent dans une architecture cohérente.</p>
       </div>
     </div>
     <div class="faq-q">
       <span class="faq-q__num">Q·04</span>
       <div class="faq-q__inner">
-        <p class="faq-q__q">Combien de temps pour dominer un territoire&nbsp;?</p>
-        <p class="faq-q__r">Entre 4 et 9 mois selon la compétition existante et la fréquence de publication. Les territoires les moins compétitifs — la majorité des villes hors Montréal — voient des résultats visibles entre le 3e et le 5e mois.</p>
+        <p class="faq-q__q">Est-ce que ça fonctionne pour toutes les niches B2B&nbsp;?</p>
+        <p class="faq-q__r">Ça fonctionne dans toute niche où les décideurs cherchent des réponses à des problèmes complexes. Manufacturier, conseil, services professionnels, logistique, tech B2B — oui. Commerce de détail ou B2C — c'est une autre logique.</p>
+      </div>
+    </div>
+    <div class="faq-q">
+      <span class="faq-q__num">Q·05</span>
+      <div class="faq-q__inner">
+        <p class="faq-q__q">Combien de temps avant les premiers résultats&nbsp;?</p>
+        <p class="faq-q__r">Les premiers signaux (visionnages qualifiés, contacts entrants) apparaissent généralement entre le 2e et le 4e mois. Les résultats commerciaux solides entre le 4e et le 8e mois. C'est un actif long terme — pas une campagne.</p>
       </div>
     </div>
   </section>
@@ -857,13 +876,12 @@
   <div class="signature" aria-label="Signature de page">
     <span style="font-family:var(--f-mono);font-size:.6rem;color:var(--txt-4);letter-spacing:.1em;padding-top:.5rem;">Fin</span>
     <div>
-      <p class="signature__texte">VINGT TERRITOIRES.<br />UN SYSTÈME.<br /><span>UNE ARCHITECTURE.</span></p>
+      <p class="signature__texte">UN CANAL FAIT<br />DU BRUIT.<br /><span>UNE ARCHITECTURE<br />FAIT DES DÉCISIONS.</span></p>
     </div>
     <p class="signature__auteur">Christophe Simon — NeuroBreak™ Studio, Québec</p>
   </div>
 
 </div><!-- /article-body -->
-
 
 <!-- ══ SECTION ÉQUIPE ══ -->
 <section class="equipe-section" id="equipe">
@@ -874,15 +892,11 @@
     </div>
     <div class="equipe-grille" role="list">
 
-      <!-- E1 — CHRISTOPHE
-           REMPLACER : <img src="christophe.jpg" alt="Christophe Simon"
-           style="width:100%;height:100%;object-fit:cover;object-position:top center;" />
-           FORMAT : carré 1/1, min. 400×400 px -->
+      <!-- E1 — CHRISTOPHE -->
       <div class="membre membre--christophe" role="listitem">
         <div class="photo-encart" aria-label="Photo Christophe Simon">
-<!-- ↓ VOTRE <img> ICI ↓ -->
 <img src="/assets/christophe-simon.jpg" alt="Christophe Simon" style="width:100%;height:100%;object-fit:cover;object-position:top center;" />
-          <div class="photo-encart__placeholder">
+<div class="photo-encart__placeholder">
             <span class="photo-encart__badge">E1 · Christophe</span>
             <p class="photo-encart__titre">Christophe Simon</p>
             <p class="photo-encart__spec">Carré 1/1 · 400×400 px</p>
@@ -893,19 +907,15 @@
           <span class="membre__role">Architecte stratégique</span>
         </div>
         <div class="membre__bio">
-          <p>Voix principale du système. <strong>Architecte de l'approche SEO territoriale B2B</strong>, il conçoit les stratégies et signe chaque page.</p>
+          <p>Voix principale du système. <strong>Il conçoit l'architecture YouTube B2B</strong> — l'intention derrière chaque vidéo, le fil décisionnel, la logique de filtrage des prospects.</p>
         </div>
       </div>
 
-      <!-- E2 — OLIVIER
-           REMPLACER : <img src="olivier.jpg" alt="Olivier"
-           style="width:100%;height:100%;object-fit:cover;object-position:top center;" />
-           FORMAT : carré 1/1, min. 400×400 px -->
+      <!-- E2 — OLIVIER -->
       <div class="membre membre--olivier" role="listitem">
         <div class="photo-encart" aria-label="Photo Olivier">
-<!-- ↓ VOTRE <img> ICI ↓ -->
 <img src="/assets/olivier.jpg" alt="Olivier" style="width:100%;height:100%;object-fit:cover;object-position:top center;" />
-          <div class="photo-encart__placeholder">
+<div class="photo-encart__placeholder">
             <span class="photo-encart__badge">E2 · Olivier</span>
             <p class="photo-encart__titre">Olivier</p>
             <p class="photo-encart__spec">Carré 1/1 · 400×400 px</p>
@@ -916,19 +926,15 @@
           <span class="membre__role">Déploiement & intégration</span>
         </div>
         <div class="membre__bio">
-          <p>Responsable technique. <strong>Il intègre le système dans les outils réels</strong> — CRM, séquences, maillage.</p>
+          <p>Responsable technique. <strong>Il connecte YouTube au CRM</strong> — les signaux de visionnage alimentent la qualification, la fenêtre québécoise n'est pas gaspillée.</p>
         </div>
       </div>
 
-      <!-- E3 — LOUNAS
-           REMPLACER : <img src="lounas.jpg" alt="Lounas"
-           style="width:100%;height:100%;object-fit:cover;object-position:top center;" />
-           FORMAT : carré 1/1, min. 400×400 px -->
+      <!-- E3 — LOUNAS -->
       <div class="membre membre--lounas" role="listitem">
         <div class="photo-encart" aria-label="Photo Lounas">
-<!-- ↓ VOTRE <img> ICI ↓ -->
 <img src="/assets/lounas.jpg" alt="Lounas" style="width:100%;height:100%;object-fit:cover;object-position:top center;" />
-          <div class="photo-encart__placeholder">
+<div class="photo-encart__placeholder">
             <span class="photo-encart__badge">E3 · Lounas</span>
             <p class="photo-encart__titre">Lounas</p>
             <p class="photo-encart__spec">Carré 1/1 · 400×400 px</p>
@@ -939,7 +945,7 @@
           <span class="membre__role">Vente & pipeline</span>
         </div>
         <div class="membre__bio">
-          <p>25 ans de management commercial international. <strong>Il structure les équipes et la pratique commerciale</strong> avec la lecture que seule l'expérience produit.</p>
+          <p>25 ans de terrain. <strong>Il valide que les prospects YouTube arrivent déjà éduqués</strong> — la conversation commerciale confirme, elle ne convainc pas.</p>
         </div>
       </div>
 
@@ -954,9 +960,9 @@
   <div class="cta__inner">
     <div>
       <h2 class="cta__titre">DIAGNOSTIC<br /><i>NeuroBreak™</i></h2>
-      <p class="cta__sub">Identifiez où se situe votre fragmentation. Choisissez votre levier. Une conversation, une direction.</p>
+      <p class="cta__sub">Identifiez où se situe votre fragmentation. Votre chaîne YouTube travaille-t-elle pour vous — ou diffuse-t-elle seulement ? Une conversation, une direction.</p>
     </div>
-    <a href="/cdn-cgi/l/email-protection#12717d7c66737166527c7767607d70607773793c71732d616770787771662f567b73757c7d61667b713720225c7767607d5060777379375720372a26375320" class="cta__btn">
+    <a href="/cdn-cgi/l/email-protection#8ae9e5e4feebe9fecae4effff8e5e8f8efebe1a4e9eb" class="cta__btn">
       DÉMARRER<span>le diagnostic →</span>
     </a>
   </div>
@@ -991,16 +997,23 @@
   </div>
 </footer>
 
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
 <script>
-  /* ── Curseur rond rouge ── */
+document.addEventListener('DOMContentLoaded', () => {
   const cursor = document.getElementById('cursor');
+  if (!cursor) return;
+
   document.addEventListener('mousemove', e => {
     cursor.style.left = e.clientX + 'px';
-    cursor.style.top  = e.clientY + 'px';
+    cursor.style.top = e.clientY + 'px';
   });
-  document.querySelectorAll('a, button, .card, .membre, .cta__btn, .nav__btn').forEach(el => {
+
+  document.querySelectorAll('a, button, .card, .card-2, .membre, .cta__btn, .nav__btn').forEach(el => {
     el.addEventListener('mouseenter', () => cursor.classList.add('big'));
     el.addEventListener('mouseleave', () => cursor.classList.remove('big'));
+  });
+});
+</script>
   });
 
   /* ── Barre de progression ── */
@@ -1010,7 +1023,7 @@
     bar.style.width = (h.scrollTop / (h.scrollHeight - h.clientHeight) * 100) + '%';
   });
 
-  /* ── Révélation au scroll — robuste ── */
+  /* ── Révélation au scroll ── */
   const blocks = document.querySelectorAll('.block');
   if ('IntersectionObserver' in window) {
     blocks.forEach(b => b.classList.add('anim-init'));
@@ -1024,7 +1037,6 @@
       });
     }, { threshold: 0.05, rootMargin: '0px 0px -40px 0px' });
     blocks.forEach(b => io.observe(b));
-    /* Fallback 900ms */
     setTimeout(() => {
       blocks.forEach(b => {
         if (b.classList.contains('anim-init')) {
@@ -1058,12 +1070,13 @@
               ? 'var(--vif)' : '';
           });
         }
-      });
-    }, { rootMargin: '-40% 0px -40% 0px' });
-    document.querySelectorAll('[id]').forEach(s => ioNav.observe(s));
+        });
+      }
+    });
+  }, { rootMargin: '-40% 0px -40% 0px' });
+  document.querySelectorAll('[id]').forEach(s => ioNav.observe(s));
   }
 </script>
 
-<div id="nb-consent"><p>Nous utilisons des cookies analytiques (Google Analytics) pour mesurer l'audience de ce site. Aucune donnée n'est revendue. <a href="/politique-confidentialite">En savoir plus</a></p><div class="nb-btns"><button class="nb-refuse" onclick="nbRefuse()">Refuser</button><button class="nb-accept" onclick="nbAccept()">Accepter</button></div></div><script>(function(){var c=localStorage.getItem("nb-consent");if(c==="accepted"){nbLoadGA();var b=document.getElementById("nb-consent");if(b)b.style.display="none";}else if(c==="refused"){document.getElementById("nb-consent").style.display="none";}})();function nbAccept(){localStorage.setItem("nb-consent","accepted");document.getElementById("nb-consent").style.display="none";nbLoadGA();}function nbRefuse(){localStorage.setItem("nb-consent","refused");document.getElementById("nb-consent").style.display="none";}function nbLoadGA(){var s=document.createElement("script");s.async=true;s.src="https://www.googletagmanager.com/gtag/js?id=G-J0730CFBB3";document.head.appendChild(s);window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-J0730CFBB3");}</script>
 </body>
 </html>
