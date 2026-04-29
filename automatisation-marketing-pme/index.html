@@ -572,30 +572,14 @@
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("consent","default",{"ad_storage":"denied","ad_user_data":"denied","ad_personalization":"denied","analytics_storage":"denied"});</script><script async src="https://www.googletagmanager.com/gtag/js?id=G-J0730CFBB3"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-J0730CFBB3");</script>
 
 <style id="lightbox-css">
-.lb-overlay {
-  display: none; position: fixed; inset: 0; z-index: 9999;
-  background: rgba(0,0,0,.92); cursor: zoom-out;
-  align-items: center; justify-content: center;
-}
-.lb-overlay.active { display: flex; }
-.lb-overlay img {
-  max-width: 92vw; max-height: 92vh;
-  object-fit: contain; border: 1px solid rgba(255,255,255,.1);
-  animation: lb-in .2s ease;
-}
-@keyframes lb-in {
-  from { opacity: 0; transform: scale(.96); }
-  to   { opacity: 1; transform: scale(1); }
-}
-.lb-close {
-  position: absolute; top: 1.25rem; right: 1.5rem;
-  color: rgba(255,255,255,.6); font-size: 2rem; cursor: pointer;
-  font-family: monospace; line-height: 1; background: none; border: none;
-  transition: color .15s;
-}
-.lb-close:hover { color: #E63E1C; }
-.zd-img { cursor: zoom-in; transition: opacity .2s; }
-.zd-img:hover { opacity: .88; }
+#lb-overlay{display:none;position:fixed;inset:0;z-index:9999;background:rgba(0,0,0,.92);cursor:zoom-out;align-items:center;justify-content:center;}
+#lb-overlay.active{display:flex;}
+#lb-overlay img{max-width:92vw;max-height:92vh;object-fit:contain;border:1px solid rgba(255,255,255,.1);animation:lb-in .2s ease;}
+@keyframes lb-in{from{opacity:0;transform:scale(.96);}to{opacity:1;transform:scale(1);}}
+#lb-close{position:absolute;top:1.25rem;right:1.5rem;color:rgba(255,255,255,.6);font-size:2rem;cursor:pointer;font-family:monospace;line-height:1;background:none;border:none;transition:color .15s;}
+#lb-close:hover{color:#E63E1C;}
+.zd-img{cursor:zoom-in !important;transition:opacity .2s;}
+.zd-img:hover{opacity:.88;}
 </style>
 </head>
 <body>
@@ -694,7 +678,7 @@
 <span class="block__tag">La mécanique<br/>de l'automatisation</span>
 </div>
 <div class="block__content"><h2 class="block__titre">La mécanique de l'automatisation <em>B2B pour PME</em></h2><div class="photo-territoire"><div aria-label="Photo mécanique automatisation" class="photo-encart">
-<img src="/assets/automatisation-marketing-pme-territoire.png" alt="" style="width:100%;height:100%;object-fit:cover;object-position:center center;"  class="zd-img" onclick="lbOpen('/assets/automatisation-marketing-pme-territoire.png')" />
+<img src="/assets/automatisation-marketing-pme-territoire.png" alt="" style="width:100%;height:100%;object-fit:cover;object-position:center center;"   class="zd-img" onclick="lbOpen('/assets/automatisation-marketing-pme-territoire.png')" />
 <div class="photo-encart__placeholder"><span class="photo-encart__badge">Zone D · §02</span><p class="photo-encart__titre">Mécanique B2B</p><p class="photo-encart__spec">16/9 · 640×360 px<br/>Architecture d'automatisation PME</p></div></div><div class="photo-territoire__caption">Architecture — système d'automatisation B2B</div></div><p>L'automatisation marketing B2B repose sur trois mécaniques distinctes qui travaillent en séquence.</p><p>La qualification automatisée d'abord. Un prospect visite une page, regarde une vidéo, télécharge un document. Ces comportements sont des signaux. Un système bien configuré les détecte, les enregistre dans le CRM, et déclenche une séquence adaptée — sans qu'un commercial doive surveiller chaque interaction. Le prospect est qualifié avant le premier contact humain.</p><p>Le nurturing automatisé ensuite. Tous les prospects ne sont pas prêts à décider immédiatement. Certains ont un cycle de 3 mois, d'autres de 12. L'automatisation maintient le contact pendant toute cette période — emails de valeur ajoutée, contenus pertinents, rappels discrets — sans que l'équipe commerciale ait à penser à chaque prospect individuellement. <a href="/nurturing-b2b-francophone">Le nurturing B2B francophone</a> a ses propres codes — ton, fréquence, format — que le système doit respecter pour rester crédible dans un marché où la relation prime.</p><p>Les alertes de conversion enfin. Quand un prospect froid redevient actif — quand il revient sur le site, ouvre plusieurs emails, consulte une page de tarification — le système le signale. Le commercial intervient au bon moment, avec les bonnes informations, sans avoir perdu une seconde à surveiller les comportements passifs.</p><p><a href="/systeme-marketing-centralise-pme">Un système marketing centralisé</a> orchestre ces trois mécaniques depuis une seule plateforme. Olivier déploie cette architecture en s'assurant que chaque déclencheur est calibré sur les comportements réels des acheteurs de la PME — pas sur des modèles génériques qui ne correspondent pas à la réalité du marché québécois francophone.</p></div>
 </div>
 
@@ -925,21 +909,15 @@
 </script>
 <div id="nb-consent"><p>Nous utilisons des cookies analytiques (Google Analytics) pour mesurer l'audience de ce site. Aucune donnée n'est revendue. <a href="/politique-confidentialite">En savoir plus</a></p><div class="nb-btns"><button class="nb-refuse" onclick="nbRefuse()">Refuser</button><button class="nb-accept" onclick="nbAccept()">Accepter</button></div></div><script>(function(){var c=localStorage.getItem("nb-consent");if(c==="accepted"){nbLoadGA();var b=document.getElementById("nb-consent");if(b)b.style.display="none";}else if(c==="refused"){document.getElementById("nb-consent").style.display="none";}})();function nbAccept(){localStorage.setItem("nb-consent","accepted");document.getElementById("nb-consent").style.display="none";nbLoadGA();}function nbRefuse(){localStorage.setItem("nb-consent","refused");document.getElementById("nb-consent").style.display="none";}function nbLoadGA(){var s=document.createElement("script");s.async=true;s.src="https://www.googletagmanager.com/gtag/js?id=G-J0730CFBB3";document.head.appendChild(s);window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-J0730CFBB3");}</script>
 
-<script id="lightbox-js">
-function lbOpen(src) {
-  document.getElementById('lb-img').src = src;
-  document.getElementById('lb-overlay').classList.add('active');
-  document.body.style.overflow = 'hidden';
-}
-function lbClose() {
-  document.getElementById('lb-overlay').classList.remove('active');
-  document.getElementById('lb-img').src = '';
-  document.body.style.overflow = '';
-}
-document.addEventListener('keydown', function(e) {
-  if (e.key === 'Escape') lbClose();
-});
-</script>
 
+<div id="lb-overlay" onclick="lbClose()">
+<button id="lb-close" onclick="event.stopPropagation();lbClose()">✕</button>
+<img id="lb-img" src="" alt="" onclick="event.stopPropagation()" />
+</div>
+<script>
+function lbOpen(src){var o=document.getElementById('lb-overlay');var i=document.getElementById('lb-img');if(!o||!i)return;i.src=src;o.classList.add('active');document.body.style.overflow='hidden';}
+function lbClose(){var o=document.getElementById('lb-overlay');var i=document.getElementById('lb-img');if(!o||!i)return;o.classList.remove('active');i.src='';document.body.style.overflow='';}
+document.addEventListener('keydown',function(e){if(e.key==='Escape')lbClose();});
+</script>
 </body>
 </html>

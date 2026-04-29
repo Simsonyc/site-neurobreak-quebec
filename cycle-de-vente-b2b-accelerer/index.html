@@ -572,30 +572,14 @@
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("consent","default",{"ad_storage":"denied","ad_user_data":"denied","ad_personalization":"denied","analytics_storage":"denied"});</script><script async src="https://www.googletagmanager.com/gtag/js?id=G-J0730CFBB3"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-J0730CFBB3");</script>
 
 <style id="lightbox-css">
-.lb-overlay {
-  display: none; position: fixed; inset: 0; z-index: 9999;
-  background: rgba(0,0,0,.92); cursor: zoom-out;
-  align-items: center; justify-content: center;
-}
-.lb-overlay.active { display: flex; }
-.lb-overlay img {
-  max-width: 92vw; max-height: 92vh;
-  object-fit: contain; border: 1px solid rgba(255,255,255,.1);
-  animation: lb-in .2s ease;
-}
-@keyframes lb-in {
-  from { opacity: 0; transform: scale(.96); }
-  to   { opacity: 1; transform: scale(1); }
-}
-.lb-close {
-  position: absolute; top: 1.25rem; right: 1.5rem;
-  color: rgba(255,255,255,.6); font-size: 2rem; cursor: pointer;
-  font-family: monospace; line-height: 1; background: none; border: none;
-  transition: color .15s;
-}
-.lb-close:hover { color: #E63E1C; }
-.zd-img { cursor: zoom-in; transition: opacity .2s; }
-.zd-img:hover { opacity: .88; }
+#lb-overlay{display:none;position:fixed;inset:0;z-index:9999;background:rgba(0,0,0,.92);cursor:zoom-out;align-items:center;justify-content:center;}
+#lb-overlay.active{display:flex;}
+#lb-overlay img{max-width:92vw;max-height:92vh;object-fit:contain;border:1px solid rgba(255,255,255,.1);animation:lb-in .2s ease;}
+@keyframes lb-in{from{opacity:0;transform:scale(.96);}to{opacity:1;transform:scale(1);}}
+#lb-close{position:absolute;top:1.25rem;right:1.5rem;color:rgba(255,255,255,.6);font-size:2rem;cursor:pointer;font-family:monospace;line-height:1;background:none;border:none;transition:color .15s;}
+#lb-close:hover{color:#E63E1C;}
+.zd-img{cursor:zoom-in !important;transition:opacity .2s;}
+.zd-img:hover{opacity:.88;}
 </style>
 </head>
 <body>
@@ -693,7 +677,7 @@
 <span class="block__num">§ 02</span>
 <span class="block__tag">Les vrais freins<br/>du cycle B2B</span>
 </div>
-<div class="block__content"><h2 class="block__titre">Les vrais freins <em>du cycle de vente B2B</em></h2><div class="photo-territoire"><div aria-label="Photo freins cycle B2B" class="photo-encart"><img src="/assets/cycle-de-vente-b2b-accelerer-territoire.png" alt="" style="width:100%;height:100%;object-fit:cover;object-position:center center;"  class="zd-img" onclick="lbOpen('/assets/cycle-de-vente-b2b-accelerer-territoire.png')" />
+<div class="block__content"><h2 class="block__titre">Les vrais freins <em>du cycle de vente B2B</em></h2><div class="photo-territoire"><div aria-label="Photo freins cycle B2B" class="photo-encart"><img src="/assets/cycle-de-vente-b2b-accelerer-territoire.png" alt="" style="width:100%;height:100%;object-fit:cover;object-position:center center;"   class="zd-img" onclick="lbOpen('/assets/cycle-de-vente-b2b-accelerer-territoire.png')" />
 <div class="photo-encart__placeholder"><span class="photo-encart__badge">Zone D · §02</span><p class="photo-encart__titre">Freins du cycle B2B</p><p class="photo-encart__spec">16/9 · 640×360 px<br/>Ce qui ralentit la décision</p></div></div><div class="photo-territoire__caption">Freins — ce qui allonge le cycle sans raison valable</div></div><p>La plupart des dirigeants pensent que leur cycle est long parce que les prospects prennent du temps à décider. C'est rarement la vraie raison.</p><p>Le premier frein réel : le prospect n'a pas les informations dont il a besoin pour décider. Il attend une information que personne n'a pensé à lui fournir proactivement. Il doit la demander. La demande crée un délai. Le délai crée une réunion de suivi. La réunion de suivi crée un nouveau délai. Un système de contenu qui anticipe ces questions — et y répond avant qu'elles soient posées — élimine ce frein mécaniquement.</p><p>Le deuxième frein : le porteur interne n'a pas les arguments pour défendre la décision devant ses collègues. Il est convaincu. Ses collègues ne le sont pas. Il doit convaincre en interne — sans les outils pour le faire. Lounas l'a observé dans des dizaines de cycles : le deal ne meurt pas lors de la présentation commerciale. Il meurt lors de la délibération interne. Un contenu qui arme le porteur — matrices ROI, réponses aux objections standard, cas clients structurés — réduit ce temps de délibération de 30 à 50%.</p><p>Le troisième frein : une qualification insuffisante en amont. Le commercial passe du temps sur des prospects qui n'achèteront pas — parce que le budget n'est pas là, parce que le timing est mauvais, parce que le problème n'est pas suffisamment douloureux. <a href="/qualification-leads-b2b">La qualification des leads B2B</a> en amont du cycle commercial est le levier le plus direct pour réduire le temps total par deal conclu.</p></div>
 </div>
 
@@ -924,21 +908,15 @@
 </script>
 <div id="nb-consent"><p>Nous utilisons des cookies analytiques (Google Analytics) pour mesurer l'audience de ce site. Aucune donnée n'est revendue. <a href="/politique-confidentialite">En savoir plus</a></p><div class="nb-btns"><button class="nb-refuse" onclick="nbRefuse()">Refuser</button><button class="nb-accept" onclick="nbAccept()">Accepter</button></div></div><script>(function(){var c=localStorage.getItem("nb-consent");if(c==="accepted"){nbLoadGA();var b=document.getElementById("nb-consent");if(b)b.style.display="none";}else if(c==="refused"){document.getElementById("nb-consent").style.display="none";}})();function nbAccept(){localStorage.setItem("nb-consent","accepted");document.getElementById("nb-consent").style.display="none";nbLoadGA();}function nbRefuse(){localStorage.setItem("nb-consent","refused");document.getElementById("nb-consent").style.display="none";}function nbLoadGA(){var s=document.createElement("script");s.async=true;s.src="https://www.googletagmanager.com/gtag/js?id=G-J0730CFBB3";document.head.appendChild(s);window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-J0730CFBB3");}</script>
 
-<script id="lightbox-js">
-function lbOpen(src) {
-  document.getElementById('lb-img').src = src;
-  document.getElementById('lb-overlay').classList.add('active');
-  document.body.style.overflow = 'hidden';
-}
-function lbClose() {
-  document.getElementById('lb-overlay').classList.remove('active');
-  document.getElementById('lb-img').src = '';
-  document.body.style.overflow = '';
-}
-document.addEventListener('keydown', function(e) {
-  if (e.key === 'Escape') lbClose();
-});
-</script>
 
+<div id="lb-overlay" onclick="lbClose()">
+<button id="lb-close" onclick="event.stopPropagation();lbClose()">✕</button>
+<img id="lb-img" src="" alt="" onclick="event.stopPropagation()" />
+</div>
+<script>
+function lbOpen(src){var o=document.getElementById('lb-overlay');var i=document.getElementById('lb-img');if(!o||!i)return;i.src=src;o.classList.add('active');document.body.style.overflow='hidden';}
+function lbClose(){var o=document.getElementById('lb-overlay');var i=document.getElementById('lb-img');if(!o||!i)return;o.classList.remove('active');i.src='';document.body.style.overflow='';}
+document.addEventListener('keydown',function(e){if(e.key==='Escape')lbClose();});
+</script>
 </body>
 </html>

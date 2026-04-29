@@ -572,30 +572,14 @@
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("consent","default",{"ad_storage":"denied","ad_user_data":"denied","ad_personalization":"denied","analytics_storage":"denied"});</script><script async src="https://www.googletagmanager.com/gtag/js?id=G-J0730CFBB3"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-J0730CFBB3");</script>
 
 <style id="lightbox-css">
-.lb-overlay {
-  display: none; position: fixed; inset: 0; z-index: 9999;
-  background: rgba(0,0,0,.92); cursor: zoom-out;
-  align-items: center; justify-content: center;
-}
-.lb-overlay.active { display: flex; }
-.lb-overlay img {
-  max-width: 92vw; max-height: 92vh;
-  object-fit: contain; border: 1px solid rgba(255,255,255,.1);
-  animation: lb-in .2s ease;
-}
-@keyframes lb-in {
-  from { opacity: 0; transform: scale(.96); }
-  to   { opacity: 1; transform: scale(1); }
-}
-.lb-close {
-  position: absolute; top: 1.25rem; right: 1.5rem;
-  color: rgba(255,255,255,.6); font-size: 2rem; cursor: pointer;
-  font-family: monospace; line-height: 1; background: none; border: none;
-  transition: color .15s;
-}
-.lb-close:hover { color: #E63E1C; }
-.zd-img { cursor: zoom-in; transition: opacity .2s; }
-.zd-img:hover { opacity: .88; }
+#lb-overlay{display:none;position:fixed;inset:0;z-index:9999;background:rgba(0,0,0,.92);cursor:zoom-out;align-items:center;justify-content:center;}
+#lb-overlay.active{display:flex;}
+#lb-overlay img{max-width:92vw;max-height:92vh;object-fit:contain;border:1px solid rgba(255,255,255,.1);animation:lb-in .2s ease;}
+@keyframes lb-in{from{opacity:0;transform:scale(.96);}to{opacity:1;transform:scale(1);}}
+#lb-close{position:absolute;top:1.25rem;right:1.5rem;color:rgba(255,255,255,.6);font-size:2rem;cursor:pointer;font-family:monospace;line-height:1;background:none;border:none;transition:color .15s;}
+#lb-close:hover{color:#E63E1C;}
+.zd-img{cursor:zoom-in !important;transition:opacity .2s;}
+.zd-img:hover{opacity:.88;}
 </style>
 </head>
 <body>
@@ -693,7 +677,7 @@
 <span class="block__num">§ 02</span>
 <span class="block__tag">Les codes du<br/>nurturing francophone</span>
 </div>
-<div class="block__content"><h2 class="block__titre">Les codes du nurturing <em>B2B francophone québécois</em></h2><div class="photo-territoire"><div aria-label="Photo codes nurturing francophone" class="photo-encart"><img src="/assets/nurturing-b2b-francophone-territoire.png" alt="" style="width:100%;height:100%;object-fit:cover;object-position:center center;"  class="zd-img" onclick="lbOpen('/assets/nurturing-b2b-francophone-territoire.png')" />
+<div class="block__content"><h2 class="block__titre">Les codes du nurturing <em>B2B francophone québécois</em></h2><div class="photo-territoire"><div aria-label="Photo codes nurturing francophone" class="photo-encart"><img src="/assets/nurturing-b2b-francophone-territoire.png" alt="" style="width:100%;height:100%;object-fit:cover;object-position:center center;"   class="zd-img" onclick="lbOpen('/assets/nurturing-b2b-francophone-territoire.png')" />
 <div class="photo-encart__placeholder"><span class="photo-encart__badge">Zone D · §02</span><p class="photo-encart__titre">Codes nurturing francophone</p><p class="photo-encart__spec">16/9 · 640×360 px<br/>Sobriété relationnelle québécoise</p></div></div><div class="photo-territoire__caption">Codes — sobriété relationnelle B2B francophone</div></div><p>Le nurturing B2B en marché francophone québécois a ses propres codes — différents de ce qu'on observe dans les marchés anglophones nord-américains ou dans les approches européennes.</p><p>La sobriété de fréquence d'abord. Un contact toutes les deux à quatre semaines est perçu comme de la présence. Un contact chaque semaine est perçu comme de la pression. Dans un marché où la relation prime sur la transaction, la capacité à maintenir une présence sans peser est elle-même un signal de compétence commerciale.</p><p>La valeur ajoutée à chaque contact ensuite. Chaque email de nurturing doit apporter quelque chose — un article pertinent, un exemple concret, une réflexion sur un enjeu du secteur du prospect. Un email "juste pour prendre des nouvelles" est transparent dans sa nature commerciale et crée de la résistance. Un email qui partage une ressource utile crée de la reconnaissance.</p><p>Le ton conversationnel plutôt que corporatif. En B2B francophone québécois, la proximité du ton est une marque de respect — pas d'un manque de professionnalisme. Un email signé par une personne réelle, avec un ton direct et sans jargon, génère plus d'engagement qu'un email générique signé par "l'équipe de [Entreprise]".</p><p>La patience comme signal de confiance. Lounas l'a observé dans des cycles longs : la PME qui maintient une présence sobre et régulière pendant 6 à 9 mois sans jamais précipiter la décision signale à son prospect qu'elle comprend ses contraintes. Cette patience est souvent le facteur décisif quand le prospect est finalement prêt.</p></div>
 </div>
 
@@ -924,21 +908,15 @@
 </script>
 <div id="nb-consent"><p>Nous utilisons des cookies analytiques (Google Analytics) pour mesurer l'audience de ce site. Aucune donnée n'est revendue. <a href="/politique-confidentialite">En savoir plus</a></p><div class="nb-btns"><button class="nb-refuse" onclick="nbRefuse()">Refuser</button><button class="nb-accept" onclick="nbAccept()">Accepter</button></div></div><script>(function(){var c=localStorage.getItem("nb-consent");if(c==="accepted"){nbLoadGA();var b=document.getElementById("nb-consent");if(b)b.style.display="none";}else if(c==="refused"){document.getElementById("nb-consent").style.display="none";}})();function nbAccept(){localStorage.setItem("nb-consent","accepted");document.getElementById("nb-consent").style.display="none";nbLoadGA();}function nbRefuse(){localStorage.setItem("nb-consent","refused");document.getElementById("nb-consent").style.display="none";}function nbLoadGA(){var s=document.createElement("script");s.async=true;s.src="https://www.googletagmanager.com/gtag/js?id=G-J0730CFBB3";document.head.appendChild(s);window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-J0730CFBB3");}</script>
 
-<script id="lightbox-js">
-function lbOpen(src) {
-  document.getElementById('lb-img').src = src;
-  document.getElementById('lb-overlay').classList.add('active');
-  document.body.style.overflow = 'hidden';
-}
-function lbClose() {
-  document.getElementById('lb-overlay').classList.remove('active');
-  document.getElementById('lb-img').src = '';
-  document.body.style.overflow = '';
-}
-document.addEventListener('keydown', function(e) {
-  if (e.key === 'Escape') lbClose();
-});
-</script>
 
+<div id="lb-overlay" onclick="lbClose()">
+<button id="lb-close" onclick="event.stopPropagation();lbClose()">✕</button>
+<img id="lb-img" src="" alt="" onclick="event.stopPropagation()" />
+</div>
+<script>
+function lbOpen(src){var o=document.getElementById('lb-overlay');var i=document.getElementById('lb-img');if(!o||!i)return;i.src=src;o.classList.add('active');document.body.style.overflow='hidden';}
+function lbClose(){var o=document.getElementById('lb-overlay');var i=document.getElementById('lb-img');if(!o||!i)return;o.classList.remove('active');i.src='';document.body.style.overflow='';}
+document.addEventListener('keydown',function(e){if(e.key==='Escape')lbClose();});
+</script>
 </body>
 </html>
