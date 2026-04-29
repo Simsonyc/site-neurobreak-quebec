@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Réduire un cycle de vente B2B trop long | NeuroBreak™</title>
-  <meta name="description" content="Votre cycle de vente B2B est trop long ? Structurez la qualification stratégique pour préparer la décision avant l'appel — et raccourcir durablement vos cycles." />
-  <link rel="canonical" href="https://neurobreak.ca/reduction-cycle-vente-b2b" />
+  <title>Système d'acquisition YouTube B2B au Québec | NeuroBreak™</title>
+  <meta name="description" content="Structurez une chaîne YouTube B2B qui génère des leads qualifiés au Québec. Un système d'acquisition stratégique — pas une simple production vidéo." />
+  <link rel="canonical" href="https://neurobreak.ca/chaine-youtube-b2b-generation-leads" />
 
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Accueil","item":"https://neurobreak.ca/"},{"@type":"ListItem","position":2,"name":"Réduire un cycle de vente B2B trop long","item":"https://neurobreak.ca/reduction-cycle-vente-b2b"}]}</script>
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Réduire un cycle de vente B2B trop long — l'architecture de conversion NeuroBreak™","author":{"@type":"Person","name":"Lounas"},"publisher":{"@type":"Organization","name":"NeuroBreak™ Studio","url":"https://neurobreak.ca"}}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Accueil","item":"https://neurobreak.ca/"},{"@type":"ListItem","position":2,"name":"Système marketing B2B","item":"https://neurobreak.ca/francophonie-systeme-marketing-b2b"},{"@type":"ListItem","position":3,"name":"Acquisition YouTube B2B","item":"https://neurobreak.ca/chaine-youtube-b2b-generation-leads"}]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Système d'acquisition YouTube B2B structuré pour PME au Québec","author":{"@type":"Person","name":"Christophe Simon"},"publisher":{"@type":"Organization","name":"NeuroBreak™ Studio","url":"https://neurobreak.ca"}}</script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -18,6 +18,9 @@
     /* ══ RESET ══ */
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
+    /* ══════════════════════════════════════════════════════
+       PALETTES DARK / LIGHT
+    ══════════════════════════════════════════════════════ */
     :root {
       --vif:       #E63E1C;
       --vif-pale:  rgba(230,62,28,0.08);
@@ -30,6 +33,7 @@
       --trans:     background .3s ease, color .3s ease, border-color .3s ease;
     }
 
+    /* THÈME LIGHT */
     [data-theme="light"] {
       --bg:        #F8F6F1;
       --bg-2:      #EDEAE2;
@@ -53,6 +57,7 @@
       --switch-dot:#141210;
     }
 
+    /* THÈME DARK */
     [data-theme="dark"] {
       --bg:        #141210;
       --bg-2:      #1E1C18;
@@ -134,7 +139,7 @@
     p:last-child { margin-bottom: 0; }
     strong { color: var(--txt); font-weight: 500; }
 
-    /* ══ ENCART PHOTO ══ */
+    /* ══ PHOTO ENCART ══ */
     .photo-encart {
       position: relative; overflow: hidden;
       background: #2A2722; border: 1px solid rgba(255,255,255,.08);
@@ -204,6 +209,7 @@
       gap: 0 4rem;
       align-items: start;
     }
+    .hero__left { }
     .hero__tag {
       display: inline-flex; align-items: center; gap: .6rem;
       font-family: var(--f-mono); font-size: .65rem; letter-spacing: .12em; text-transform: uppercase;
@@ -237,6 +243,8 @@
     .hero__index a { color: var(--txt-3); text-decoration: none; font-family: var(--f-sans); font-size: .78rem; transition: color .15s; }
     .hero__index a:hover { color: var(--vif); opacity: 1; }
 
+
+
     /* ══ EN BREF ══ */
     .en-bref { background: var(--encart-bg); padding: 2.5rem; margin: 4rem 0 0; }
     .en-bref__inner {
@@ -249,8 +257,6 @@
     .en-bref__label { font-family: var(--f-display); font-size: 4rem; line-height: 1; color: var(--vif); letter-spacing: .05em; writing-mode: vertical-rl; text-orientation: mixed; transform: rotate(180deg); padding-bottom: .5rem; align-self: center; }
     .en-bref__corps { font-family: var(--f-serif); font-size: clamp(1rem, 1.2vw, 1.15rem); font-weight: 300; color: rgba(248,246,241,.75); line-height: 1.75; margin-bottom: 0; }
     .en-bref__corps strong { color: #F8F6F1; font-weight: 500; }
-
-    /* ZONE A — Photo Lounas */
     .en-bref__photo {
       display: flex; flex-direction: column;
       align-self: stretch;
@@ -286,7 +292,6 @@
     }
     .block.anim-init { opacity: 0; transform: translateY(24px); }
     .block.visible   { opacity: 1; transform: translateY(0); transition: opacity .6s ease, transform .6s ease, border-color .3s; }
-
     .block__num-wrap { position: relative; display: flex; flex-direction: column; align-items: flex-start; }
     .block__ghost { font-family: var(--f-display); font-size: 8rem; line-height: 1; color: var(--ghost); letter-spacing: -.02em; position: absolute; top: -1rem; left: -1rem; z-index: 0; user-select: none; pointer-events: none; transition: color .3s; }
     .block__num { font-family: var(--f-mono); font-size: .65rem; font-weight: 500; letter-spacing: .14em; color: var(--vif); position: relative; z-index: 1; margin-top: .5rem; }
@@ -295,19 +300,34 @@
     .block__titre { font-family: var(--f-serif); font-size: clamp(1.6rem, 2.5vw, 2.2rem); font-weight: 700; color: var(--txt); line-height: 1.18; margin-bottom: 1.75rem; letter-spacing: -.01em; transition: color .3s; }
     .block__titre em { font-style: italic; font-weight: 300; color: var(--txt-3); }
 
-    /* Photo inline */
+    /* ══ PHOTO INLINE ══ */
     .photo-inline { float: right; width: 260px; margin: 0 0 1.5rem 2.5rem; }
     .photo-inline .photo-encart { width: 100%; aspect-ratio: 4/3; border-radius: 4px; border: 1px solid var(--ligne); }
     .photo-inline__caption { padding: .4rem .7rem; background: var(--bg-2); border: 1px solid var(--ligne); border-top: none; border-radius: 0 0 4px 4px; font-family: var(--f-mono); font-size: .54rem; letter-spacing: .08em; text-transform: uppercase; color: var(--txt-4); transition: var(--trans); }
     .clearfix::after { content: ''; display: table; clear: both; }
+
+    /* ══ PHOTO TERRITOIRE ══ */
+    .photo-territoire { float: right; width: 300px; margin: 0 0 2rem 2.5rem; }
+    .photo-territoire .photo-encart { width: 100%; aspect-ratio: 16/9; border-radius: 4px; border: 1px solid var(--ligne); }
+    .photo-territoire__caption { padding: .4rem .7rem; background: var(--encart-bg); border-radius: 0 0 4px 4px; font-family: var(--f-mono); font-size: .54rem; letter-spacing: .08em; text-transform: uppercase; color: rgba(248,246,241,.4); }
 
     /* Pull quote */
     .pq { margin: 2.5rem 0; padding: 2rem; background: var(--pq-bg); border-left: 4px solid var(--vif); transition: background .3s; }
     .pq__texte { font-family: var(--f-serif); font-size: clamp(1.1rem, 1.5vw, 1.35rem); font-style: italic; font-weight: 300; color: var(--txt); line-height: 1.5; margin-bottom: .75rem; transition: color .3s; }
     .pq__src { font-family: var(--f-mono); font-size: .62rem; letter-spacing: .1em; text-transform: uppercase; color: var(--txt-4); }
 
-    /* Cards */
-    .cards { display: grid; grid-template-columns: repeat(2,1fr); gap: 0; margin: 2rem 0; border: 1px solid var(--ligne); transition: border-color .3s; }
+    /* Cards 2 colonnes — canal vs infrastructure */
+    .cards-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 0; margin: 2rem 0; border: 1px solid var(--ligne); transition: border-color .3s; }
+    .card-2 { padding: 2rem 1.75rem; border-right: 1px solid var(--ligne); position: relative; overflow: hidden; background: var(--card-bg); transition: background .25s, border-color .3s; }
+    .card-2:last-child { border-right: none; }
+    .card-2:hover { background: var(--card-hover); }
+    .card-2__label { font-family: var(--f-mono); font-size: .6rem; letter-spacing: .12em; text-transform: uppercase; color: var(--txt-4); margin-bottom: .75rem; }
+    .card-2--infra .card-2__label { color: var(--vif); }
+    .card-2__titre { font-family: var(--f-serif); font-size: 1.05rem; font-weight: 700; color: var(--txt); margin-bottom: 1rem; line-height: 1.25; transition: color .3s; }
+    .card-2--infra .card-2__titre { color: var(--vif); }
+
+    /* Cards 3 colonnes */
+    .cards { display: grid; grid-template-columns: repeat(3,1fr); gap: 0; margin: 2rem 0; border: 1px solid var(--ligne); transition: border-color .3s; }
     .card { padding: 2rem 1.75rem; border-right: 1px solid var(--ligne); position: relative; overflow: hidden; background: var(--card-bg); transition: background .25s, border-color .3s; }
     .card:last-child { border-right: none; }
     .card:hover { background: var(--card-hover); }
@@ -322,37 +342,31 @@
     .liste li { display: grid; grid-template-columns: 1.5rem 1fr; gap: 0 1rem; padding: .75rem 0; border-bottom: 1px solid var(--ligne-2); font-family: var(--f-sans); font-size: .88rem; color: var(--txt-3); font-weight: 300; line-height: 1.6; transition: color .3s, border-color .3s; }
     .liste li::before { content: '↳'; color: var(--vif); font-size: .9rem; line-height: 1.6; }
 
-    /* Photo territoire */
-    .photo-territoire { float: right; width: 300px; margin: 0 0 2rem 2.5rem; }
-    .photo-territoire .photo-encart { width: 100%; aspect-ratio: 16/9; border-radius: 4px; border: 1px solid var(--ligne); }
-    .photo-territoire__caption { padding: .4rem .7rem; background: var(--encart-bg); border-radius: 0 0 4px 4px; font-family: var(--f-mono); font-size: .54rem; letter-spacing: .08em; text-transform: uppercase; color: rgba(248,246,241,.4); }
-
-    /* Niveaux d'architecture — 3 colonnes spéciales */
-    .niveaux { display: grid; grid-template-columns: repeat(3,1fr); gap: 0; margin: 2rem 0; border: 1px solid var(--ligne); transition: border-color .3s; }
-    .niveau { padding: 2rem 1.75rem; border-right: 1px solid var(--ligne); position: relative; overflow: hidden; background: var(--card-bg); transition: background .25s, border-color .3s; }
-    .niveau:last-child { border-right: none; }
-    .niveau:hover { background: var(--card-hover); }
-    .niveau__num { font-family: var(--f-display); font-size: 4rem; line-height: 1; color: var(--ghost); position: absolute; top: .5rem; right: 1rem; letter-spacing: -.02em; transition: color .25s; }
-    .niveau:hover .niveau__num { color: var(--vif); opacity: .2; }
-    .niveau__label { font-family: var(--f-mono); font-size: .6rem; letter-spacing: .12em; text-transform: uppercase; color: var(--vif); margin-bottom: .75rem; }
-    .niveau__titre { font-family: var(--f-serif); font-size: 1.05rem; font-weight: 700; color: var(--txt); margin-bottom: .75rem; line-height: 1.25; transition: color .3s; }
-    .niveau__corps { font-family: var(--f-sans); font-size: .82rem; color: var(--txt-3); line-height: 1.7; margin-bottom: 0; font-weight: 300; transition: color .3s; }
+    /* Tableau comparatif canal / infrastructure */
+    .compare-table { width: 100%; border-collapse: collapse; margin: 2rem 0; font-family: var(--f-sans); font-size: .85rem; }
+    .compare-table th { font-family: var(--f-mono); font-size: .6rem; letter-spacing: .12em; text-transform: uppercase; padding: .75rem 1.25rem; border-bottom: 2px solid var(--ligne); text-align: left; color: var(--txt-4); }
+    .compare-table th.col-infra { color: var(--vif); border-bottom-color: var(--vif); }
+    .compare-table td { padding: .7rem 1.25rem; border-bottom: 1px solid var(--ligne-2); color: var(--txt-3); font-weight: 300; line-height: 1.6; transition: color .3s, border-color .3s; }
+    .compare-table td.col-infra { color: var(--txt); font-weight: 400; }
+    .compare-table tr:hover td { background: var(--vif-pale); }
 
     /* FAQ */
     .faq-block { padding: 5rem 0; border-bottom: 1px solid var(--ligne); }
     .faq-block__header { display: grid; grid-template-columns: 120px 1fr; gap: 0 3rem; margin-bottom: 3rem; }
     .faq-q { display: grid; grid-template-columns: 120px 1fr; gap: 0 3rem; padding: 1.5rem 0; border-top: 1px solid var(--ligne); }
     .faq-q__num { font-family: var(--f-mono); font-size: .6rem; color: var(--txt-4); letter-spacing: .1em; padding-top: .2rem; }
+    .faq-q__inner { }
     .faq-q__q { font-family: var(--f-serif); font-size: 1rem; font-weight: 700; color: var(--txt); margin-bottom: .6rem; transition: color .3s; }
     .faq-q__r { font-family: var(--f-sans); font-size: .85rem; font-weight: 300; color: var(--txt-3); line-height: 1.72; margin-bottom: 0; transition: color .3s; }
 
     /* Signature */
     .signature { padding: 4rem 0 3rem; display: grid; grid-template-columns: 120px 1fr; gap: 0 3rem; border-bottom: 1px solid var(--ligne); }
+    .signature__label { font-family: var(--f-mono); font-size: .6rem; color: var(--txt-4); letter-spacing: .1em; text-transform: uppercase; }
     .signature__texte { font-family: var(--f-display); font-size: clamp(2rem, 4vw, 4.5rem); line-height: 1; color: var(--txt); letter-spacing: .02em; transition: color .3s; }
     .signature__texte span { color: var(--vif); }
     .signature__auteur { font-family: var(--f-mono); font-size: .7rem; color: var(--txt-4); letter-spacing: .1em; margin-top: 1rem; grid-column: 2; }
 
-    /* Section équipe */
+    /* ══ SECTION ÉQUIPE ══ */
     .equipe-section { background: var(--encart-bg); padding: 4rem 2.5rem; margin-top: 0; }
     .equipe-inner { max-width: var(--max); margin: 0 auto; }
     .equipe-header { display: flex; align-items: baseline; gap: 1.5rem; margin-bottom: 2.5rem; }
@@ -360,7 +374,6 @@
     .equipe-header__titre { font-family: var(--f-display); font-size: clamp(2rem, 4vw, 3.5rem); color: #F8F6F1; letter-spacing: .04em; line-height: 1; }
     .equipe-header__titre span { color: var(--vif); }
     .equipe-grille { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.25rem; }
-
     .membre { display: flex; flex-direction: column; }
     .membre .photo-encart { width: 100%; aspect-ratio: 1/1; border-radius: 4px 4px 0 0; border-bottom: none; }
     .membre__bar { padding: .65rem 1rem; display: flex; align-items: center; justify-content: space-between; }
@@ -393,7 +406,9 @@
     .footer__nav a:hover { color: var(--vif); opacity: 1; }
     .footer__copy { width: 100%; font-family: var(--f-mono); font-size: .6rem; color: rgba(248,246,241,.25); letter-spacing: .06em; margin-top: 1rem; }
 
-    /* ══ MOBILE FIRST ══ */
+    /* ══════════════════════════════════════════════
+       MOBILE FIRST
+    ══════════════════════════════════════════════ */
     .nav { padding: 0 1rem; }
     .nav__right { gap: .75rem; }
     .nav__pill { display: none; }
@@ -413,11 +428,11 @@
     .block__ghost { display: none; }
     .block__tag { margin-top: 0; }
     .cards { grid-template-columns: 1fr; }
+    .cards-2 { grid-template-columns: 1fr; }
     .card { border-right: none; border-bottom: 1px solid var(--ligne); }
     .card:last-child { border-bottom: none; }
-    .niveaux { grid-template-columns: 1fr; }
-    .niveau { border-right: none; border-bottom: 1px solid var(--ligne); }
-    .niveau:last-child { border-bottom: none; }
+    .card-2 { border-right: none; border-bottom: 1px solid var(--ligne); }
+    .card-2:last-child { border-bottom: none; }
     .photo-inline, .photo-territoire { float: right; margin: 0 0 1.5rem 1.25rem; }
     .photo-inline { width: 140px; }
     .photo-territoire { width: 160px; }
@@ -433,6 +448,8 @@
     .cta__inner { grid-template-columns: 1fr; gap: 1.5rem; }
     .footer { padding: 2rem 1.25rem; }
     .breadcrumb-wrap { padding: .6rem 1.25rem; }
+    .compare-table { font-size: .78rem; }
+    .compare-table th, .compare-table td { padding: .6rem .75rem; }
     #cursor { display: none; }
     body { cursor: auto; }
     a, button, [role="button"] { cursor: pointer !important; }
@@ -453,9 +470,6 @@
       .block { grid-template-columns: 80px 1fr; gap: 0 2rem; padding: 4rem 0; }
       .block__num-wrap { flex-direction: column; align-items: flex-start; }
       .block__ghost { display: block; font-size: 6rem; }
-      .niveaux { grid-template-columns: repeat(3,1fr); }
-      .niveau { border-right: 1px solid var(--ligne); border-bottom: none; }
-      .niveau:last-child { border-right: none; }
       .faq-block__header { grid-template-columns: 80px 1fr; gap: 0 2rem; }
       .faq-q { grid-template-columns: 80px 1fr; gap: 0 2rem; }
       .signature { grid-template-columns: 80px 1fr; gap: 0 2rem; }
@@ -464,6 +478,8 @@
       .equipe-section { padding: 3rem 1.75rem; }
       .cta { padding: 4rem 1.75rem; }
       .footer { padding: 2.5rem 1.75rem; }
+      .cards { grid-template-columns: repeat(2,1fr); }
+      .cards-2 { grid-template-columns: 1fr 1fr; }
     }
 
     @media (min-width: 900px) {
@@ -489,9 +505,10 @@
       .cta__inner { grid-template-columns: 1fr auto; gap: 2rem 4rem; }
       .footer { padding: 3rem 2.5rem; }
       .breadcrumb-wrap { padding: .75rem 2.5rem; }
+      .cards { grid-template-columns: repeat(3,1fr); }
       #cursor { display: block; }
       body { cursor: none; }
-      a, button, [role="button"], .card, .membre,
+      a, button, [role="button"], .card, .card-2, .membre,
       .nav__btn, .cta__btn, .theme-switch, .theme-switch * { cursor: pointer !important; }
     }
   </style>
@@ -521,69 +538,67 @@
 <div class="breadcrumb-wrap">
   <ol class="breadcrumb" aria-label="Fil d'Ariane">
     <li><a href="/">Accueil</a></li>
-    <li><a href="/francophonie-systeme-marketing-b2b">Système B2B</a></li>
-    <li>Réduction du cycle de vente</li>
+    <li><a href="/">Architecture B2B francophone</a></li>
+    <li>YouTube B2B — Acquisition</li>
   </ol>
 </div>
 
 <!-- ══ HERO ══ -->
 <header class="hero" id="top">
   <div class="hero__left">
-    <div class="hero__tag">NeuroBreak™ — Pilier 03 · Conversion</div>
+    <div class="hero__tag">NeuroBreak™ Studio — Système B2B Francophone</div>
     <h1 class="hero__h1">
-      CYCLE<br />
-      <span class="rouge">TROP LONG</span><br />
-      <span class="fin">Voilà pourquoi.</span>
+      YOU<br />
+      <span class="rouge">TUBE</span><br />
+      <span class="fin">infrastructure B2B</span>
     </h1>
     <p class="hero__statement">
-      Le cycle ne s'allonge pas par hasard.<br />
-      La décision n'a jamais été préparée<br />
-      avant l'appel.
+      Tout le monde publie.<br />
+      Peu orientent.<br />
+      Ce n'est pas la même chose.
     </p>
   </div>
 
   <div class="hero__right">
-    <p class="hero__meta-label">Auteur</p>
-    <p class="hero__meta-val">Lounas<br />Vente &amp; pipeline B2B</p>
     <p class="hero__meta-label">Pilier</p>
-    <p class="hero__meta-val">03 — Conversion</p>
-    <p class="hero__meta-label">Système</p>
-    <p class="hero__meta-val">Qualification · Séquences · Multi-parties</p>
+    <p class="hero__meta-val">02 — Acquisition</p>
+    <p class="hero__meta-label">Auteur</p>
+    <p class="hero__meta-val">Christophe Simon<br />Architecte stratégique</p>
+    <p class="hero__meta-label">Territoire</p>
+    <p class="hero__meta-val">Québec — PME B2B francophones</p>
     <ul class="hero__index" aria-label="Sommaire">
-      <li><span class="idx">01</span><a href="#diagnostic">Ce que le cycle long révèle</a></li>
-      <li><span class="idx">02</span><a href="#distinction">La distinction qui change tout</a></li>
+      <li><span class="idx">01</span><a href="#intention">Le problème d'intention</a></li>
+      <li><span class="idx">02</span><a href="#distinction">Canal vs infrastructure</a></li>
       <li><span class="idx">03</span><a href="#erreurs">Les erreurs invisibles</a></li>
-      <li><span class="idx">04</span><a href="#architecture">L'architecture de conversion</a></li>
+      <li><span class="idx">04</span><a href="#fenetreqc">La fenêtre québécoise</a></li>
       <li><span class="idx">05</span><a href="#faq">Questions fréquentes</a></li>
     </ul>
   </div>
 </header>
 
-<!-- EN BREF + ZONE A — Photo Lounas -->
+<!-- EN BREF -->
 <div class="en-bref" id="en-bref">
   <div class="en-bref__inner">
     <p class="en-bref__label" aria-hidden="true">EN<br/>BREF</p>
-    <p class="en-bref__corps">Un cycle de vente B2B trop long est rarement un problème commercial. C'est un <strong>problème de qualification amont</strong>. Quand le prospect arrive à l'appel sans avoir compris le problème, la méthode et la valeur — l'équipe commerciale passe son temps à convaincre plutôt qu'à confirmer. <strong>Structurer la qualification avant le rendez-vous</strong> réduit le cycle, améliore le taux de transformation et libère une capacité commerciale entière.</p>
+    <p class="en-bref__corps">Une chaîne YouTube B2B structurée n'est pas un canal de contenu. C'est une <strong>infrastructure d'acquisition</strong>. Elle filtre les prospects en amont, prépare la décision avant l'appel, et produit des leads qualifiés plutôt que du trafic générique. La distinction est structurelle : un canal diffuse à tout le monde, une infrastructure sélectionne ceux qui sont prêts à décider.</p>
 
-    <!-- ══ ZONE A — Photo Lounas ══
-         REMPLACER : ajoutez <img> juste après la balise ouvrante .photo-encart
-         <img src="lounas.jpg"
-              alt="Lounas — Vente & pipeline NeuroBreak™"
+    <!-- ZONE A — Photo Christophe
+         REMPLACER : <img src="christophe-simon.jpg"
+              alt="Christophe Simon — Architecte stratégique NeuroBreak™"
               style="width:100%;height:100%;object-fit:cover;object-position:top center;" />
-         FORMAT : portrait 3/4, min. 480×640 px
-    ══ -->
+         FORMAT : portrait 3/4, min. 480×640 px -->
     <div class="en-bref__photo">
-      <div class="photo-encart" aria-label="Emplacement photo Lounas">
-        <!-- ↓ VOTRE <img> ICI ↓ -->
-        <div class="photo-encart__placeholder">
+      <div class="photo-encart" aria-label="Emplacement photo Christophe Simon">
+<img src="/assets/christophe.jpg" alt="Christophe Simon" style="width:100%;height:100%;object-fit:cover;object-position:center center;" />
+<div class="photo-encart__placeholder">
           <span class="photo-encart__badge">Zone A</span>
-          <p class="photo-encart__titre">Lounas</p>
+          <p class="photo-encart__titre">Christophe Simon</p>
           <p class="photo-encart__spec">Portrait 3/4<br />480×640 px min.</p>
         </div>
       </div>
       <div class="en-bref__photo-caption">
-        <span class="en-bref__photo-caption__name">LOUNAS</span>
-        <span class="en-bref__photo-caption__role">Vente &amp; pipeline</span>
+        <span class="en-bref__photo-caption__name">CHRISTOPHE SIMON</span>
+        <span class="en-bref__photo-caption__role">Architecte stratégique</span>
       </div>
     </div>
 
@@ -593,7 +608,7 @@
 <!-- TICKER -->
 <div class="ticker" aria-hidden="true">
   <div class="ticker__inner">
-    <span>QUALIFICATION AMONT</span><span class="hl">·</span><span>CYCLE RÉDUIT</span><span class="hl">·</span><span>CONVERSION</span><span class="hl">·</span><span>SÉQUENCES DÉCISIONNELLES</span><span class="hl">·</span><span>B2B FRANCOPHONE</span><span class="hl">·</span><span>NEUROBREAK™</span><span class="hl">·</span><span>QUALIFICATION AMONT</span><span class="hl">·</span><span>CYCLE RÉDUIT</span><span class="hl">·</span><span>CONVERSION</span><span class="hl">·</span><span>SÉQUENCES DÉCISIONNELLES</span><span class="hl">·</span><span>B2B FRANCOPHONE</span><span class="hl">·</span><span>NEUROBREAK™</span><span class="hl">·</span>
+    <span>INFRASTRUCTURE</span><span class="hl">·</span><span>ACQUISITION</span><span class="hl">·</span><span>LEADS QUALIFIÉS</span><span class="hl">·</span><span>YOUTUBE B2B</span><span class="hl">·</span><span>QUÉBEC FRANCOPHONE</span><span class="hl">·</span><span>NEUROBREAK™</span><span class="hl">·</span><span>INFRASTRUCTURE</span><span class="hl">·</span><span>ACQUISITION</span><span class="hl">·</span><span>LEADS QUALIFIÉS</span><span class="hl">·</span><span>YOUTUBE B2B</span><span class="hl">·</span><span>QUÉBEC FRANCOPHONE</span><span class="hl">·</span><span>NEUROBREAK™</span><span class="hl">·</span>
   </div>
 </div>
 
@@ -601,79 +616,93 @@
 <main>
 <div class="article-body">
 
-  <!-- §01 — Ce que le cycle long révèle -->
-  <div class="block" id="diagnostic">
+  <!-- §01 — Le problème d'intention -->
+  <div class="block" id="intention">
     <div class="block__num-wrap">
       <span class="block__ghost" aria-hidden="true">01</span>
       <span class="block__num">§ 01</span>
       <span class="block__tag">Diagnostic<br />structural</span>
     </div>
     <div class="block__content">
-      <h2 class="block__titre">Ce que le cycle long<br /><em>révèle vraiment</em></h2>
+      <h2 class="block__titre">Ce que YouTube fait —<br /><em>et ce qu'il ne fait pas seul</em></h2>
 
-      <!-- ══ ZONE B — Photo contextuelle §01 ══
-           REMPLACER : ajoutez <img src="appel-commercial.jpg" alt="Appel commercial B2B"
+      <!-- ZONE B — Photo contextuelle §01
+           REMPLACER : <img src="studio-video.jpg" alt="Studio vidéo B2B"
            style="width:100%;height:100%;object-fit:cover;object-position:center;" />
-           Suggestion : "business phone call", "sales meeting B2B"
            FORMAT : paysage 4/3, min. 640×480 px -->
       <div class="photo-inline">
         <div class="photo-encart" aria-label="Emplacement photo contextuelle">
           <!-- ↓ VOTRE <img> ICI ↓ -->
           <div class="photo-encart__placeholder">
             <span class="photo-encart__badge">Zone B · §01</span>
-            <p class="photo-encart__titre">Appel commercial B2B</p>
+            <p class="photo-encart__titre">Studio / tournage vidéo</p>
             <p class="photo-encart__spec">Paysage 4/3 · 640×480 px</p>
           </div>
         </div>
-        <div class="photo-inline__caption">Le cycle — ce qu'il cache vraiment</div>
+        <div class="photo-inline__caption">Contexte — la chaîne qui diffuse sans orienter</div>
       </div>
 
-      <p>Un appel. Quarante minutes. Le prospect est intéressé. Il pose des questions pertinentes. La conversation est bonne. À la fin : <em>"Je vais en parler à mon associé. On se rappelle la semaine prochaine."</em></p>
-      <p>La semaine suivante, un autre appel. Trente minutes. On reprend depuis le début — l'associé n'a pas eu le temps de regarder la documentation. On réexplique. On répond aux mêmes objections. Deux semaines plus tard : <em>"On est intéressés, mais on a besoin d'un devis plus détaillé."</em></p>
-      <p>Le cycle dure depuis 6 semaines. Il n'est pas terminé. Ce n'est pas une mauvaise force de vente. Ce n'est pas un prospect difficile. C'est un système qui fait faire à l'équipe commerciale un travail que le contenu aurait dû faire en amont.</p>
-      <p>Lounas a vu ce pattern des centaines de fois en 25 ans de terrain commercial. Dans des PME de 10 personnes comme dans des équipes de 80 commerciaux. Dans le conseil, le manufacturier, les services professionnels, la tech B2B. La conclusion est toujours la même : <strong>un cycle long n'est presque jamais un problème de closing. C'est un problème de préparation.</strong></p>
-      <p><a href="/marketing-fragmente-pme">Le marketing fragmenté produit exactement ça</a> — des prospects qui entrent dans le pipeline sans avoir été qualifiés en amont, qui arrivent à l'appel avec des questions de base, qui ont besoin d'être convaincus de l'existence du problème avant même qu'on puisse parler de solution.</p>
+      <p>Une chaîne YouTube existe. Des vidéos sortent. Régulièrement. Certaines ont quelques centaines de vues. D'autres quelques milliers. Les commentaires sont positifs. L'audience semble intéressée.</p>
+      <p>Et pourtant. Aucun rendez-vous qualifié ne vient de là. Aucun prospect ne mentionne YouTube comme point d'entrée. La chaîne tourne — mais elle ne travaille pas.</p>
+      <p>Ce n'est pas un problème de qualité vidéo. Ce n'est pas un problème de fréquence. Ce n'est pas l'algorithme. C'est un problème d'intention.</p>
+      <p>La chaîne diffuse. Elle n'oriente pas. Elle accumule une audience — sans jamais construire un pipeline. Et la différence entre ces deux états n'est pas une question de production. C'est une question d'architecture.</p>
+      <p>YouTube est la deuxième plateforme de recherche mondiale. Les décideurs B2B l'utilisent. Ils cherchent des réponses à des problèmes précis, des méthodes pour résoudre des situations concrètes, des preuves que quelqu'un comprend leur réalité. C'est un terrain d'acquisition exceptionnel — mais seulement si la chaîne est construite pour orienter, pas juste pour informer.</p>
+      <p><a href="/marketing-fragmente-pme">Le marketing fragmenté coûte précisément ça</a> — des actions qui existent, qui fonctionnent chacune dans leur logique, mais qui ne se parlent pas. Une chaîne YouTube déconnectée du pipeline commercial en est l'exemple le plus visible.</p>
 
-      <ul class="liste" aria-label="Ce que le cycle long coûte concrètement">
-        <li>Chaque appel repart de zéro — le temps commercial est gaspillé en pédagogie</li>
-        <li>Les objections se répètent d'un prospect à l'autre — elles ne sont jamais traitées structurellement</li>
-        <li>Les décisions sont reportées parce que le prospect n'a pas eu le temps de mûrir</li>
-        <li>Les comités internes ralentissent parce que personne n'a préparé les parties prenantes</li>
-        <li>Le taux de transformation reste bas malgré un pipeline actif</li>
-      </ul>
       <div class="clearfix"></div>
       <div class="pq">
-        <p class="pq__texte">« Ce ne sont pas des symptômes commerciaux. Ce sont des symptômes d'architecture. Changer l'équipe ne les résout pas. »</p>
-        <p class="pq__src">Lounas — NeuroBreak™ Studio, 25 ans de terrain</p>
+        <p class="pq__texte">« Je ne regarde pas d'abord la qualité des vidéos. Je regarde l'intention derrière chaque contenu. Est-ce que cette vidéo attire quelqu'un de précis, avec un problème précis, à un stade précis de sa réflexion ? Ou est-ce qu'elle informe un public large qui ne prendra jamais de rendez-vous ? »</p>
+        <p class="pq__src">Christophe Simon — NeuroBreak™ Studio</p>
       </div>
     </div>
   </div>
 
-  <!-- §02 — La distinction qui change tout -->
+  <!-- §02 — Canal vs infrastructure -->
   <div class="block" id="distinction">
     <div class="block__num-wrap">
       <span class="block__ghost" aria-hidden="true">02</span>
       <span class="block__num">§ 02</span>
-      <span class="block__tag">Conversion<br />avant l'appel</span>
+      <span class="block__tag">Architecture<br />système</span>
     </div>
     <div class="block__content">
-      <h2 class="block__titre">La distinction<br /><em>qui change tout</em></h2>
-      <p>Il y a deux types de rendez-vous B2B. Tout se joue là.</p>
-      <div class="cards">
-        <div class="card" role="listitem">
-          <span class="card__num" aria-hidden="true">01</span>
-          <p class="card__levier">Rendez-vous non préparé</p>
-          <p class="card__titre">Le prospect arrive sans contexte</p>
-          <p class="card__corps">L'équipe commerciale passe les 20 premières minutes à expliquer le problème, les 20 suivantes à présenter la méthode, et les 10 dernières à gérer des objections qui auraient pu être anticipées. Si le rendez-vous se passe bien, on en fixe un deuxième.</p>
+      <h2 class="block__titre">Canal vs infrastructure —<br /><em>la distinction qui change tout</em></h2>
+      <p>Un canal de contenu cherche des vues. Une infrastructure d'acquisition cherche des décisions. Ce ne sont pas deux degrés d'ambition. Ce sont deux logiques de construction.</p>
+
+      <div class="cards-2" role="list">
+        <div class="card-2 card-2--canal" role="listitem">
+          <p class="card-2__label">Le canal</p>
+          <p class="card-2__titre">Diffuse à tout le monde</p>
+          <ul class="liste" aria-label="Caractéristiques du canal">
+            <li>Produit du contenu éducatif large</li>
+            <li>Mesure les vues, abonnés, temps de visionnage</li>
+            <li>Attire une audience intéressée</li>
+            <li>Génère de la notoriété</li>
+          </ul>
         </div>
-        <div class="card" role="listitem">
-          <span class="card__num" aria-hidden="true">02</span>
-          <p class="card__levier">Rendez-vous préparé</p>
-          <p class="card__titre">Le prospect a déjà décidé en grande partie</p>
-          <p class="card__corps">Le prospect arrive après avoir consommé du contenu qui a préparé sa décision. Il connaît le problème. Il a compris la méthode. Il a déjà répondu à ses propres objections. Le rendez-vous confirme ce qu'il a déjà décidé.</p>
+        <div class="card-2 card-2--infra" role="listitem">
+          <p class="card-2__label">L'infrastructure</p>
+          <p class="card-2__titre">Sélectionne ceux qui décident</p>
+          <ul class="liste" aria-label="Caractéristiques de l'infrastructure">
+            <li>Produit du contenu orienté vers un problème décisionnel précis</li>
+            <li>Mesure les rendez-vous qualifiés générés</li>
+            <li>Filtre les prospects selon leur niveau de maturité</li>
+            <li>Prépare la conversation commerciale avant qu'elle commence</li>
+          </ul>
         </div>
       </div>
-      <p><a href="/chaine-youtube-b2b-generation-leads">Une infrastructure d'acquisition YouTube B2B structurée</a> produit le deuxième type de prospect — pas le premier. C'est la connexion directe entre acquisition et conversion que la plupart des systèmes n'établissent jamais. Le cycle se réduit. Pas parce qu'on a poussé plus fort. Parce qu'on a préparé mieux.</p>
+
+      <p>La majorité des chaînes B2B québécoises sont des canaux. Elles informent bien. Elles ne convertissent pas.</p>
+      <p><a href="/">L'architecture NeuroBreak™ part de ce constat</a> pour construire différemment — en définissant l'intention de chaque vidéo avant de définir son contenu.</p>
+
+      <h3 style="font-family:var(--f-serif);font-size:1.15rem;font-weight:700;color:var(--txt);margin:2.5rem 0 1.25rem;letter-spacing:-.01em;">Comment une infrastructure d'acquisition fonctionne</h3>
+      <p>Le principe est simple. L'exécution demande de la rigueur. Chaque vidéo a une intention déclarée avant d'être produite. Elle s'adresse à un profil précis, à un stade précis de sa réflexion, avec un problème précis qu'elle traite en profondeur.</p>
+      <p>Le contenu ne cherche pas à plaire. Il cherche à filtrer. Un prospect qui regarde une vidéo sur "comment qualifier ses leads B2B avant l'appel" et qui la regarde jusqu'au bout — c'est quelqu'un qui a ce problème, qui cherche une solution, et qui est potentiellement prêt à avoir une conversation.</p>
+      <p><a href="/reduction-cycle-vente-b2b">C'est exactement ce qui réduit le cycle de vente</a> — le prospect arrive à l'appel déjà convaincu du problème, déjà familier de la méthode, déjà disposé à décider. La conversation commerciale confirme. Elle ne convainc pas.</p>
+
+      <div class="pq">
+        <p class="pq__texte">Lounas, qui structure des pipelines depuis 25 ans, reconnaît immédiatement ce pattern. Les équipes commerciales les plus performantes qu'il a accompagnées n'étaient pas les plus agressives. C'étaient celles dont les prospects arrivaient déjà éduqués.</p>
+        <p class="pq__src">Lounas — Croissance commerciale & transformation, NeuroBreak™</p>
+      </div>
     </div>
   </div>
 
@@ -682,79 +711,121 @@
     <div class="block__num-wrap">
       <span class="block__ghost" aria-hidden="true">03</span>
       <span class="block__num">§ 03</span>
-      <span class="block__tag">Causes<br />structurelles</span>
+      <span class="block__tag">Erreurs<br />structurelles</span>
     </div>
     <div class="block__content">
-      <h2 class="block__titre">Les erreurs invisibles<br /><em>qui allongent le cycle</em></h2>
+      <h2 class="block__titre">Les erreurs invisibles<br /><em>qui bloquent l'acquisition</em></h2>
+      <p>Ce sont rarement des erreurs de production. Ce sont des erreurs de structure.</p>
 
-      <!-- ══ ZONE D — Photo contextuelle §03 ══
-           REMPLACER : <img src="pipeline.jpg" alt="Pipeline B2B"
-           style="width:100%;height:100%;object-fit:cover;object-position:center;" />
-           FORMAT : paysage 16/9, min. 640×360 px -->
-      <div class="photo-territoire">
-        <div class="photo-encart" aria-label="Emplacement photo pipeline">
-          <!-- ↓ VOTRE <img> ICI ↓ -->
-          <div class="photo-encart__placeholder">
-            <span class="photo-encart__badge">Zone D · §03</span>
-            <p class="photo-encart__titre">Pipeline B2B</p>
-            <p class="photo-encart__spec">16/9 · 640×360 px</p>
-          </div>
+      <div class="cards" role="list">
+        <div class="card" role="listitem">
+          <span class="card__num" aria-hidden="true">01</span>
+          <p class="card__levier">Erreur 01</p>
+          <p class="card__titre">Absence de fil décisionnel</p>
+          <p class="card__corps">Les vidéos s'enchaînent sans logique de progression. Un prospect peut regarder 10 vidéos sans jamais être orienté vers une action concrète.</p>
         </div>
-        <div class="photo-territoire__caption">Le pipeline — là où le cycle s'allonge</div>
+        <div class="card" role="listitem">
+          <span class="card__num" aria-hidden="true">02</span>
+          <p class="card__levier">Erreur 02</p>
+          <p class="card__titre">Contenu trop large</p>
+          <p class="card__corps">On parle à tout le monde, donc à personne de précis. Les décideurs ne se reconnaissent pas dans le contenu diffusé.</p>
+        </div>
+        <div class="card" role="listitem">
+          <span class="card__num" aria-hidden="true">03</span>
+          <p class="card__levier">Erreur 03</p>
+          <p class="card__titre">Aucun mécanisme de filtrage</p>
+          <p class="card__corps">Les vidéos attirent mais ne qualifient pas. Il n'y a pas de signal qui distingue le curieux du prospect prêt à décider.</p>
+        </div>
       </div>
 
-      <p>Ces erreurs sont structurelles, pas comportementales. Changer l'équipe ne les résout pas.</p>
-      <ul class="liste" aria-label="Erreurs structurelles qui allongent le cycle">
-        <li><strong>Qualification trop tardive :</strong> on qualifie pendant l'appel, pas avant. Le filtre arrive trop tard dans le processus.</li>
-        <li><strong>Contenu déconnecté du cycle d'achat :</strong> les vidéos, les articles, les emails informent — mais ne font pas avancer la décision. Ils ne traitent pas les objections au bon moment.</li>
-        <li><strong>Absence de séquence décisionnelle :</strong> entre le premier contact et le rendez-vous, il n'y a rien. Le prospect est livré à lui-même pour construire sa conviction.</li>
-        <li><strong>Un seul interlocuteur préparé :</strong> l'initiateur du projet est convaincu. Son associé, son directeur financier, son responsable technique — ne le sont pas. Le comité interne bloque.</li>
-        <li><strong>Le rendez-vous comme premier filtre :</strong> c'est l'appel qui doit convaincre, pas le contenu. C'est trop tard, trop coûteux, trop long.</li>
-      </ul>
-      <div class="clearfix"></div>
-      <div class="pq">
-        <p class="pq__texte">« Le cycle s'allonge parce que la décision n'a jamais été préparée avant l'appel. Ce n'est pas un problème de vente. C'est un problème d'architecture. »</p>
-        <p class="pq__src">Lounas — NeuroBreak™ Studio</p>
+      <div class="cards" role="list" style="margin-top:0;border-top:none;">
+        <div class="card" role="listitem">
+          <span class="card__num" aria-hidden="true">04</span>
+          <p class="card__levier">Erreur 04</p>
+          <p class="card__titre">Déconnexion pipeline</p>
+          <p class="card__corps">YouTube et le CRM vivent séparément. Les données de visionnage ne nourrissent pas la qualification commerciale.</p>
+        </div>
+        <div class="card" role="listitem">
+          <span class="card__num" aria-hidden="true">05</span>
+          <p class="card__levier">Erreur 05</p>
+          <p class="card__titre">Fréquence prioritaire sur intention</p>
+          <p class="card__corps">On publie parce qu'il faut publier, pas parce que ce contenu précis sert un objectif précis dans le cycle d'achat.</p>
+        </div>
+        <div class="card" role="listitem" style="background:var(--vif-pale);">
+          <span class="card__num" aria-hidden="true" style="color:var(--vif);opacity:.15;">→</span>
+          <p class="card__levier">Ce que ça change</p>
+          <p class="card__titre">Sans orchestration</p>
+          <p class="card__corps"><a href="/systeme-marketing-centralise-pme">L'orchestration de ce système</a> — faire en sorte que les signaux YouTube alimentent le CRM — c'est la brique qui rend l'acquisition durable.</p>
+        </div>
       </div>
     </div>
   </div>
 
-  <!-- §04 — L'architecture de conversion -->
-  <div class="block" id="architecture">
+  <!-- §04 — La fenêtre québécoise -->
+  <div class="block" id="fenetreqc">
     <div class="block__num-wrap">
       <span class="block__ghost" aria-hidden="true">04</span>
       <span class="block__num">§ 04</span>
-      <span class="block__tag">Architecture<br />système</span>
+      <span class="block__tag">Contexte<br />marché</span>
     </div>
     <div class="block__content">
-      <h2 class="block__titre">L'architecture<br /><em>de conversion</em></h2>
-      <p>Réduire le cycle ne s'obtient pas en formant mieux les commerciaux. Ça s'obtient en restructurant ce qui se passe avant qu'ils interviennent.</p>
-      <p><a href="/francophonie-systeme-marketing-b2b">Le modèle NeuroBreak™ structure trois niveaux de préparation</a> avant le premier appel commercial.</p>
+      <h2 class="block__titre">La fenêtre québécoise<br /><em>— une opportunité structurelle</em></h2>
 
-      <div class="niveaux">
-        <div class="niveau" role="listitem">
-          <span class="niveau__num" aria-hidden="true">01</span>
-          <p class="niveau__label">Niveau 1 — Qualification</p>
-          <p class="niveau__titre">Par le contenu</p>
-          <p class="niveau__corps">Chaque contenu publié traite un problème précis à un stade précis de la réflexion d'achat. Le prospect qui regarde jusqu'au bout se qualifie lui-même. Il signale son niveau de maturité par son comportement.</p>
+      <!-- ZONE D — Photo territoire §04
+           REMPLACER : <img src="montreal-skyline.jpg" alt="Montréal B2B"
+           style="width:100%;height:100%;object-fit:cover;object-position:center;" />
+           FORMAT : paysage 16/9, min. 640×360 px -->
+      <div class="photo-territoire">
+        <div class="photo-encart" aria-label="Emplacement photo territoire Québec">
+          <!-- ↓ VOTRE <img> ICI ↓ -->
+          <div class="photo-encart__placeholder">
+            <span class="photo-encart__badge">Zone D · §04</span>
+            <p class="photo-encart__titre">Paysage urbain Québec / Montréal</p>
+            <p class="photo-encart__spec">16/9 · 640×360 px</p>
+          </div>
         </div>
-        <div class="niveau" role="listitem">
-          <span class="niveau__num" aria-hidden="true">02</span>
-          <p class="niveau__label">Niveau 2 — Séquence</p>
-          <p class="niveau__titre">Décisionnelle</p>
-          <p class="niveau__corps">Entre le premier contact et le rendez-vous, une séquence structurée traite les objections principales, présente la méthode, et pose les questions qui permettent de calibrer l'appel. Le commercial arrive avec du contexte — pas une page blanche.</p>
-        </div>
-        <div class="niveau" role="listitem">
-          <span class="niveau__num" aria-hidden="true">03</span>
-          <p class="niveau__label">Niveau 3 — Multi-parties</p>
-          <p class="niveau__titre">Prenantes</p>
-          <p class="niveau__corps">Dans les cycles B2B complexes, la décision implique plusieurs personnes. Le contenu doit parler à chacune d'elles — le DG, le directeur financier, le responsable opérationnel — avec les arguments qui correspondent à leurs préoccupations respectives.</p>
-        </div>
+        <div class="photo-territoire__caption">Québec — la fenêtre francophone encore ouverte</div>
       </div>
 
-      <p>Une PME B2B avec un cycle moyen de 90 jours et 3 rendez-vous par deal — qui réduit ce cycle à 55 jours en structurant la qualification amont — ne fait pas juste vendre plus vite. Elle augmente mécaniquement le nombre de deals traités sur l'année avec la même équipe.</p>
-      <p><a href="/systeme-marketing-b2b-quebec">Dans le marché B2B québécois</a>, où les cycles sont souvent allongés par des prises de décision en comité et une culture de validation formelle, cette structuration a un impact particulièrement visible. Les cycles longs ne sont pas une fatalité culturelle. Ils sont le résultat d'une architecture insuffisante.</p>
-      <p>Olivier, côté déploiement, configure les séquences et les automatisations qui font vivre cette architecture dans les outils réels — CRM, email, séquences de nurturing — pour que la préparation décisionnelle se fasse sans intervention manuelle à chaque prospect.</p>
+      <p>Le marché B2B francophone québécois est en retard d'environ 3 à 5 ans sur le marché anglophone pour l'adoption de YouTube comme levier d'acquisition. Ce n'est pas un problème. C'est une opportunité.</p>
+      <p>Les requêtes B2B stratégiques en français restent peu compétitives. Les chaînes d'autorité dans des niches comme le conseil, le manufacturier avancé, les services professionnels ou la logistique — elles n'existent presque pas encore.</p>
+      <p><a href="/systeme-marketing-b2b-quebec">Dans le marché québécois</a>, le premier acteur qui structure une présence YouTube B2B dans une niche donnée la domine durablement. Ce n'est pas de la théorie — c'est ce que les marchés anglophones ont démontré.</p>
+
+      <div class="clearfix"></div>
+
+      <table class="compare-table" aria-label="Comparaison marché anglophone vs francophone">
+        <thead>
+          <tr>
+            <th>Marché anglophone</th>
+            <th class="col-infra">Marché francophone québécois</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Chaînes d'autorité B2B établies dans la plupart des niches</td>
+            <td class="col-infra">Niches encore largement sans leader YouTube B2B</td>
+          </tr>
+          <tr>
+            <td>Compétition forte sur les requêtes stratégiques</td>
+            <td class="col-infra">Requêtes stratégiques en français peu disputées</td>
+          </tr>
+          <tr>
+            <td>Coût d'entrée élevé — saturation du contenu</td>
+            <td class="col-infra">Coût d'entrée faible — terrain de positionnement ouvert</td>
+          </tr>
+          <tr>
+            <td>Adoption massive : YouTube = infrastructure standard</td>
+            <td class="col-infra">Adoption naissante : avantage du premier entrant</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>Olivier, côté déploiement, veille à ce que cette fenêtre ne soit pas gaspillée sur de la production générique. La vitesse d'exécution compte — mais seulement si l'architecture est posée correctement avant.</p>
+
+      <div class="pq">
+        <p class="pq__texte">Une PME qui structure son acquisition YouTube correctement n'obtient pas « plus de vues ». Elle obtient des rendez-vous avec des prospects qui savent déjà pourquoi ils appellent.</p>
+        <p class="pq__src">Christophe Simon — NeuroBreak™ Studio</p>
+      </div>
     </div>
   </div>
 
@@ -767,29 +838,36 @@
     <div class="faq-q">
       <span class="faq-q__num">Q·01</span>
       <div class="faq-q__inner">
-        <p class="faq-q__q">Est-ce que réduire le cycle signifie précipiter la décision&nbsp;?</p>
-        <p class="faq-q__r">Non. Ça signifie que la décision est préparée plus tôt dans le processus — par le contenu, pas par la pression commerciale. Le prospect décide quand il est prêt. L'architecture fait en sorte qu'il soit prêt plus tôt.</p>
+        <p class="faq-q__q">Faut-il déjà avoir une audience pour que ça fonctionne&nbsp;?</p>
+        <p class="faq-q__r">Non. Une infrastructure d'acquisition fonctionne avec une petite audience ciblée mieux qu'avec une grande audience générique. Ce qui compte, c'est la précision de l'intention — pas le volume.</p>
       </div>
     </div>
     <div class="faq-q">
       <span class="faq-q__num">Q·02</span>
       <div class="faq-q__inner">
-        <p class="faq-q__q">Ça fonctionne pour les cycles très longs — 6 mois, 12 mois&nbsp;?</p>
-        <p class="faq-q__r">Oui — et c'est même là que l'impact est le plus fort. Les cycles très longs sont presque toujours des cycles où la décision n'a pas été préparée en amont. Structurer la qualification et les séquences décisionnelles raccourcit même les cycles institutionnels longs.</p>
+        <p class="faq-q__q">Combien de vidéos faut-il pour voir des résultats&nbsp;?</p>
+        <p class="faq-q__r">Ça dépend de la niche et de la compétition. En B2B francophone québécois, une dizaine de vidéos bien structurées sur un problème précis suffisent souvent à positionner une autorité réelle. Le volume ne compense pas l'intention.</p>
       </div>
     </div>
     <div class="faq-q">
       <span class="faq-q__num">Q·03</span>
       <div class="faq-q__inner">
-        <p class="faq-q__q">Et si les décideurs ne consomment pas de contenu vidéo&nbsp;?</p>
-        <p class="faq-q__r">La préparation décisionnelle n'est pas uniquement vidéo. Elle peut prendre la forme d'articles, de séquences email, de documents de qualification, de cas fictifs. YouTube est un levier puissant — pas le seul.</p>
+        <p class="faq-q__q">YouTube remplace-t-il LinkedIn en B2B&nbsp;?</p>
+        <p class="faq-q__r">Non — ils ne font pas le même travail. LinkedIn crée des connexions et de la proximité relationnelle. YouTube prépare la décision en profondeur. Les deux se complètent dans une architecture cohérente.</p>
       </div>
     </div>
     <div class="faq-q">
       <span class="faq-q__num">Q·04</span>
       <div class="faq-q__inner">
-        <p class="faq-q__q">Comment savoir si mon cycle est structurellement trop long&nbsp;?</p>
-        <p class="faq-q__r">La question n'est pas la durée absolue — certains cycles longs sont normaux. La question est : combien de ce cycle est passé à convaincre de l'existence du problème&nbsp;? Si la réponse est "beaucoup" — le cycle est structurellement trop long.</p>
+        <p class="faq-q__q">Est-ce que ça fonctionne pour toutes les niches B2B&nbsp;?</p>
+        <p class="faq-q__r">Ça fonctionne dans toute niche où les décideurs cherchent des réponses à des problèmes complexes. Manufacturier, conseil, services professionnels, logistique, tech B2B — oui. Commerce de détail ou B2C — c'est une autre logique.</p>
+      </div>
+    </div>
+    <div class="faq-q">
+      <span class="faq-q__num">Q·05</span>
+      <div class="faq-q__inner">
+        <p class="faq-q__q">Combien de temps avant les premiers résultats&nbsp;?</p>
+        <p class="faq-q__r">Les premiers signaux (visionnages qualifiés, contacts entrants) apparaissent généralement entre le 2e et le 4e mois. Les résultats commerciaux solides entre le 4e et le 8e mois. C'est un actif long terme — pas une campagne.</p>
       </div>
     </div>
   </section>
@@ -798,9 +876,9 @@
   <div class="signature" aria-label="Signature de page">
     <span style="font-family:var(--f-mono);font-size:.6rem;color:var(--txt-4);letter-spacing:.1em;padding-top:.5rem;">Fin</span>
     <div>
-      <p class="signature__texte">CLARIFIER<br />AVANT DE<br /><span>CONVAINCRE.</span></p>
+      <p class="signature__texte">UN CANAL FAIT<br />DU BRUIT.<br /><span>UNE ARCHITECTURE<br />FAIT DES DÉCISIONS.</span></p>
     </div>
-    <p class="signature__auteur">Lounas — NeuroBreak™ Studio, Québec</p>
+    <p class="signature__auteur">Christophe Simon — NeuroBreak™ Studio, Québec</p>
   </div>
 
 </div><!-- /article-body -->
@@ -814,31 +892,12 @@
     </div>
     <div class="equipe-grille" role="list">
 
-      <!-- E1 — LOUNAS (voix principale de cette page) -->
-      <div class="membre membre--lounas" role="listitem">
-        <div class="photo-encart" aria-label="Photo Lounas">
-          <!-- ↓ VOTRE <img> ICI ↓ -->
-          <div class="photo-encart__placeholder">
-            <span class="photo-encart__badge">E1 · Lounas</span>
-            <p class="photo-encart__titre">Lounas</p>
-            <p class="photo-encart__spec">Carré 1/1 · 400×400 px</p>
-          </div>
-        </div>
-        <div class="membre__bar">
-          <span class="membre__name">LOUNAS</span>
-          <span class="membre__role">Vente &amp; pipeline</span>
-        </div>
-        <div class="membre__bio">
-          <p>25 ans de terrain. <strong>Il structure les pipelines et qualifie les leads</strong> avec la lecture que seule l'expérience produit. Voix de ce pilier.</p>
-        </div>
-      </div>
-
-      <!-- E2 — CHRISTOPHE -->
+      <!-- E1 — CHRISTOPHE -->
       <div class="membre membre--christophe" role="listitem">
         <div class="photo-encart" aria-label="Photo Christophe Simon">
-          <!-- ↓ VOTRE <img> ICI ↓ -->
-          <div class="photo-encart__placeholder">
-            <span class="photo-encart__badge">E2 · Christophe</span>
+<img src="/assets/christophe-simon.jpg" alt="Christophe Simon" style="width:100%;height:100%;object-fit:cover;object-position:top center;" />
+<div class="photo-encart__placeholder">
+            <span class="photo-encart__badge">E1 · Christophe</span>
             <p class="photo-encart__titre">Christophe Simon</p>
             <p class="photo-encart__spec">Carré 1/1 · 400×400 px</p>
           </div>
@@ -848,26 +907,45 @@
           <span class="membre__role">Architecte stratégique</span>
         </div>
         <div class="membre__bio">
-          <p>Voix principale du système. <strong>Architecte de l'approche SEO territoriale B2B</strong>, il conçoit les stratégies et signe chaque page.</p>
+          <p>Voix principale du système. <strong>Il conçoit l'architecture YouTube B2B</strong> — l'intention derrière chaque vidéo, le fil décisionnel, la logique de filtrage des prospects.</p>
         </div>
       </div>
 
-      <!-- E3 — OLIVIER -->
+      <!-- E2 — OLIVIER -->
       <div class="membre membre--olivier" role="listitem">
         <div class="photo-encart" aria-label="Photo Olivier">
-          <!-- ↓ VOTRE <img> ICI ↓ -->
-          <div class="photo-encart__placeholder">
-            <span class="photo-encart__badge">E3 · Olivier</span>
+<img src="/assets/olivier.jpg" alt="Olivier" style="width:100%;height:100%;object-fit:cover;object-position:top center;" />
+<div class="photo-encart__placeholder">
+            <span class="photo-encart__badge">E2 · Olivier</span>
             <p class="photo-encart__titre">Olivier</p>
             <p class="photo-encart__spec">Carré 1/1 · 400×400 px</p>
           </div>
         </div>
         <div class="membre__bar">
           <span class="membre__name">OLIVIER</span>
-          <span class="membre__role">Déploiement &amp; intégration</span>
+          <span class="membre__role">Déploiement & intégration</span>
         </div>
         <div class="membre__bio">
-          <p>Responsable technique. <strong>Il intègre le système dans les outils réels</strong> — CRM, séquences, maillage — pour que la préparation décisionnelle tourne sans intervention manuelle.</p>
+          <p>Responsable technique. <strong>Il connecte YouTube au CRM</strong> — les signaux de visionnage alimentent la qualification, la fenêtre québécoise n'est pas gaspillée.</p>
+        </div>
+      </div>
+
+      <!-- E3 — LOUNAS -->
+      <div class="membre membre--lounas" role="listitem">
+        <div class="photo-encart" aria-label="Photo Lounas">
+<img src="/assets/lounas.jpg" alt="Lounas" style="width:100%;height:100%;object-fit:cover;object-position:top center;" />
+<div class="photo-encart__placeholder">
+            <span class="photo-encart__badge">E3 · Lounas</span>
+            <p class="photo-encart__titre">Lounas</p>
+            <p class="photo-encart__spec">Carré 1/1 · 400×400 px</p>
+          </div>
+        </div>
+        <div class="membre__bar">
+          <span class="membre__name">LOUNAS</span>
+          <span class="membre__role">Croissance commerciale & transformation</span>
+        </div>
+        <div class="membre__bio">
+          <p>25 ans de terrain. <strong>Il valide que les prospects YouTube arrivent déjà éduqués</strong> — la conversation commerciale confirme, elle ne convainc pas.</p>
         </div>
       </div>
 
@@ -878,13 +956,13 @@
 </main>
 
 <!-- CTA -->
-<div class="cta" id="diagnostic-cta">
+<div class="cta" id="diagnostic">
   <div class="cta__inner">
     <div>
       <h2 class="cta__titre">DIAGNOSTIC<br /><i>NeuroBreak™</i></h2>
-      <p class="cta__sub">Identifiez où se situe votre fragmentation. Choisissez votre levier. Une conversation, une direction.</p>
+      <p class="cta__sub">Identifiez où se situe votre fragmentation. Votre chaîne YouTube travaille-t-elle pour vous — ou diffuse-t-elle seulement ? Une conversation, une direction.</p>
     </div>
-    <a href="mailto:diagnostic@neurobreak.ca" class="cta__btn">
+    <a href="/cdn-cgi/l/email-protection#8ae9e5e4feebe9fecae4effff8e5e8f8efebe1a4e9eb" class="cta__btn">
       DÉMARRER<span>le diagnostic →</span>
     </a>
   </div>
@@ -919,16 +997,23 @@
   </div>
 </footer>
 
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
 <script>
-  /* ── Curseur rond rouge ── */
+document.addEventListener('DOMContentLoaded', () => {
   const cursor = document.getElementById('cursor');
+  if (!cursor) return;
+
   document.addEventListener('mousemove', e => {
     cursor.style.left = e.clientX + 'px';
-    cursor.style.top  = e.clientY + 'px';
+    cursor.style.top = e.clientY + 'px';
   });
-  document.querySelectorAll('a, button, .card, .niveau, .membre, .cta__btn, .nav__btn').forEach(el => {
+
+  document.querySelectorAll('a, button, .card, .card-2, .membre, .cta__btn, .nav__btn').forEach(el => {
     el.addEventListener('mouseenter', () => cursor.classList.add('big'));
     el.addEventListener('mouseleave', () => cursor.classList.remove('big'));
+  });
+});
+</script>
   });
 
   /* ── Barre de progression ── */
@@ -985,9 +1070,11 @@
               ? 'var(--vif)' : '';
           });
         }
-      });
-    }, { rootMargin: '-40% 0px -40% 0px' });
-    document.querySelectorAll('[id]').forEach(s => ioNav.observe(s));
+        });
+      }
+    });
+  }, { rootMargin: '-40% 0px -40% 0px' });
+  document.querySelectorAll('[id]').forEach(s => ioNav.observe(s));
   }
 </script>
 
