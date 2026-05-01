@@ -567,6 +567,16 @@
       .nav__btn, .cta__btn, .theme-switch, .theme-switch * { cursor: pointer !important; }
     }
   </style>
+<style id="lightbox-css">
+#lb-overlay{display:none;position:fixed;inset:0;z-index:9999;background:rgba(0,0,0,.92);cursor:zoom-out;align-items:center;justify-content:center;}
+#lb-overlay.active{display:flex;}
+#lb-overlay img{max-width:92vw;max-height:92vh;object-fit:contain;border:1px solid rgba(255,255,255,.1);animation:lb-in .2s ease;}
+@keyframes lb-in{from{opacity:0;transform:scale(.96);}to{opacity:1;transform:scale(1);}}
+#lb-close{position:absolute;top:1.25rem;right:1.5rem;color:rgba(255,255,255,.6);font-size:2rem;cursor:pointer;font-family:monospace;line-height:1;background:none;border:none;transition:color .15s;}
+#lb-close:hover{color:#E63E1C;}
+.zd-img{cursor:zoom-in !important;transition:opacity .2s;}
+.zd-img:hover{opacity:.88;}
+</style>
 </head>
 <body>
 <div id="cursor"></div>
@@ -661,7 +671,7 @@
 <span class="block__num">§ 02</span>
 <span class="block__tag">Les 5 blocages<br/>les plus fréquents</span>
 </div>
-<div class="block__content"><h2 class="block__titre">Les 5 blocages <em>les plus fréquents dans les PME B2B québécoises</em></h2><div class="photo-territoire"><div aria-label="Photo blocages B2B" class="photo-encart"><img src="/assets/diagnostic-marketing-pme-territoire.png" alt="diagnostic-marketing-pme-territoire" style="width:100%;height:100%;object-fit:cover;" /><div class="photo-encart__placeholder"><span class="photo-encart__badge">Zone D · §02</span><p class="photo-encart__titre">Blocages B2B PME</p><p class="photo-encart__spec">16/9 · 640×360 px<br/>Les 5 causes les plus fréquentes</p></div></div><div class="photo-territoire__caption">Blocages — les 5 causes les plus fréquentes</div></div><p>Blocage 1 — L'acquisition dépend entièrement du dirigeant. Tous les nouveaux clients viennent de son réseau personnel ou de ses initiatives directes. Le pipeline s'arrête quand il s'arrête. Solution prioritaire : <a href="/chaine-youtube-b2b-generation-leads">une infrastructure d'acquisition autonome</a>.</p><p>Blocage 2 — Le contenu informe mais ne convertit pas. La PME produit des vidéos, des articles, des posts LinkedIn — mais ce contenu ne prépare pas la décision d'achat. Les prospects regardent et passent à autre chose. Solution prioritaire : <a href="/contenu-youtube-b2b-convertir">reformater le contenu vers la conversion</a>.</p><p>Blocage 3 — Le cycle de vente est trop long parce que la qualification est insuffisante. Le commercial passe du temps sur des prospects qui n'achèteront pas. Solution prioritaire : <a href="/qualification-leads-b2b">structurer la qualification amont</a> avant que le commercial entre en jeu.</p><p>Blocage 4 — Le CRM ne dit pas ce qu'il devrait dire. La direction ne peut pas lire l'état réel du pipeline sans faire le tour des commerciaux. Solution prioritaire : <a href="/crm-pme-b2b-quebec">reconfigurer le CRM sur le parcours d'achat réel</a> du prospect.</p><p>Blocage 5 — Le nurturing est inexistant. Les prospects froids sont abandonnés. Les clients existants ne reçoivent aucune attention systématique entre les achats. Solution prioritaire : <a href="/nurturing-b2b-francophone">mettre en place un nurturing B2B francophone</a> adapté aux cycles longs.</p><p>La plupart des PME ont deux ou trois de ces blocages simultanément. L'enjeu du diagnostic est d'identifier lequel traiter en premier — celui qui libère le plus de valeur avec le moins d'effort.</p></div>
+<div class="block__content"><h2 class="block__titre">Les 5 blocages <em>les plus fréquents dans les PME B2B québécoises</em></h2><div class="photo-territoire"><div aria-label="Photo blocages B2B" class="photo-encart"><img src="/assets/diagnostic-marketing-pme-territoire.png" alt="diagnostic-marketing-pme-territoire" style="width:100%;height:100%;object-fit:cover;" class="zd-img" onclick="lbOpen('/assets/diagnostic-marketing-pme-territoire.png')" /><div class="photo-encart__placeholder"><span class="photo-encart__badge">Zone D · §02</span><p class="photo-encart__titre">Blocages B2B PME</p><p class="photo-encart__spec">16/9 · 640×360 px<br/>Les 5 causes les plus fréquentes</p></div></div><div class="photo-territoire__caption">Blocages — les 5 causes les plus fréquentes</div></div><p>Blocage 1 — L'acquisition dépend entièrement du dirigeant. Tous les nouveaux clients viennent de son réseau personnel ou de ses initiatives directes. Le pipeline s'arrête quand il s'arrête. Solution prioritaire : <a href="/chaine-youtube-b2b-generation-leads">une infrastructure d'acquisition autonome</a>.</p><p>Blocage 2 — Le contenu informe mais ne convertit pas. La PME produit des vidéos, des articles, des posts LinkedIn — mais ce contenu ne prépare pas la décision d'achat. Les prospects regardent et passent à autre chose. Solution prioritaire : <a href="/contenu-youtube-b2b-convertir">reformater le contenu vers la conversion</a>.</p><p>Blocage 3 — Le cycle de vente est trop long parce que la qualification est insuffisante. Le commercial passe du temps sur des prospects qui n'achèteront pas. Solution prioritaire : <a href="/qualification-leads-b2b">structurer la qualification amont</a> avant que le commercial entre en jeu.</p><p>Blocage 4 — Le CRM ne dit pas ce qu'il devrait dire. La direction ne peut pas lire l'état réel du pipeline sans faire le tour des commerciaux. Solution prioritaire : <a href="/crm-pme-b2b-quebec">reconfigurer le CRM sur le parcours d'achat réel</a> du prospect.</p><p>Blocage 5 — Le nurturing est inexistant. Les prospects froids sont abandonnés. Les clients existants ne reçoivent aucune attention systématique entre les achats. Solution prioritaire : <a href="/nurturing-b2b-francophone">mettre en place un nurturing B2B francophone</a> adapté aux cycles longs.</p><p>La plupart des PME ont deux ou trois de ces blocages simultanément. L'enjeu du diagnostic est d'identifier lequel traiter en premier — celui qui libère le plus de valeur avec le moins d'effort.</p></div>
 </div>
 
 <!-- §03 -->
@@ -888,6 +898,15 @@
     }, { rootMargin: '-40% 0px -40% 0px' });
     document.querySelectorAll('[id]').forEach(s => ioNav.observe(s));
   }
+</script>
+<div id="lb-overlay" onclick="lbClose()">
+<button id="lb-close" onclick="event.stopPropagation();lbClose()">✕</button>
+<img id="lb-img" src="" alt="" onclick="event.stopPropagation()" />
+</div>
+<script>
+function lbOpen(src){var o=document.getElementById('lb-overlay');var i=document.getElementById('lb-img');if(!o||!i)return;i.src=src;o.classList.add('active');document.body.style.overflow='hidden';}
+function lbClose(){var o=document.getElementById('lb-overlay');var i=document.getElementById('lb-img');if(!o||!i)return;o.classList.remove('active');i.src='';document.body.style.overflow='';}
+document.addEventListener('keydown',function(e){if(e.key==='Escape')lbClose();});
 </script>
 </body>
 </html>
