@@ -1,11 +1,10 @@
 #!/usr/bin/env python3
 """
 inject_zone_b.py
-Injecte l'image Zone B (photo-inline / §01) dans chaque page NeuroBreak™.
+Injecte l'image Zone B (§01) uniquement sur les 13 pages secondaires.
 Lancer depuis la racine du site : python inject_zone_b.py
 """
 
-import re
 from pathlib import Path
 
 PAGES = [
@@ -24,15 +23,9 @@ PAGES = [
     "tableau-de-bord-marketing-b2b",
 ]
 
-# Regex : trouve le bloc photo-inline qui contient "Zone B"
-# et qui n'a pas encore de <img> (placeholder only)
-PATTERN = re.compile(
-    r'(<div[^>]*class="photo-encart"[^>]*>)'   # ouverture photo-encart
-    r'(\s*<!-- ↓ VOTRE <img> ICI ↓ -->)'        # commentaire placeholder
-    r'(\s*<div class="photo-encart__placeholder">)'
-    r'(\s*<span class="photo-encart__badge">Zone B)',
-    re.DOTALL
-)
+IMG_TEMPLATE = '<img src="/assets/{page}-contexte.png" alt="{page}" style="width:100%;height:100%;object-fit:cover;" />'
+MARKER = '<span class="photo-encart__badge">Zone B'
+PLACEHOLDER = '<div class="photo-encart__placeholder">'
 
 def inject(page: str) -> str:
     file = Path(page) / "index.html"
@@ -41,23 +34,26 @@ def inject(page: str) -> str:
 
     html = file.read_text(encoding="utf-8")
 
-    # Vérifie si Zone B a déjà une img
-    if re.search(
-        r'<img[^>]+>\s*<div class="photo-encart__placeholder">\s*<span[^>]*>Zone B',
-        html, re.DOTALL
-    ):
+    if MARKER not in html:
+        return f"❌  marker Zone B non trouvé : {page}"
+
+    img_tag = IMG_TEMPLATE.format(page=page)
+
+    # Position du badge Zone B
+    idx = html.index(MARKER)
+
+    # Vérifie si l'img est déjà présente juste avant le placeholder
+    avant = html[max(0, idx-300):idx]
+    if 'contexte.png' in avant:
         return f"⏭️  déjà corrigé : {page}"
 
-    img_tag = f'<img src="/assets/{page}-contexte.png" alt="{page}" style="width:100%;height:100%;object-fit:cover;" />\n          '
+    # Trouve le placeholder juste avant Zone B
+    pos_placeholder = html.rfind(PLACEHOLDER, 0, idx)
+    if pos_placeholder == -1:
+        return f"❌  placeholder non trouvé : {page}"
 
-    new_html, n = PATTERN.subn(
-        lambda m: m.group(1) + "\n          " + img_tag + m.group(3) + m.group(4),
-        html
-    )
-
-    if n == 0:
-        return f"❌  pattern Zone B non trouvé : {page}"
-
+    # Insère l'img juste avant le placeholder
+    new_html = html[:pos_placeholder] + img_tag + "\n" + html[pos_placeholder:]
     file.write_text(new_html, encoding="utf-8")
     return f"✅  corrigé : {page}"
 
