@@ -1,3 +1,4 @@
-User-agent: *
+﻿User-agent: *
 Allow: /
-Sitemap: https://www.neurobreak.eu/sitemap.xml
+Sitemap: https://neurobreak.eu/sitemap.xml
+
